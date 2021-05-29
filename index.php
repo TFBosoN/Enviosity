@@ -8,6 +8,9 @@ $zoom = 2;
 //COPIUM 
 $copium_overdose = false;
 $copium_icon = '<img src="//enviosity.com/assets/COPIUM.png" width="64" alt="COPIUM" title="COPIUM">';
+function alarm_html(){
+	return '<div class="wrapper"><div class="alarm"><div class="light"><span></span><span></span><span></span><span></span><span></span></div><div class="bulb"><div class="eyes"><span></span><span></span></div><div class="mouth"></div></div><div class="base"></div></div></div>';
+}
 
 //RNG names
 $names = explode("\n", file_get_contents("./envi_names.txt"));
@@ -237,7 +240,7 @@ switch($names[$count]){
 			height:30px;
 		}
 		.credits{
-			font-size:10px;
+			font-size:12px;
 			opacity: 0.9;
 			color: lightgray;
 		}
@@ -361,287 +364,248 @@ switch($names[$count]){
 		}
 		
 		@keyframes blinking {
-		  0% {
-			color: #ff0000;
-		  }
-		  50% {
-			color: #ffffff;
-		  }
-		  100% {
-			color: #ff0000;
-		  }
+			0% {
+				color: #ff0000;
+			}
+			50% {
+				color: #ffffff;
+			}
+			100% {
+				color: #ff0000;
+			}
 		}
 		.red {
-		  width: 300px;
-		  height: 300px;
-		  animation: blinking 1s infinite;
-		  font-size: 20px;
+			width: 300px;
+			height: 300px;
+			animation: blinking 1s infinite;
+			font-size: 20px;
 		}
-		
+		.first, .second{
+			position: relative;
+		}		
+		.first .wrapper{
+			left: 50%;
+		}		
+		.second .wrapper{
+			right:50%;
+		}
+		.wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			border-radius: 50%;
+			position: absolute;
+			top: -218px;
+			transform: rotate(180deg) scale(0.3);
+			z-index: -1;
+		}
+		@media (max-width: 600px) {
+			.wrapper {
+				transform: scale(0.7) translate(-71%, -71%);
+			}
+		}
 
-.first, .second{
-	position: relative;
-}		
-.first .wrapper{
-	left: 50%;
-}		
-.second .wrapper{
-	right:50%;
-}
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  border-radius: 50%;
-  position: absolute;
-  top: -218px;
-  transform: rotate(180deg) scale(0.3);
-  z-index: -1;
-}
-@media (max-width: 600px) {
-  .wrapper {
-    transform: scale(0.7) translate(-71%, -71%);
-  }
-}
+		.alarm {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			width: 400px;
+			height: 400px;
+			position: relative;
+			overflow: hidden;
+		}
+		.alarm .bulb {
+			width: 180px;
+			height: 180px;
+			border-top-left-radius: 100px;
+			border-top-right-radius: 100px;
+			background-color: #ff5722;
+			position: relative;
+		}
+		.alarm .bulb:after {
+			content: "";
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			border: 10px solid transparent;
+			border-top-color: rgba(255, 255, 255, 0.2);
+			top: 15%;
+			left: 50%;
+			transform: rotate(45deg);
+			border-radius: 50%;
+		}
+		.alarm .base {
+			width: 260px;
+			height: 40px;
+			border-top-left-radius: 50px;
+			border-top-right-radius: 50px;
+			margin-top: -4px;
+			background-color: #555;
+		}
+		.alarm .bulb, .alarm .base {
+			border: 5px solid #000000;
+			box-shadow: inset 15px 5px 0px 1px rgba(0, 0, 0, 0.15);
+		}
+		.alarm .light {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0%;
+		}
+		.alarm .light span {
+			position: absolute;
+			width: 0px;
+			height: 5px;
+			background-color: #e04311;
+			border-radius: 10px;
+		}
+		.alarm .light span:nth-child(1) {
+			left: 10%;
+			top: 50%;
+			transform-origin: right;
+		}
+		.alarm .light span:nth-child(2) {
+			transform: rotate(35deg);
+			left: 15%;
+			top: 25%;
+			transform-origin: right;
+		}
+		.alarm .light span:nth-child(3) {
+			transform: translate(-50%, 0%) rotate(90deg);
+			left: 44%;
+			top: 15%;
+			transform-origin: right;
+		}
+		.alarm .light span:nth-child(4) {
+			transform: rotate(145deg);
+			right: 30%;
+			top: 25%;
+			transform-origin: right;
+		}
+		.alarm .light span:nth-child(5) {
+			right: 10%;
+			top: 50%;
+			transform-origin: left;
+		}
+		.alarm .bulb {
+			animation: bulb 1s ease infinite;
+		}
+		.alarm .light span {
+			width: 50px;
+		}
+		.alarm .light span:nth-child(1) {
+			animation: light1 1s ease infinite;
+		}
+		.alarm .light span:nth-child(2) {
+			  animation: light2 1s ease infinite;
+		}
+		.alarm .light span:nth-child(3) {
+			  animation: light3 1s ease infinite;
+		}
+		.alarm .light span:nth-child(4) {
+			  animation: light4 1s ease infinite;
+		}
+		.alarm .light span:nth-child(5) {
+			  animation: light1 1s ease infinite;
+		}
 
-.alarm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 400px;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-}
-.alarm .bulb {
-  width: 180px;
-  height: 180px;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  background-color: #ff5722;
-  position: relative;
-}
-.alarm .bulb:after {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border: 10px solid transparent;
-  border-top-color: rgba(255, 255, 255, 0.2);
-  top: 15%;
-  left: 50%;
-  transform: rotate(45deg);
-  border-radius: 50%;
-}
-.alarm .base {
-  width: 260px;
-  height: 40px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  margin-top: -4px;
-  background-color: #555;
-}
-.alarm .bulb,
-.alarm .base {
-  border: 5px solid #000000;
-  box-shadow: inset 15px 5px 0px 1px rgba(0, 0, 0, 0.15);
-}
-.alarm .light {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0%;
-}
-.alarm .light span {
-  position: absolute;
-  width: 0px;
-  height: 5px;
-  background-color: #e04311;
-  border-radius: 10px;
-}
-.alarm .light span:nth-child(1) {
-  left: 10%;
-  top: 50%;
-  transform-origin: right;
-}
-.alarm .light span:nth-child(2) {
-  transform: rotate(35deg);
-  left: 15%;
-  top: 25%;
-  transform-origin: right;
-}
-.alarm .light span:nth-child(3) {
-  transform: translate(-50%, 0%) rotate(90deg);
-  left: 44%;
-  top: 15%;
-  transform-origin: right;
-}
-.alarm .light span:nth-child(4) {
-  transform: rotate(145deg);
-  right: 30%;
-  top: 25%;
-  transform-origin: right;
-}
-.alarm .light span:nth-child(5) {
-  right: 10%;
-  top: 50%;
-  transform-origin: left;
-}
-.alarm .bulb {
-  animation: bulb 1s ease infinite;
-}
-.alarm .light span {
-  width: 50px;
-}
-.alarm .light span:nth-child(1) {
-  animation: light1 1s ease infinite;
-}
-.alarm .light span:nth-child(2) {
-  animation: light2 1s ease infinite;
-}
-.alarm .light span:nth-child(3) {
-  animation: light3 1s ease infinite;
-}
-.alarm .light span:nth-child(4) {
-  animation: light4 1s ease infinite;
-}
-.alarm .light span:nth-child(5) {
-  animation: light1 1s ease infinite;
-}
-
-@keyframes light1 {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-@keyframes light2 {
-  0% {
-    transform: scale(0) rotate(35deg);
-  }
-  50% {
-    transform: scale(1) rotate(35deg);
-  }
-  100% {
-    transform: scale(0) rotate(35deg);
-  }
-}
-@keyframes light3 {
-  0% {
-    transform: scaleY(0) translate(-50%, 0%) rotate(90deg);
-    height: 0px;
-  }
-  50% {
-    transform: scaleY(1) translate(-50%, 0%) rotate(90deg);
-    height: 5px;
-  }
-  100% {
-    transform: scaleY(0) translate(-50%, 0%) rotate(90deg);
-    height: 0px;
-  }
-}
-@keyframes light4 {
-  0% {
-    transform: scale(0) rotate(145deg);
-  }
-  50% {
-    transform: scale(1) rotate(145deg);
-  }
-  100% {
-    transform: scale(0) rotate(145deg);
-  }
-}
-@keyframes bulb {
-  0% {
-    background-color: #500;
-    box-shadow: inset 15px 5px 0px 1px rgba(0, 0, 0, 0.15), 0px -10px 30px rgba(255, 87, 34, 0);
-  }
-  50% {
-    background-color: #f11;
-    box-shadow: inset 15px 5px 0px 1px rgba(0, 0, 0, 0.15), 0px -10px 30px rgba(255, 87, 34, 0.5);
-  }
-  100% {
-    background-color: #500;
-    box-shadow: inset 15px 5px 0px 1px rgba(0, 0, 0, 0.15), 0px -10px 30px rgba(255, 87, 34, 0);
-  }
-}
+		@keyframes light1 {
+			0% {
+				transform: scale(0);
+			}
+			50% {
+				transform: scale(1);
+			}
+			100% {
+				transform: scale(0);
+			}
+		}
+		@keyframes light2 {
+			0% {
+				transform: scale(0) rotate(35deg);
+			}
+			50% {
+				transform: scale(1) rotate(35deg);
+			}
+			100% {
+				transform: scale(0) rotate(35deg);
+			}
+		}
+		@keyframes light3 {
+			0% {
+				transform: scaleY(0) translate(-50%, 0%) rotate(90deg);
+				height: 0px;
+			}
+			50% {
+				transform: scaleY(1) translate(-50%, 0%) rotate(90deg);
+				height: 5px;
+			}
+			100% {
+				transform: scaleY(0) translate(-50%, 0%) rotate(90deg);
+				height: 0px;
+			}
+		}
+		@keyframes light4 {
+			0% {
+				transform: scale(0) rotate(145deg);
+			}
+			50% {
+				transform: scale(1) rotate(145deg);
+			}
+			100% {
+				transform: scale(0) rotate(145deg);
+			}
+		}
+		@keyframes bulb {
+			0% {
+				background-color: #500;
+				box-shadow: inset 15px 5px 0px 1px rgba(0, 0, 0, 0.15), 0px -10px 30px rgba(255, 87, 34, 0);
+			}
+			50% {
+				background-color: #f11;
+				box-shadow: inset 15px 5px 0px 1px rgba(0, 0, 0, 0.15), 0px -10px 30px rgba(255, 87, 34, 0.5);
+			}
+			100% {
+				background-color: #500;
+				box-shadow: inset 15px 5px 0px 1px rgba(0, 0, 0, 0.15), 0px -10px 30px rgba(255, 87, 34, 0);
+			}
+		}
 	</style>
 </head>
 <body onload="draw();">
-<div id="cover"></div>
-<table class="slimes" id="slimes" style="">
-	<tr>
-		<td class="first">
-			<?
-			if($copium_overdose){
-			?>
-			<div class="wrapper">
-			  <div class="alarm">
-				<div class="light">
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				  <span></span>
+	<div id="cover"></div>
+	<table class="slimes" id="slimes" style="">
+		<tr>
+			<td class="first">
+				<?			
+				if($copium_overdose){
+					echo alarm_html();
+				} ?>
+				<div class="slime">
+					<img src="<?=($copium_overdose)? '//enviosity.com/assets/COPIUM.png': '//enviosity.com/assets/slime.png';?>" style="width:150px">
 				</div>
-				<div class="bulb">
-				  <div class="eyes">
-					<span></span><span></span>
-				  </div>
-				  <div class="mouth"></div>
+			</td>
+			<td style="width:150px;">
+				<div>
+					<a style="display:none">ENVI DonoWall Clap</a>
 				</div>
-				<div class="base"></div>
-			  </div>
-			</div>
-			<? } ?>
-			<div class="slime">
-				<img src="<?=($copium_overdose)? '//enviosity.com/assets/COPIUM.png': '//enviosity.com/assets/slime.png';?>" style="width:150px">
-			</div>
-		</td>
-		<td style="width:150px;">
-			<div>
-				<a style="display:none">DONOWALL ANDY</a>
-			</div>
-		</td>
-		<td class="second">
-			<?			
-			if($copium_overdose){
-			?>
-			<div class="wrapper">
-			  <div class="alarm">
-				<div class="light">
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				  <span></span>
+			</td>
+			<td class="second">
+				<?			
+				if($copium_overdose){
+					echo alarm_html();
+				} ?>
+				<div class="slime">
+					<img src="<?=($copium_overdose)? '//enviosity.com/assets/COPIUM.png': '//enviosity.com/assets/slime.png';?>" style="width:150px">
 				</div>
-				<div class="bulb">
-				  <div class="eyes">
-					<span></span><span></span>
-				  </div>
-				  <div class="mouth"></div>
-				</div>
-				<div class="base"></div>
-			  </div>
-			</div>
-			<? } ?>
-			<div class="slime">
-				<img src="<?=($copium_overdose)? '//enviosity.com/assets/COPIUM.png': '//enviosity.com/assets/slime.png';?>" style="width:150px">
-			</div>
-		</td>
-	</tr>
-</table>
-<canvas id="canvas" width="100%" height="100%"></canvas>
+			</td>
+		</tr>
+	</table>
+	<canvas id="canvas" width="100%" height="100%"></canvas>
 	<div class="container">
 		<div id="presentation"><h1 class="banner"><?=$phrase;?></h1></div>
 		<div class="main" id="main" style="display:none;">
@@ -671,74 +635,74 @@ switch($names[$count]){
 				<br>
 				<br>
 				<div class="credits">
-				<table align="center">
-					<tr>
-						<td colspan=5 style="text-align:center"><a style="font-size:12px">VOD CHAT EXPERIENCE SOON <img src="//enviosity.com/assets/COPIUM.png" height="20" width="20" alt="COPIUM" title="COPIUM"></a><br><div style="display:none" id="slime_warning"><a style="font-size:11px">slimes are resource intence!</a> <a style="font-size:10px; text-decoration:underline; cursor:pointer" onclick='enable_slimes()'>Enable them</a></div></td>
-					</tr>
-				</table>
-				
-				Images by @fishywishes! Site made by <a>TFBosoN</a> with <?=($copium_overdose)? '<img src="//enviosity.com/assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">': '<img src="//enviosity.com/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?> | <a href='https://github.com/TFBosoN/enviosity'>Contribute</a></div>
+					<table align="center">
+						<tr>
+							<td colspan=5 style="text-align:center"><a style="font-size:12px">VOD CHAT EXPERIENCE SOON <img src="//enviosity.com/assets/COPIUM.png" height="20" width="20" alt="COPIUM" title="COPIUM"></a><br><div style="display:none" id="slime_warning"><a style="font-size:11px">slimes are resource intence!</a> <a style="font-size:10px; text-decoration:underline; cursor:pointer" onclick='enable_slimes()'>Enable them</a></div></td>
+						</tr>
+					</table>
+					Images by @fishywishes! Site made by <a>TFBosoN</a> with <?=($copium_overdose)? '<img src="//enviosity.com/assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">': '<img src="//enviosity.com/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?> | <a href='https://github.com/TFBosoN/enviosity'>Contribute</a>
+				</div>
 				<div id="popup" onclick="stop();" style="display:none"></div>
 			</div>
 		</div>
 	</div>
-<script>
+	<script>
 
-//Close load screen on timeout
-function close_p(){
-	document.getElementById("main").style.display = 'block';
-	document.getElementById("presentation").style.opacity = '0';	
-	console.log("closed");
-	document.getElementById("main").style.opacity = '1';	
-	setTimeout(() => { document.getElementById("presentation").style.display = 'none';}, 1500);
-	//Disabling slimes after some time because they are resource intence
-	setTimeout(() => { document.getElementById("slimes").style.opacity = '0';}, 20000);
-	setTimeout(() => { document.getElementById("slimes").style.display = 'none';}, 22000);
-	//Showing slime warning after
-	setTimeout(() => { document.getElementById("slime_warning").style.display = 'block';}, 22000);
-}
-document.addEventListener("DOMContentLoaded", function() {
-	setTimeout(() => { close_p(); }, 500);
-});
-
-//After disabling slimes
-function enable_slimes(){
-	document.getElementById("slimes").style.opacity = '1';
-	document.getElementById("slimes").style.display = 'block';	
-}
-
-//Background
-data = [
-<?php
-foreach($bg_images->data as $dat){
-	if(!empty($dat->thumbnail_url)){
-		$dat->thumbnail_url = str_replace("%{width}", $imgh/9*16, $dat->thumbnail_url);
-		$dat->thumbnail_url = str_replace("%{height}", $imgh, $dat->thumbnail_url);
-		echo '"'.$dat->thumbnail_url.'",';
+	//Close load screen on timeout
+	function close_p(){
+		document.getElementById("main").style.display = 'block';
+		document.getElementById("presentation").style.opacity = '0';	
+		console.log("closed");
+		document.getElementById("main").style.opacity = '1';	
+		setTimeout(() => { document.getElementById("presentation").style.display = 'none';}, 500);
+		//Disabling slimes after some time because they are resource intence
+		setTimeout(() => { document.getElementById("slimes").style.opacity = '0';}, 20000);
+		setTimeout(() => { document.getElementById("slimes").style.display = 'none';}, 22000);
+		//Showing slime warning after
+		setTimeout(() => { document.getElementById("slime_warning").style.display = 'block';}, 22000);
 	}
-}
-?>
-];
-function draw() {
-  var k = 0;
-  var imgwidth = <?=$imgh/9*16;?>;
-  var imgheight = <?=$imgh;?>;
-  var imgh = 8;
-  var ctx = document.getElementById('canvas').getContext('2d');
-  data.forEach(function(item, i , arr){
-	  var img = new Image();
-	  img.onload = function() {
-		  ctx.drawImage(img, (k*imgwidth)%(imgh*imgwidth), parseInt(k/imgh)*imgheight, imgwidth, imgheight);
-		  console.log("loaded "+item);
-		  k=k+1;
-	  }
-	  img.src = item;
-  });
+	document.addEventListener("DOMContentLoaded", function() {
+		setTimeout(() => { close_p(); }, 500);
+	});
 
-}
-canvas = document.getElementById("canvas");
-canvas.width = document.body.clientWidth*3;
-canvas.height = document.body.clientHeight*3;
-</script>
+	//After disabling slimes
+	function enable_slimes(){
+		document.getElementById("slimes").style.opacity = '1';
+		document.getElementById("slimes").style.display = 'block';	
+	}
+
+	//Background
+	data = [
+	<?php
+	foreach($bg_images->data as $dat){
+		if(!empty($dat->thumbnail_url)){
+			$dat->thumbnail_url = str_replace("%{width}", $imgh/9*16, $dat->thumbnail_url);
+			$dat->thumbnail_url = str_replace("%{height}", $imgh, $dat->thumbnail_url);
+			echo '"'.$dat->thumbnail_url.'",';
+		}
+	}
+	?>
+	];
+	function draw() {
+	  var k = 0;
+	  var imgwidth = <?=$imgh/9*16;?>;
+	  var imgheight = <?=$imgh;?>;
+	  var imgh = 8;
+	  var ctx = document.getElementById('canvas').getContext('2d');
+	  data.forEach(function(item, i , arr){
+		  var img = new Image();
+		  img.onload = function() {
+			  ctx.drawImage(img, (k*imgwidth)%(imgh*imgwidth), parseInt(k/imgh)*imgheight, imgwidth, imgheight);
+			  console.log("loaded "+item);
+			  k=k+1;
+		  }
+		  img.src = item;
+	  });
+
+	}
+	canvas = document.getElementById("canvas");
+	canvas.width = document.body.clientWidth*3;
+	canvas.height = document.body.clientHeight*3;
+	</script>
 </body>
 </html>
