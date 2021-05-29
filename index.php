@@ -92,8 +92,8 @@ switch($names[$count]){
 			color: white;
 		}
 		@font-face {
-			font-family: 'Segoe Print’;
-			src: url(‘//enviosity.com/assets/segoepr.ttf’);  
+			font-family: 'Segoe Printâ€™;
+			src: url(â€˜//enviosity.com/assets/segoepr.ttfâ€™);  
 		}
 		body{
 			margin:0;
@@ -677,7 +677,7 @@ switch($names[$count]){
 					</tr>
 				</table>
 				
-				Images by @fishywishes! Site made by <a>TFBosoN</a> with <?=($copium_overdose)? '<img src="//enviosity.com/assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">': '<img src="//enviosity.com/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?></div>
+				Images by @fishywishes! Site made by <a>TFBosoN</a> with <?=($copium_overdose)? '<img src="//enviosity.com/assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">': '<img src="//enviosity.com/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?> | <a href='https://github.com/TFBosoN/enviosity'>Contribute</a></div>
 				<div id="popup" onclick="stop();" style="display:none"></div>
 			</div>
 		</div>
