@@ -243,6 +243,7 @@ switch($names[$count]){
 			font-size:12px;
 			opacity: 0.9;
 			color: lightgray;
+			margin-bottom: 20px;
 		}
 		.credits a{
 			color: lightgray;
