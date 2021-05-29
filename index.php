@@ -640,7 +640,7 @@ switch($names[$count]){
 							<td style="text-align:center"><div style="display:none" id="slime_warning"><a style="font-size:11px">slimes are resource intence!</a> <a style="font-size:10px; text-decoration:underline; cursor:pointer" onclick='enable_slimes()'>Enable them</a></div></td>
 						</tr>
 						<tr>
-							<td style="text-align:center">Images by @fishywishes! Site made by <a>TFBosoN</a> with <?=($copium_overdose)? '<img src="//enviosity.com/assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">': '<img src="//enviosity.com/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?> | <a href='https://github.com/TFBosoN/enviosity'>Contribute</a></td>
+							<td style="text-align:center">Images by @fishywishes! | Site by <a>TFBosoN</a> w/ <?=($copium_overdose)? '<img src="//enviosity.com/assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">': '<img src="//enviosity.com/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?> | <a href='https://github.com/TFBosoN/enviosity'>Contribute</a></td>
 						</tr>
 					</table>
 				</div>
