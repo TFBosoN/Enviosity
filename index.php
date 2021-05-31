@@ -97,7 +97,7 @@ switch($names){
 		$alarm_icon_s = '<img src="//enviosity.com/assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">';
 		$alarm_img = '//enviosity.com/assets/COPIUM.png';
 		$alarm_name = "COPIUM";
-		$alaem_msg = "WARNING! COPIUM OVERDOSE!";
+		$alarm_msg = "WARNING! COPIUM OVERDOSE!";
 	break;
 	case "Hackiosity":
 		$avatar = $alarm_img = "//enviosity.com/assets/HACKERMANS.gif";
@@ -107,7 +107,7 @@ switch($names){
 		$alarm_icon_s = '<img src="//enviosity.com/assets/HACKERMANS.gif" width="18" alt="HACKERMANS" title="HACKERMANS">';
 		$alarm_img = '//enviosity.com/assets/HACKERMANS.gif';
 		$alarm_name = "HACKERMANS";
-		$alaem_msg = "WARNING! SYSTEM SHUTDOWN!";
+		$alarm_msg = 'WARNING! SYSTEM SHUTDOWN!<br><br><div class="progress"><div class="bar dots"></div></div>';
 	break;
 }
 
@@ -268,6 +268,20 @@ switch($names){
 	];
 	var imgwidth = <?=$imgh/9*16;?>;
 	var imgheight = <?=$imgh;?>;
+	const bars = document.querySelectorAll('.bar');
+const progress = document.querySelectorAll('.progress');
+
+bars.forEach((bar, index) => {
+  const randomWidth = Math.floor((Math.random() * 65) + 10);
+  bar.style.width = `${randomWidth}%`;
+
+  progress[index].addEventListener('mouseover', () => {
+    const randomTiming = Math.floor((Math.random() * 2) + 2);
+    console.log(randomTiming);
+    bar.style.transitionDuration = `${randomTiming}s`;
+    bar.style.width = '100%';
+  });
+})
 	</script>
 	<script src='//enviosity.com/assets/main.js'></script>
 </body>

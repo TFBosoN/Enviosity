@@ -439,3 +439,14 @@ canvas {
 		box-shadow: inset 15px 5px 0px 1px rgba(0, 0, 0, 0.15), 0px -10px 30px rgba(255, 87, 34, 0);
 	}
 }
+.bar {
+    border-radius: 20px;
+    width: 0%;
+    height: 100%;
+    transition: width;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.36,.55,.63,.48);
+}
+.dot {
+    background-color: #DFDBE5;
+}
