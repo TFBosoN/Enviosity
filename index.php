@@ -110,7 +110,7 @@ switch($names){
 		$alarm_icon_s = '<img src="//enviosity.com/assets/HACKERMANS.gif" width="18" alt="HACKERMANS" title="HACKERMANS">';
 		$alarm_img = '//enviosity.com/assets/HACKERMANS.gif';
 		$alarm_name = "HACKERMANS";
-		$alarm_msg = 'WARNING! SYSTEM SHUTDOWN!<br><br><a id="hack_text">Downloading</a><div class="progress"><div class="bar"></div></div>';
+		$alarm_msg = 'WARNING! SYSTEM OVERRIDE!<br><br><a id="hack_text">Hacking in progress..</a><div class="progress"><div class="bar"></div></div>';
 	break;
 }
 
@@ -272,12 +272,12 @@ switch($names){
 	var imgwidth = <?=$imgh/9*16;?>;
 	var imgheight = <?=$imgh;?>;
 	function randomString(){
-		text = ["Downloading secret porn stash", "Uploading virus", "Installing backdoor", "Logging passwords"];
+		text = ["DOWNLOADING SECRET PORN STASH..", "UPLOADING VIRUSES..", "INSTALLING BACKDOOR..", "LOGGING PASSWORDS..", "OVERRIDING SECURITY PROTOCOL..", "PENETRATING THE SYSTEM..", "HACKING THE IP-ADDRESS..", "MINING DOGE-COINS..", "GETTING SATELLITE DATA..", "INSERTING KEYLOGGER.."];
 		return text[Math.floor(Math.random() * text.length)];
 	}
 	setInterval(function(){
 		document.getElementById("hack_text").innerHTML = randomString();
-	},4000);	
+	},2680);	
 	</script>
 	<script src='//enviosity.com/assets/main.js'></script>
 </body>

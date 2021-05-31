@@ -465,7 +465,7 @@ canvas {
 }
 
 .bar {
-  animation: load 4s normal infinite;
+  animation: load 2.7s normal infinite;
   box-shadow: 0 10px 40px -10px #2f2;
   border-radius: 100px;
   background: #2f2;
