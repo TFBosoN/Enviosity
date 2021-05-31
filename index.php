@@ -279,8 +279,8 @@ switch($names){
 		return getRandomInt(len(text));
 	}
 	setInterval(function(){
-		document.getElementById("hack_text").innerHTML = randomString(Length);
-	},5000);	
+		document.getElementById("hack_text").innerHTML = randomString();
+	},4000);	
 	</script>
 	<script src='//enviosity.com/assets/main.js'></script>
 </body>
