@@ -2,6 +2,10 @@ What is this?
 =================
 Community project for Enviosity. Social links can be found on the website.
 
+TODO
+-----------------
+- Upload assets
+
 Want to contribute?
 -----------------
 Create an issue or fork me :)
