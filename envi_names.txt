@@ -81,6 +81,11 @@ Mr. Stove
 Mr. Watermelon
 Mr. Windmill
 Mr. Window Cleaner
+Mr. Invention
+Mr. Inventory
+Mr. Entourage
+Mr. Establishment
+Mr. Endocrine System
 
 #Actially good
 
