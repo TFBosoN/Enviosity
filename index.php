@@ -273,7 +273,7 @@ switch($names){
 	var imgheight = <?=$imgh;?>;
 	function randomString(){
 		text = ["Downloading secret porn stash", "Uploading virus", "Installing backdoor", "Logging passwords"];
-		return Math.floor(text.random() * text.length);
+		return Math.floor(Math.random() * text.length);
 	}
 	setInterval(function(){
 		document.getElementById("hack_text").innerHTML = randomString();
