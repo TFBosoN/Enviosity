@@ -110,7 +110,7 @@ switch($names){
 		$alarm_icon_s = '<img src="//enviosity.com/assets/HACKERMANS.gif" width="18" alt="HACKERMANS" title="HACKERMANS">';
 		$alarm_img = '//enviosity.com/assets/HACKERMANS.gif';
 		$alarm_name = "HACKERMANS";
-		$alarm_msg = 'WARNING! SYSTEM SHUTDOWN!<br><br><div class="progress"><div class="bar dots"></div></div>';
+		$alarm_msg = 'WARNING! SYSTEM SHUTDOWN!<br><br><a style="position:absolute">Downloading</a><div class="progress"><div class="bar dots"></div></div>';
 	break;
 }
 
