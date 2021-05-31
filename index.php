@@ -6,15 +6,25 @@ $imgh = 360;
 $zoom = 2;
 
 //COPIUM 
-$copium_overdose = false;
-$copium_icon = '<img src="//enviosity.com/assets/COPIUM.png" width="64" alt="COPIUM" title="COPIUM">';
+$alarm = false;
 function alarm_html(){
 	return '<div class="wrapper"><div class="alarm"><div class="light"><span></span><span></span><span></span><span></span><span></span></div><div class="bulb"><div class="eyes"><span></span><span></span></div><div class="mouth"></div></div><div class="base"></div></div></div>';
 }
 
-//RNG names
-$names = explode("\n", file_get_contents("./envi_names.txt"));
-$count = rand(0,count($names)-1);
+function empty_and_comments($var){
+	return (empty($var) || str_starts_with($var, "#"));
+}
+
+/*/
+	RNG names
+	Splitting into categories and choosing random for more variety
+/*/
+$promote_name = "Hackiosity";
+$categories = explode("#", file_get_contents("./envi_names.txt"));
+$rcat = rand(0, count($categories)-1); //Choosing rand category
+$names = array_filter(explode("\n", $categories[$rcat]));
+$count = rand(1,count($names)-1);
+$names = (rand(0,1))? $names : $promote_name; //50:50
 
 //RNG phrases on load screen
 $phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--Barack Obama",'<img src="//enviosity.com/assets/enviLove.png" width="160" alt="enviLove" title="enviLove">', '<img src="//enviosity.com/assets/slime.png" width="185" alt="slime" title="slime">', '<img src="//enviosity.com/assets/enviAyaya.png" width="185" alt="enviAyaya" title="enviAyaya">');
@@ -61,8 +71,13 @@ switch($names[$count]){
 	case "Coderviosity":
 		$names[$count] = "<a href='//enviosity.com/coderviosity.html'>".$names[$count]."</a>";
 	break;
+	case "Pepegiosity":
+		$names[$count] .= " <img src='//enviosity.com/assets/Pepega.png' width='32' alt='Pepega' title='Pepega'><img src='//enviosity.com/assets/Clap.gif' width='32' alt='Clap' title='Clap'>";
+	break;
 	case "Daddyosity":
 	case "Daddy Envi":
+	case "Boobiosity":
+	case "Mr. Polestripper":
 		$names[$count] .= " <img src='//enviosity.com/assets/enviGasm.png' width='32' alt='enviGasm' title='enviGasm'>";
 	break;
 	case "Dylan":
@@ -70,13 +85,31 @@ switch($names[$count]){
 	case "Dylanosity":
 		$avatar = "//enviosity.com/assets/dylan.png";
 	break;
+	case "Mr. Fishy":
+	case "Fishywishes":
+		$avatar = "//enviosity.com/assets/fishy.png";
+		$phrase = "<img src='//enviosity.com/assets/AYAYA.png' width='160' alt='AYAYA' title='AYAYA'><img src='//enviosity.com/assets/Clap.gif' width='32' alt='Clap' title='Clap'>";
+	break;
 	case "Eulanosity":
 		$avatar = "//enviosity.com/assets/eulaviosity.png";
 	break;
 	case "Copiosity":
 		$avatar = "https://i.imgur.com/wtaJ1zB.png";
-		$copium_overdose = true;
+		$alarm = true;
 		$phrase = '<img src="//enviosity.com/assets/COPIUM.png" width="160" alt="COPIUM" title="COPIUM">';
+		$alarm_icon = '<img src="//enviosity.com/assets/COPIUM.png" width="64" alt="COPIUM" title="COPIUM">';
+		$alarm_icon_s = '<img src="//enviosity.com/assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">';
+		$alarm_img = '//enviosity.com/assets/COPIUM.png';
+		$alarm_name = "COPIUM";
+	break;
+	case "Hackiosity":
+		$avatar = $alarm_img = "//enviosity.com/assets/HACKERMANS.png";
+		$alarm = true;
+		$phrase = '<img src="//enviosity.com/assets/HACKERMANS.gif" width="160" alt="HACKERMANS" title="HACKERMANS">';
+		$alarm_icon = '<img src="//enviosity.com/assets/HACKERMANS.gif" width="64" alt="HACKERMANS" title="HACKERMANS">';
+		$alarm_icon_s = '<img src="//enviosity.com/assets/HACKERMANS.gif" width="18" alt="HACKERMANS" title="HACKERMANS">';
+		$alarm_img = '//enviosity.com/assets/HACKERMANS.gif';
+		$alarm_name = "HACKERMANS";
 	break;
 }
 
@@ -153,11 +186,11 @@ switch($names[$count]){
 		<tr>
 			<td class="first">
 				<?			
-				if($copium_overdose){
+				if($alarm){
 					echo alarm_html();
 				} ?>
 				<div class="slime">
-					<img src="<?=($copium_overdose)? '//enviosity.com/assets/COPIUM.png': '//enviosity.com/assets/slime.png';?>" style="width:150px">
+					<img src="<?=($alarm)? $alarm_img: '//enviosity.com/assets/slime.png';?>" style="width:150px">
 				</div>
 			</td>
 			<td style="width:150px;">
@@ -167,11 +200,11 @@ switch($names[$count]){
 			</td>
 			<td class="second">
 				<?			
-				if($copium_overdose){
+				if($alarm){
 					echo alarm_html();
 				} ?>
 				<div class="slime">
-					<img src="<?=($copium_overdose)? '//enviosity.com/assets/COPIUM.png': '//enviosity.com/assets/slime.png';?>" style="width:150px">
+					<img src="<?=($alarm)? $alarm_img : '//enviosity.com/assets/slime.png';?>" style="width:150px">
 				</div>
 			</td>
 		</tr>
@@ -183,23 +216,23 @@ switch($names[$count]){
 			<a class="logo"><div></div></a>
 			<div class="AYAYA_social">
 				<h1><?=$names[$count];?></h1>
-				<a>0 days without <?=($copium_overdose)?"COPIUM":"streaming!";?></a><br>
+				<a>0 days without <?=($alarm)? $alarm_name : "streaming!";?></a><br>
 				<a>GFUEL use code "ENVIOSITY" for 10% off!</a>
-				<?=($copium_overdose)?"<br><br><a class='red'>WARNING! COPIUM OVERDOSE!</a>":"";?>
+				<?=($alarm)?"<br><br><a class='red'>WARNING! COPIUM OVERDOSE!</a>":"";?>
 				<br><br>
 				<div class="lines">
-					<span><a class="youtube" href="https://youtube.com/Enviosity" target="_blank"><?=($copium_overdose)? $copium_icon: '<i class="fab fa-youtube"></i>';?><br><b>Youtube</b></a></span>
-					<span><a class="twitch" href="https://www.twitch.tv/enviosity" target="_blank"><?=($copium_overdose)? $copium_icon: '<i class="fab fa-twitch"></i>';?><br><b>Twitch</b></a></span>
-					<span><a class="youtube" href="https://www.youtube.com/channel/UCc-msH2ut_AGNtkZhLxOLew" target="_blank"><?=($copium_overdose)? $copium_icon: '<i class="fab fa-youtube"></i>';?><br><b>VODs</b></a></span>
+					<span><a class="youtube" href="https://youtube.com/Enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-youtube"></i>';?><br><b>Youtube</b></a></span>
+					<span><a class="twitch" href="https://www.twitch.tv/enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-twitch"></i>';?><br><b>Twitch</b></a></span>
+					<span><a class="youtube" href="https://www.youtube.com/channel/UCc-msH2ut_AGNtkZhLxOLew" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-youtube"></i>';?><br><b>VODs</b></a></span>
 				</div>
 				<div class="lines">
-					<span><a class="twittor" href="https://twitter.com/Enviosity" target="_blank"><?=($copium_overdose)? $copium_icon: '<i class="fab fa-twitter"></i>';?><br><b>Twitter</b></a></span>
-					<span><a class="tiktok" href="https://www.tiktok.com/@enviosityclips" target="_blank"><?=($copium_overdose)? $copium_icon: '<i class="fab fa-tiktok"></i>';?><br><b>Tiktok</b></a></span>
-					<span><a class="instogram" href="https://instagram.com/enviosity/" target="_blank"><?=($copium_overdose)? $copium_icon: '<i class="fab fa-instagram"></i>';?><br><b>Instagram</b></a></span>
+					<span><a class="twittor" href="https://twitter.com/Enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-twitter"></i>';?><br><b>Twitter</b></a></span>
+					<span><a class="tiktok" href="https://www.tiktok.com/@enviosityclips" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-tiktok"></i>';?><br><b>Tiktok</b></a></span>
+					<span><a class="instogram" href="https://instagram.com/enviosity/" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-instagram"></i>';?><br><b>Instagram</b></a></span>
 				</div>
 				<div class="lines">
-					<span><a class="discord" href="https://discord.gg/enviosity" target="_blank"><?=($copium_overdose)? $copium_icon: '<i class="fab fa-discord"></i>';?><br><b>Discord</b></a></span>
-					<span><a class="instogram" href="https://merch.streamelements.com/enviosity" target="_blank"><?=($copium_overdose)? $copium_icon: '<i class="fas fa-tshirt"></i>';?><br><b>Merch</b></a></span>
+					<span><a class="discord" href="https://discord.gg/enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-discord"></i>';?><br><b>Discord</b></a></span>
+					<span><a class="instogram" href="https://merch.streamelements.com/enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fas fa-tshirt"></i>';?><br><b>Merch</b></a></span>
 				</div>
 				<br>
 				<br>
@@ -211,7 +244,7 @@ switch($names[$count]){
 							<td style="text-align:center"><div style="display:none" id="slime_warning"><a style="font-size:11px">slimes are resource intence!</a> <a style="font-size:10px; text-decoration:underline; cursor:pointer" onclick='enable_slimes()'>Enable them</a></div></td>
 						</tr>
 						<tr>
-							<td style="text-align:center">Images by <a>@fishywishes!</a> | Site by <a>@TFBosoN</a> w/ <?=($copium_overdose)? '<img src="//enviosity.com/assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">': '<img src="//enviosity.com/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?> | <a href='https://github.com/TFBosoN/enviosity' style="text-decoration:none">GITHUB</a></td>
+							<td style="text-align:center">Images by <a>@fishywishes!</a> | Site by <a>@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="//enviosity.com/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?> | <a href='https://github.com/TFBosoN/enviosity' style="text-decoration:none">GITHUB</a></td>
 						</tr>
 					</table>
 				</div>
