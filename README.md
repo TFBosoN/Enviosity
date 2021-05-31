@@ -4,7 +4,7 @@ Community project for Enviosity. Social links can be found on the website.
 
 TODO
 -----------------
-- Upload assets
+- Twitch VOD chat experience project
 
 Want to contribute?
 -----------------
