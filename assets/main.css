@@ -440,21 +440,33 @@ canvas {
 	}
 }
 
+#hack_text{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 99;
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+	text-shadow: 1px 1px 2px white, 0 0 1em green;
+}
 .progress {
-  background: rgba(20,255,20,0.1);
-  justify-content: flex-start;
-  border-radius: 100px;
-  align-items: center;
-  position: relative;
-  padding: 0 5px;
-  display: flex;
-  height: 40px;
-  width: 500px;
+	background: rgba(20,255,20,0.1);
+	justify-content: flex-start;
+	border-radius: 100px;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	padding: 0 5px;
+	display: flex;
+	height: 40px;
+	width: 500px;
 }
 
 .bar {
   animation: load 4s normal infinite;
-  box-shadow: 0 10px 40px -10px #fff;
+  box-shadow: 0 10px 40px -10px #2f2;
   border-radius: 100px;
   background: #fff;
   height: 30px;
