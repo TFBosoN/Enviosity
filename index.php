@@ -11,20 +11,16 @@ function alarm_html(){
 	return '<div class="wrapper"><div class="alarm"><div class="light"><span></span><span></span><span></span><span></span><span></span></div><div class="bulb"><div class="eyes"><span></span><span></span></div><div class="mouth"></div></div><div class="base"></div></div></div>';
 }
 
-function empty_and_comments($var){
-	return (empty($var) || str_starts_with($var, "#"));
-}
-
 /*/
 	RNG names
 	Splitting into categories and choosing random for more variety
 /*/
 $promote_name = "Hackiosity";
 $categories = explode("#", file_get_contents("./envi_names.txt"));
-$rcat = rand(0, count($categories)-1); //Choosing rand category
+$rcat = rand(1, count($categories)-1); //Choosing rand category
 $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(1,count($names)-1);
-$names = (rand(0,1))? $names : $promote_name; //50:50
+$names = (rand(0,1))? $names[$count] : $promote_name; //50:50
 
 //RNG phrases on load screen
 $phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--Barack Obama",'<img src="//enviosity.com/assets/enviLove.png" width="160" alt="enviLove" title="enviLove">', '<img src="//enviosity.com/assets/slime.png" width="185" alt="slime" title="slime">', '<img src="//enviosity.com/assets/enviAyaya.png" width="185" alt="enviAyaya" title="enviAyaya">');
@@ -61,24 +57,24 @@ function get_movement(){
 
 //Some special site looks depending on name
 /*
-if($names[$count]=="Coderviosity" && !isset($_GET["real_site_pls"])){
+if($names=="Coderviosity" && !isset($_GET["real_site_pls"])){
 	die("<body><h1 style='color:red'>Hello!</h1><blockquote><br>&#171;I do know how to code&#187;</blockquote><figcaption>--Coderviosity, <cite>05/28/2021</cite><br><br><a href='?real_site_pls'>Real site please!</body>");
 }
 */
 
 $avatar = "//enviosity.com/assets/avatar.png";
-switch($names[$count]){
+switch($names){
 	case "Coderviosity":
-		$names[$count] = "<a href='//enviosity.com/coderviosity.html'>".$names[$count]."</a>";
+		$names = "<a href='//enviosity.com/coderviosity.html'>".$names."</a>";
 	break;
 	case "Pepegiosity":
-		$names[$count] .= " <img src='//enviosity.com/assets/Pepega.png' width='32' alt='Pepega' title='Pepega'><img src='//enviosity.com/assets/Clap.gif' width='32' alt='Clap' title='Clap'>";
+		$names .= " <img src='//enviosity.com/assets/Pepega.png' width='32' alt='Pepega' title='Pepega'><img src='//enviosity.com/assets/Clap.gif' width='32' alt='Clap' title='Clap'>";
 	break;
 	case "Daddyosity":
 	case "Daddy Envi":
 	case "Boobiosity":
 	case "Mr. Polestripper":
-		$names[$count] .= " <img src='//enviosity.com/assets/enviGasm.png' width='32' alt='enviGasm' title='enviGasm'>";
+		$names .= " <img src='//enviosity.com/assets/enviGasm.png' width='32' alt='enviGasm' title='enviGasm'>";
 	break;
 	case "Dylan":
 	case "Dylan the villain":
@@ -215,7 +211,7 @@ switch($names[$count]){
 		<div class="main" id="main" style="display:none;">
 			<a class="logo"><div></div></a>
 			<div class="AYAYA_social">
-				<h1><?=$names[$count];?></h1>
+				<h1><?=$names;?></h1>
 				<a>0 days without <?=($alarm)? $alarm_name : "streaming!";?></a><br>
 				<a>GFUEL use code "ENVIOSITY" for 10% off!</a>
 				<?=($alarm)?"<br><br><a class='red'>WARNING! COPIUM OVERDOSE!</a>":"";?>
