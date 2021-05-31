@@ -23,8 +23,6 @@ function enable_slimes(){
 //Background
 function draw() {
   var k = 0;
-  var imgwidth = <?=$imgh/9*16;?>;
-  var imgheight = <?=$imgh;?>;
   var imgh = 8;
   var ctx = document.getElementById('canvas').getContext('2d');
   data.forEach(function(item, i , arr){

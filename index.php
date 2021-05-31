@@ -235,6 +235,8 @@ switch($names[$count]){
 		}
 	?>
 	];
+	var imgwidth = <?=$imgh/9*16;?>;
+	var imgheight = <?=$imgh;?>;
 	</script>
 	<script src='//enviosity.com/assets/main.js'></script>
 </body>
