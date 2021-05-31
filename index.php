@@ -271,12 +271,9 @@ switch($names){
 	];
 	var imgwidth = <?=$imgh/9*16;?>;
 	var imgheight = <?=$imgh;?>;
-	function getRandomInt(max) {
-	  return Math.floor(Math.random() * max);
-	}
 	function randomString(){
 		text = ["Downloading secret porn stash", "Uploading virus", "Installing backdoor", "Logging passwords"];
-		return getRandomInt(text[text.length]);
+		return Math.floor(text.random() * text.length);
 	}
 	setInterval(function(){
 		document.getElementById("hack_text").innerHTML = randomString();
