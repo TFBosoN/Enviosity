@@ -271,13 +271,17 @@ switch($names){
 	];
 	var imgwidth = <?=$imgh/9*16;?>;
 	var imgheight = <?=$imgh;?>;
+	<?php
+	if($name == "Hackiosity"){
+	?>
 	function randomString(){
 		text = ["DOWNLOADING SECRET PORN STASH..", "UPLOADING VIRUSES..", "INSTALLING BACKDOOR..", "LOGGING PASSWORDS..", "OVERRIDING SECURITY PROTOCOL..", "PENETRATING THE SYSTEM..", "HACKING THE IP-ADDRESS..", "MINING DOGE-COINS..", "GETTING SATELLITE DATA..", "INSERTING KEYLOGGER.."];
 		return text[Math.floor(Math.random() * text.length)];
 	}
 	setInterval(function(){
 		document.getElementById("hack_text").innerHTML = randomString();
-	},2707);	
+	},2707);
+	?>
 	</script>
 	<script src='//enviosity.com/assets/main.js'></script>
 </body>
