@@ -70,6 +70,9 @@ switch($names){
 	case "Pepegiosity":
 		$names .= " <img src='//enviosity.com/assets/Pepega.png' width='32' alt='Pepega' title='Pepega'><img src='//enviosity.com/assets/Clap.gif' width='32' alt='Clap' title='Clap'>";
 	break;
+	case "Mr. Minimalist":
+		$avatar = "//enviosity.com/assets/minimalist.png";
+	break;
 	case "Daddyosity":
 	case "Daddy Envi":
 	case "Boobiosity":
