@@ -468,7 +468,7 @@ canvas {
   animation: load 4s normal infinite;
   box-shadow: 0 10px 40px -10px #2f2;
   border-radius: 100px;
-  background: #fff;
+  background: #2f2;
   height: 30px;
   width: 0;
 }
