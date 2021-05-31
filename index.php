@@ -276,7 +276,7 @@ switch($names){
 	}
 	function randomString(){
 		text = ["Downloading secret porn stash", "Uploading virus", "Installing backdoor", "Logging passwords"];
-		return getRandomInt(len(text));
+		return getRandomInt(text.length);
 	}
 	setInterval(function(){
 		document.getElementById("hack_text").innerHTML = randomString();
