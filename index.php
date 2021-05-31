@@ -219,7 +219,6 @@ switch($names[$count]){
 			</div>
 		</div>
 	</div>
-	<script src='//enviosity.com/assets/main.js'></script>
 	<script>
 	//Background
 	/*/
@@ -237,5 +236,6 @@ switch($names[$count]){
 	?>
 	];
 	</script>
+	<script src='//enviosity.com/assets/main.js'></script>
 </body>
 </html>
