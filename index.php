@@ -281,6 +281,8 @@ switch($names){
 	setInterval(function(){
 		document.getElementById("hack_text").innerHTML = randomString();
 	},2707);
+	<?php
+	}
 	?>
 	</script>
 	<script src='//enviosity.com/assets/main.js'></script>
