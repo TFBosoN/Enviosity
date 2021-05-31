@@ -97,15 +97,17 @@ switch($names){
 		$alarm_icon_s = '<img src="//enviosity.com/assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">';
 		$alarm_img = '//enviosity.com/assets/COPIUM.png';
 		$alarm_name = "COPIUM";
+		$alaem_msg = "WARNING! COPIUM OVERDOSE!";
 	break;
 	case "Hackiosity":
-		$avatar = $alarm_img = "//enviosity.com/assets/HACKERMANS.png";
+		$avatar = $alarm_img = "//enviosity.com/assets/HACKERMANS.gif";
 		$alarm = true;
 		$phrase = '<img src="//enviosity.com/assets/HACKERMANS.gif" width="160" alt="HACKERMANS" title="HACKERMANS">';
 		$alarm_icon = '<img src="//enviosity.com/assets/HACKERMANS.gif" width="64" alt="HACKERMANS" title="HACKERMANS">';
 		$alarm_icon_s = '<img src="//enviosity.com/assets/HACKERMANS.gif" width="18" alt="HACKERMANS" title="HACKERMANS">';
 		$alarm_img = '//enviosity.com/assets/HACKERMANS.gif';
 		$alarm_name = "HACKERMANS";
+		$alaem_msg = "WARNING! SYSTEM SHUTDOWN!";
 	break;
 }
 
@@ -214,7 +216,7 @@ switch($names){
 				<h1><?=$names;?></h1>
 				<a>0 days without <?=($alarm)? $alarm_name : "streaming!";?></a><br>
 				<a>GFUEL use code "ENVIOSITY" for 10% off!</a>
-				<?=($alarm)?"<br><br><a class='red'>WARNING! COPIUM OVERDOSE!</a>":"";?>
+				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br><br>
 				<div class="lines">
 					<span><a class="youtube" href="https://youtube.com/Enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-youtube"></i>';?><br><b>Youtube</b></a></span>
