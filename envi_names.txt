@@ -13,7 +13,6 @@ N V
 Artiosity
 Boobiosity
 Coderviosity
-Copiosity
 Designosity
 EMviosity
 Elasticity
@@ -21,7 +20,6 @@ Elfyviosity
 Extemporaneity
 Fakeweebiosity
 Greediosity
-Hackiosity
 Hoardiosity
 IKEAosity
 Monstrosity
@@ -102,12 +100,13 @@ Mr. Envi Taco Pee
 
 #special
 
+Copiosity
 Daddy Envi
 Daddyosity
-Dylan
 Dylan the villain
 Dylanosity
 Eulanosity
 Fishywishes
+Hackiosity
 Mr. Fishy
 Mr. Minimalist
