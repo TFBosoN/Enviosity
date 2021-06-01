@@ -272,7 +272,7 @@ switch($names){
 	var imgwidth = <?=$imgh/9*16;?>;
 	var imgheight = <?=$imgh;?>;
 	<?php
-	if($name == "Hackiosity"){
+	if($names == "Hackiosity"){
 	?>
 	function randomString(){
 		text = ["DOWNLOADING SECRET PORN STASH..", "UPLOADING VIRUSES..", "INSTALLING BACKDOOR..", "LOGGING PASSWORDS..", "OVERRIDING SECURITY PROTOCOL..", "PENETRATING THE SYSTEM..", "HACKING THE IP-ADDRESS..", "MINING DOGE-COINS..", "GETTING SATELLITE DATA..", "INSERTING KEYLOGGER.."];
