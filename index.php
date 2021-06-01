@@ -28,8 +28,14 @@ $phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--
 $phrase = $phrase[rand(0, count($phrase)-1)];
 
 
-//Slime RNG functions
+/*/
+Slime RNG functions
+Classes: 
+spin  - spin clockwise
+spins - spin counter clockwise
+/*/
 function get_spin(){
+	//Spins or spin
 	$spin = (rand(0, 1))? "s":"";  
 	$speed = rand(45, 85)/10;
 	$temp = rand(45, 270)/10;

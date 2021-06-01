@@ -10,6 +10,7 @@ N V
 
 #osity
 
+Alatreonosity
 Artiosity
 Boobiosity
 Coderviosity
@@ -47,13 +48,14 @@ Mr. Swimmer
 Mr. Slipper
 Mr. Skipper
 Mr. Steamer
+Mr. Street Light
 
 #Mr
 
-Mr. Alatreon
 Mr. Anvil
 Mr. Aromatherapy
 Mr. Atrocity
+Mr. Audacity
 Mr. Avocado
 Mr. Banana
 Mr. Beef Jerkey
