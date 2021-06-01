@@ -70,6 +70,9 @@ if($names=="Coderviosity" && !isset($_GET["real_site_pls"])){
 
 $avatar = "//enviosity.com/assets/avatar.png";
 switch($names){
+	case "Donowalliosity":
+		$names .= " <img src='//enviosity.com/assets/enviWall.png' width='32' alt='enviWall' title='enviWall'>";
+	break;
 	case "Coderviosity":
 		$names = "<a href='//enviosity.com/coderviosity.html'>".$names."</a>";
 	break;
