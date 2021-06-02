@@ -74,7 +74,7 @@ $avatar = "//enviosity.com/assets/avatar.png";
 switch($names){
 	case "Mr. Screamer":
 		$avatar = "//enviosity.com/assets/Screamer.jpg";
-		$phrase = '<div style="position:absolute; width:100%; height: 100%"><img src="//enviosity.com/assets/Screamer.png" style="width:100%; height:100%;" alt="Screamer" title="Screamer">';
+		$phrase = '<img src="//enviosity.com/assets/Screamer.png" style="width:100%; height:100%;" alt="Screamer" title="Screamer">';
 		$without = "SCREAMING";
 	break;
 	case "Donowalliosity":
@@ -232,7 +232,7 @@ switch($names){
 		<div class="main" id="main" style="display:none;">
 			<a class="logo"><div></div></a>
 			<div class="AYAYA_social">
-				<h1><?=$names;?></h1>
+				<h1 style="width:100%;"><?=$names;?></h1>
 				<a>0 days without <?=$without;?>!</a><br>
 				<a>GFUEL use code "ENVIOSITY" for 10% off!</a>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
