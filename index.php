@@ -5,6 +5,8 @@ $bg_images = json_decode(file_get_contents("./envi.json"));
 $imgh = 360;
 $zoom = 2;
 
+$without = "streaming";
+
 //COPIUM 
 $alarm = false;
 function alarm_html(){
@@ -73,6 +75,7 @@ switch($names){
 	case "Mr. Screamer":
 		$avatar = "//enviosity.com/assets/Screamer.jpg";
 		$phrase = '<img src="//enviosity.com/assets/Screamer.jpg" height="100%" alt="Screamer" title="Screamer">';
+		$without = "SCREAMING";
 	break;
 	case "Donowalliosity":
 		$names .= " <img src='//enviosity.com/assets/enviWall.png' width='32' alt='enviWall' title='enviWall'>";
@@ -112,7 +115,7 @@ switch($names){
 		$alarm_icon = '<img src="//enviosity.com/assets/COPIUM.png" width="64" alt="COPIUM" title="COPIUM">';
 		$alarm_icon_s = '<img src="//enviosity.com/assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">';
 		$alarm_img = '//enviosity.com/assets/COPIUM.png';
-		$alarm_name = "COPIUM";
+		$without = "COPIUM";
 		$alarm_msg = "WARNING! COPIUM OVERDOSE!";
 	break;
 	case "Hackiosity":
@@ -122,7 +125,7 @@ switch($names){
 		$alarm_icon = '<img src="//enviosity.com/assets/HACKERMANS.gif" width="64" alt="HACKERMANS" title="HACKERMANS">';
 		$alarm_icon_s = '<img src="//enviosity.com/assets/HACKERMANS.gif" width="18" alt="HACKERMANS" title="HACKERMANS">';
 		$alarm_img = '//enviosity.com/assets/HACKERMANS.gif';
-		$alarm_name = "HACKERMANS";
+		$without = "HACKERMANS";
 		$alarm_msg = 'WARNING! SYSTEM OVERRIDE!<br><br><a id="hack_text">Hacking in progress..</a><div class="progress"><div class="bar"></div></div>';
 	break;
 }
@@ -230,7 +233,7 @@ switch($names){
 			<a class="logo"><div></div></a>
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
-				<a>0 days without <?=($alarm)? $alarm_name : "streaming!";?></a><br>
+				<a>0 days without <?=$without;?>!</a><br>
 				<a>GFUEL use code "ENVIOSITY" for 10% off!</a>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br><br>
