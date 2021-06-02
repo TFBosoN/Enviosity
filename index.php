@@ -6,6 +6,7 @@ $imgh = 360;
 $zoom = 2;
 
 $without = "streaming";
+$phrase_fs = false;
 
 //COPIUM 
 $alarm = false;
@@ -76,6 +77,7 @@ switch($names){
 		$avatar = "//enviosity.com/assets/Screamer.jpg";
 		$phrase = '<img src="//enviosity.com/assets/Screamer.png" style="width:100%; height:100%;" alt="Screamer" title="Screamer">';
 		$without = "SCREAMING";
+		$phrase_fs = true;
 	break;
 	case "Donowalliosity":
 		$names .= " <img src='//enviosity.com/assets/enviWall.png' width='32' alt='enviWall' title='enviWall'>";
@@ -228,7 +230,7 @@ switch($names){
 	</table>
 	<canvas id="canvas" width="100%" height="100%"></canvas>
 	<div class="container">
-		<div id="presentation"><h1 class="banner"><?=$phrase;?></h1></div>
+		<div id="presentation"><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>><?=$phrase;?></h1></div>
 		<div class="main" id="main" style="display:none;">
 			<a class="logo"><div></div></a>
 			<div class="AYAYA_social">
