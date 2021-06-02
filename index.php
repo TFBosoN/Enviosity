@@ -232,7 +232,7 @@ switch($names){
 		<div class="main" id="main" style="display:none;">
 			<a class="logo"><div></div></a>
 			<div class="AYAYA_social">
-				<h1 style="width:100%;"><?=$names;?></h1>
+				<h1 style="width:100%; height:100%;"><?=$names;?></h1>
 				<a>0 days without <?=$without;?>!</a><br>
 				<a>GFUEL use code "ENVIOSITY" for 10% off!</a>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
