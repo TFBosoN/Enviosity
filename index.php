@@ -74,7 +74,7 @@ $avatar = "//enviosity.com/assets/avatar.png";
 switch($names){
 	case "Mr. Screamer":
 		$avatar = "//enviosity.com/assets/Screamer.jpg";
-		$phrase = '<img src="//enviosity.com/assets/Screamer.jpg" height="100%" alt="Screamer" title="Screamer">';
+		$phrase = '<div style="position:absolute; width:100%; height: 100%"><img src="//enviosity.com/assets/Screamer.png" style="width:100%; height:100%;" alt="Screamer" title="Screamer">';
 		$without = "SCREAMING";
 	break;
 	case "Donowalliosity":
