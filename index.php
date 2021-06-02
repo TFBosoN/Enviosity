@@ -74,7 +74,7 @@ if($names=="Coderviosity" && !isset($_GET["real_site_pls"])){
 $avatar = "//enviosity.com/assets/avatar.png";
 switch($names){
 	case "Mr. Screamer":
-		$avatar = "//enviosity.com/assets/Screamer.jpg";
+		$avatar = "//enviosity.com/assets/Screamer.png";
 		$phrase = '<img src="//enviosity.com/assets/Screamer.png" style="width:100%; height:100%;" alt="Screamer" title="Screamer">';
 		$without = "SCREAMING";
 		$phrase_fs = true;
@@ -230,7 +230,7 @@ switch($names){
 	</table>
 	<canvas id="canvas" width="100%" height="100%"></canvas>
 	<div class="container">
-		<div id="presentation"><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>><?=$phrase;?></h1></div>
+		<div id="presentation"><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>"><?=$phrase;?></h1></div>
 		<div class="main" id="main" style="display:none;">
 			<a class="logo"><div></div></a>
 			<div class="AYAYA_social">
