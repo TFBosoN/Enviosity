@@ -81,7 +81,7 @@ switch($names){
 		$names .= " <img src='//enviosity.com/assets/enviWall.png' width='32' alt='enviWall' title='enviWall'>";
 	break;
 	case "Coderviosity":
-		$names = "<a href='//enviosity.com/coderviosity.html'>".$names."</a>";
+		$names = "<a href='//enviosity.com/coderviosity.html' style='text-decoration:underline; cursor: pointer'>".$names."</a>";
 	break;
 	case "Pepegiosity":
 		$names .= " <img src='//enviosity.com/assets/Pepega.png' width='32' alt='Pepega' title='Pepega'><img src='//enviosity.com/assets/Clap.gif' width='32' alt='Clap' title='Clap'>";
@@ -102,7 +102,7 @@ switch($names){
 	break;
 	case "Mr. Fishy":
 	case "Fishywishes":
-		$avatar = "//enviosity.com/assets/fishy.png";
+		$avatar = "//enviosity.com/assets/fishy.jpg";
 		$phrase = "<img src='//enviosity.com/assets/AYAYA.png' width='160' alt='AYAYA' title='AYAYA'><img src='//enviosity.com/assets/Clap.gif' width='32' alt='Clap' title='Clap'>";
 	break;
 	case "Eulanosity":
