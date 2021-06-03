@@ -96,6 +96,7 @@ switch($names){
 	break;
 	case "Mr. Minimalist":
 		$avatar = "//enviosity.com/assets/minimalist.png";
+		$without = "minimalism";
 	break;
 	case "Daddyosity":
 	case "Daddy Envi":
