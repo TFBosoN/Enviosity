@@ -75,7 +75,7 @@ $avatar = "//enviosity.com/assets/avatar.png";
 switch($names){
 	case "Mr. F2P":
 		$avatar = "//enviosity.com/assets/F2P.png";
-		$without = "F2P <s>damage</s>";
+		$without = "F2P <s>damage</s> <img src='//enviosity.com/assets/KEKWait.png' width='32' alt='KEKWait' title='KEKWait'>";
 	break;
 	case "Mr. Screamer":
 		$avatar = "//enviosity.com/assets/Screamer.png";
