@@ -23,7 +23,7 @@ $categories = explode("#", file_get_contents("./envi_names.txt"));
 $rcat = rand(1, count($categories)-1); //Choosing rand category
 $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(1,count($names)-1);
-$names = (rand(0,2)>1)?  $promote_name : $names[$count]; //33:66
+$names = (rand(1,2)>1)?  $promote_name : $names[$count]; //33:66
 
 //RNG phrases on load screen
 $phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--Barack Obama",'<img src="//enviosity.com/assets/enviLove.png" width="160" alt="enviLove" title="enviLove">', '<img src="//enviosity.com/assets/slime.png" width="185" alt="slime" title="slime">', '<img src="//enviosity.com/assets/enviAyaya.png" width="185" alt="enviAyaya" title="enviAyaya">');
