@@ -81,6 +81,7 @@ Mr. Stapler
 Mr. Stepmother's friend
 Mr. Steam Client
 Mr. Stove
+Mr. Stroller
 Mr. Thunder Cheeks
 Mr. Watermelon
 Mr. Windmill
@@ -91,6 +92,8 @@ Mr. Entourage
 Mr. Establishment
 Mr. Endocrine System
 Mr. Refrigirator
+Mr. Sticker
+Mr. Garder Hose
 
 #Actially good
 
