@@ -18,7 +18,7 @@ function alarm_html(){
 	RNG names
 	Splitting into categories and choosing random for more variety
 /*/
-$promote_name = "Mr. Screamer";
+$promote_name = "Mr. F2P";
 $categories = explode("#", file_get_contents("./envi_names.txt"));
 $rcat = rand(1, count($categories)-1); //Choosing rand category
 $names = array_filter(explode("\n", $categories[$rcat]));
@@ -73,6 +73,9 @@ if($names=="Coderviosity" && !isset($_GET["real_site_pls"])){
 
 $avatar = "//enviosity.com/assets/avatar.png";
 switch($names){
+	case "Mr. F2P":
+		$names .= " <img src='//enviosity.com/assets/F2P.png' width='32' alt='F2P' title='F2P'>";
+	break;
 	case "Mr. Screamer":
 		$avatar = "//enviosity.com/assets/Screamer.png";
 		$phrase = '<img src="//enviosity.com/assets/Screamer.png" style="width:100%; height:100%;">';

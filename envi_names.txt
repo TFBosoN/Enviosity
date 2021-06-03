@@ -60,6 +60,7 @@ Mr. Avocado
 Mr. Banana
 Mr. Beef Jerkey
 Mr. Burger King
+Mr. Cracker
 Mr. Coconut
 Mr. Electricity
 Mr. Encyclopedia
