@@ -267,7 +267,7 @@ switch($names){
 							<td style="text-align:center"><div style="display:none" id="slime_warning"><a style="font-size:11px">slimes are resource intence!</a> <a style="font-size:10px; text-decoration:underline; cursor:pointer" onclick='enable_slimes()'>Enable them</a></div></td>
 						</tr>
 						<tr>
-							<td style="text-align:center">Images by <a>@fishywishes!</a> | Site by <a>@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="//enviosity.com/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?> | <a href='https://github.com/TFBosoN/enviosity' style="text-decoration:none">GITHUB</a></td>
+							<td style="text-align:center">Images by <a>@fishywishes!</a> <img src="//enviosity.com/assets/fishy.jpg" height="18" width="18" alt="fishy" title="fishy"> | Site by <a>@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="//enviosity.com/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?> | <a href='https://github.com/TFBosoN/enviosity' style="text-decoration:none">GITHUB</a></td>
 						</tr>
 					</table>
 				</div>
