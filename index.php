@@ -74,7 +74,8 @@ if($names=="Coderviosity" && !isset($_GET["real_site_pls"])){
 $avatar = "//enviosity.com/assets/avatar.png";
 switch($names){
 	case "Mr. F2P":
-		$names .= " <img src='//enviosity.com/assets/F2P.png' width='32' alt='F2P' title='F2P'>";
+		$avatar = "//enviosity.com/assets/F2P.png";
+		$without = "F2P damage";
 	break;
 	case "Mr. Screamer":
 		$avatar = "//enviosity.com/assets/Screamer.png";
