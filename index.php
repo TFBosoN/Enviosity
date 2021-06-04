@@ -84,6 +84,7 @@ $avatar = "//enviosity.com/assets/avatar.png";
 switch($names){
 	case "Dendriosity":
 		$avatar = "//enviosity.com/assets/Dendriosity.jpg";
+		$without = "being Envi";
 	break;
 	case "Mr. F2P":
 		$avatar = "//enviosity.com/assets/F2P.png";

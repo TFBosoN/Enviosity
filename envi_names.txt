@@ -38,6 +38,7 @@ Snailiosity
 Stinkyosity
 Viscosity
 YEPiosity
+Sevenosity
 
 #streamer
 
@@ -68,6 +69,7 @@ Mr. Endoskeleton
 Mr. Enigma
 Mr. Enterobacterium
 Mr. Equilibrium
+Mr. Entrapment
 Mr. F2P
 Mr. Fitness
 Mr. Lycanthropy
