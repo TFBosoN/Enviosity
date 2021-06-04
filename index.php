@@ -18,14 +18,17 @@ function alarm_html(){
 	RNG names
 	Splitting into categories and choosing random for more variety
 /*/
-$promote_name = "Mr. F2P";
-$promote_name2 = "Mr. Minimalist";
+$promote_name = array();
+$promote_name[] = "Mr. F2P";
+$promote_name[] = "Mr. Minimalist";
+$promote_name[] = "Dendriosity";
+
+$promote_name[] = $names[$count];
 $categories = explode("#", file_get_contents("./envi_names.txt"));
 $rcat = rand(1, count($categories)-1); //Choosing rand category
 $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(1,count($names)-1);
-$names = (rand(1,2)>1)?  $promote_name : $names[$count]; //50:50
-$names = (rand(1,2)>1)?  $promote_name2 : $names; //50:50
+$names = $promote_name[rand(1,count($promote_name))];
 
 //RNG phrases on load screen
 $phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--Barack Obama",'<img src="//enviosity.com/assets/enviLove.png" width="160" alt="enviLove" title="enviLove">', '<img src="//enviosity.com/assets/slime.png" width="185" alt="slime" title="slime">', '<img src="//enviosity.com/assets/enviAyaya.png" width="185" alt="enviAyaya" title="enviAyaya">');
@@ -75,6 +78,9 @@ if($names=="Coderviosity" && !isset($_GET["real_site_pls"])){
 
 $avatar = "//enviosity.com/assets/avatar.png";
 switch($names){
+	case "Dendriosity":
+		$avatar = "//enviosity.com/assets/Dendriosity.jpg";
+	break;
 	case "Mr. F2P":
 		$avatar = "//enviosity.com/assets/F2P.png";
 		$without = "F2P <s>damage</s> <img src='//enviosity.com/assets/KEKWait.png' width='32' alt='KEKWait' title='KEKWait' style='vertical-align:middle'>";
@@ -95,6 +101,7 @@ switch($names){
 		$names .= " <img src='//enviosity.com/assets/Pepega.png' width='32' alt='Pepega' title='Pepega'><img src='//enviosity.com/assets/Clap.gif' width='32' alt='Clap' title='Clap'>";
 	break;
 	case "Mr. Minimalist":
+	case "Minimaliosity":
 		$avatar = "//enviosity.com/assets/minimalist.png";
 		$without = "minimalism";
 	break;
