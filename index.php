@@ -23,11 +23,6 @@ $promote_name[] = "Mr. F2P";
 $promote_name[] = "Mr. F2P";
 $promote_name[] = "Mr. Minimalist";
 $promote_name[] = "Mr. Minimalist";
-$promote_name[] = "Dendriosity";
-$promote_name[] = "Dendriosity";
-$promote_name[] = "Dendriosity";
-$promote_name[] = "Dendriosity";
-$promote_name[] = "Dendriosity";
 
 $promote_name[] = $names[$count];
 $categories = explode("#", file_get_contents("./envi_names.txt"));
