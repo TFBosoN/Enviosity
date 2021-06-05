@@ -24,11 +24,12 @@ $promote_name[] = "Mr. F2P";
 $promote_name[] = "Mr. Minimalist";
 $promote_name[] = "Mr. Minimalist";
 
+$names = array_filter(explode("\n", $categories[$rcat]));
+$count = rand(1,count($names)-1);
 $promote_name[] = $names[$count];
 $categories = explode("#", file_get_contents("./envi_names.txt"));
 $rcat = rand(1, count($categories)-1); //Choosing rand category
-$names = array_filter(explode("\n", $categories[$rcat]));
-$count = rand(1,count($names)-1);
+
 $names = $promote_name[rand(1,count($promote_name))];
 
 //RNG phrases on load screen
