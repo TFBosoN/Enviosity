@@ -39,6 +39,7 @@ Stinkyosity
 Viscosity
 YEPiosity
 Sevenosity
+Kappiosity
 
 #streamer
 
@@ -63,6 +64,7 @@ Mr. Beef Jerkey
 Mr. Burger King
 Mr. Cracker
 Mr. Coconut
+Mr. Diabetes
 Mr. Electricity
 Mr. Encyclopedia
 Mr. Endoskeleton
