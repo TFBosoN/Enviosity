@@ -248,7 +248,7 @@ switch($names){
 	</table>
 	<canvas id="canvas" width="100%" height="100%"></canvas>
 	<div class="container">
-		<div id="presentation" style='display:none'><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>"><?=$phrase;?></h1></div>
+		<div id="presentation"><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>"><?=$phrase;?></h1></div>
 		<div class="main" id="main" style="display:none;">
 			<a class="logo"><div></div></a>
 			<div class="AYAYA_social">
