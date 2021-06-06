@@ -97,7 +97,6 @@ switch($names){
 		$without = "being Envi";
 	break;
 	case "Mr. F2P":
-		$avatar = "//enviosity.com/assets/F2P.png";
 		$without = "F2P <s>damage</s> <img src='//enviosity.com/assets/KEKWait.png' width='32' alt='KEKWait' title='KEKWait' style='vertical-align:middle'>";
 	break;
 	case "Mr. Screamer":
@@ -133,7 +132,7 @@ switch($names){
 	case "Mr. Fishy":
 	case "Fishywishes":
 		$avatar = "//enviosity.com/assets/fishy.jpg";
-		$phrase = "<img src='//enviosity.com/assets/AYAYA.png' width='160' alt='AYAYA' title='AYAYA'><img src='//enviosity.com/assets/Clap.gif' width='32' alt='Clap' title='Clap'>";
+		$phrase = "<img src='//enviosity.com/assets/enviAyaya.png' width='160' alt='enviAyaya' title='enviAyaya'><img src='//enviosity.com/assets/Clap.gif' width='140' alt='Clap' title='Clap'>";
 	break;
 	case "Eulanosity":
 		$avatar = "//enviosity.com/assets/eulaviosity.png";
@@ -270,7 +269,7 @@ switch($names){
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
 				<a>0 days without <?=$without;?>!</a><br>
-				<a>GFUEL use code "ENVIOSITY" for 10% off!<?=$count;?></a>
+				<a>GFUEL use code "ENVIOSITY" for 10% off!</a>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br><br>
 				<div class="lines">
