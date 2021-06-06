@@ -38,7 +38,6 @@ $phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--
 //$phrase = array("0 days without<br><img src='//enviosity.com/assets/WeirdChamp.png' width='185' height='170' alt='WeirdChamp' title='WeirdChamp'> and <img src='//enviosity.com/assets/monkaTOS.png' width='185' height='170' alt='WeirdChamp' title='WeirdChamp'> in the chat");
 $phrase = $phrase[rand(0, count($phrase)-1)];
 
-$phrase .= 
 /*/
 Slime RNG functions
 Classes: 
