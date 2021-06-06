@@ -22,9 +22,9 @@ $promote_name = array();
 $promote_name[] = "Mr. F2P";
 $promote_name[] = "Mr. Minimalist";
 
-$categories = explode("#", file_get_contents("./envi_names.txt"));
+$categories = array_filter(explode("#", file_get_contents("./envi_names.txt")));
 $rcat = rand(1, count($categories)-1); //Choosing rand category
-$names = array_filter(explode("\n", array_filter($categories[$rcat])));
+$names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(1,count($names)-1);
 $promote_name[] = $names[$count];
 
