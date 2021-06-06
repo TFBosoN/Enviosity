@@ -19,8 +19,6 @@ function alarm_html(){
 	Splitting into categories and choosing random for more variety
 /*/
 $promote_name = array();
-$promote_name[] = "Mr. F2P";
-$promote_name[] = "Mr. Minimalist";
 
 $categories = array_filter(explode("#", file_get_contents("./envi_names.txt")));
 $rcat = rand(1, count($categories)-1); //Choosing rand category
