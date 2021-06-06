@@ -8,6 +8,7 @@ Envy
 Mr. Environment
 Ms. Enviosity
 N V
+Momma Envy
 
 #osity
 
@@ -37,7 +38,7 @@ Viscosity
 Sevenosity
 Kappiosity
 
-#streamer
+#general autocorrect
 
 Mr. Streamer
 Mr. Stripper
@@ -48,7 +49,7 @@ Mr. Skipper
 Mr. Steamer
 Mr. Street Light
 
-#Mr
+#Mr names
 
 Mr. Anvil
 Mr. Aromatherapy
@@ -74,6 +75,7 @@ Mr. Meticulosity
 Mr. Milla Jovovich
 Mr. Nucleophilicity
 Mr. Physical Goblin
+Mr. Skinny Pop
 Mr. Snicker
 Mr. Skeleton
 Mr. Stapler
@@ -94,6 +96,9 @@ Mr. Refrigirator
 Mr. Sticker
 Mr. Garder Hose
 Mr. Legbone
+Mr. Letter Opener
+Mr. Entertainment
+Mr. Mango
 
 #Actially good and stupid stuff
 
