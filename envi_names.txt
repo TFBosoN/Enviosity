@@ -13,7 +13,6 @@ N V
 Alatreonosity
 Artiosity
 Boobiosity
-Coderviosity
 Designosity
 EMviosity
 Elasticity
@@ -116,6 +115,7 @@ Mr. Envi Taco Pee
 
 #special
 
+Coderviosity
 Copiosity
 Daddy Envi
 Daddyosity
