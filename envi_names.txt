@@ -80,6 +80,7 @@ Mr. Milla Jovovich
 Mr. Nucleophilicity
 Mr. Polestripper
 Mr. Physical Goblin
+Mr. Snicker
 Mr. Skeleton
 Mr. Stapler
 Mr. Stepmother's friend
@@ -98,6 +99,7 @@ Mr. Endocrine System
 Mr. Refrigirator
 Mr. Sticker
 Mr. Garder Hose
+Mr. Legbone
 
 #Actially good
 

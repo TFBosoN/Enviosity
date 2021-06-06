@@ -38,7 +38,7 @@ $phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--
 //$phrase = array("0 days without<br><img src='//enviosity.com/assets/WeirdChamp.png' width='185' height='170' alt='WeirdChamp' title='WeirdChamp'> and <img src='//enviosity.com/assets/monkaTOS.png' width='185' height='170' alt='WeirdChamp' title='WeirdChamp'> in the chat");
 $phrase = $phrase[rand(0, count($phrase)-1)];
 
-
+$phrase .= 
 /*/
 Slime RNG functions
 Classes: 
@@ -129,7 +129,7 @@ switch($names){
 		$avatar = "//enviosity.com/assets/eulaviosity.png";
 	break;
 	case "Copiosity":
-		$avatar = "https://i.imgur.com/wtaJ1zB.png";
+		$avatar = rand(0,1)? "//i.imgur.com/wtaJ1zB.png" : "//enviosity.com/assets/enviCOPIUM.jpg";
 		$alarm = true;
 		$phrase = '<img src="//enviosity.com/assets/COPIUM.png" width="160" alt="COPIUM" title="COPIUM">';
 		$alarm_icon = '<img src="//enviosity.com/assets/COPIUM.png" width="64" alt="COPIUM" title="COPIUM">';
