@@ -20,8 +20,6 @@ function alarm_html(){
 /*/
 $promote_name = array();
 $promote_name[] = "Mr. F2P";
-$promote_name[] = "Mr. F2P";
-$promote_name[] = "Mr. Minimalist";
 $promote_name[] = "Mr. Minimalist";
 
 $categories = explode("#", file_get_contents("./envi_names.txt"));
