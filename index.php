@@ -18,6 +18,21 @@ function alarm_html(){
 	RNG names
 	Splitting into categories and choosing random for more variety
 /*/
+
+$names = explode("#", file_get_contents("./envi_names.txt"));
+//Delete comments
+foreach($names as $key => $name){
+	$name = explode("\n", $name);
+	unset($name[0]);
+	$name = array_filter($name);
+	$names[$key] = implode("\n", $name);
+}
+//fix later
+$names = explode("\n", implode("\n",$names));
+$names = array_filter($names);
+$count = rand(0, count($names)-1);
+$names = $names[$count];
+/*
 $promote_name = array();
 
 $categories = array_filter(explode("#", file_get_contents("./envi_names.txt")));
@@ -28,6 +43,7 @@ $promote_name[] = $names[$count];
 
 
 $names = $promote_name[rand(0,count($promote_name)-1)];
+*/
 
 //RNG phrases on load screen
 $phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--Barack Obama",'<img src="//enviosity.com/assets/enviLove.png" width="160" alt="enviLove" title="enviLove">', '<img src="//enviosity.com/assets/slime.png" width="185" alt="slime" title="slime">', '<img src="//enviosity.com/assets/enviAyaya.png" width="185" alt="enviAyaya" title="enviAyaya">');
@@ -74,7 +90,7 @@ if($names=="Coderviosity" && !isset($_GET["real_site_pls"])){
 }
 */
 
-$avatar = "//enviosity.com/assets/avatar.png";
+$avatar = "//enviosity.com/assets/F2P.png";
 switch($names){
 	case "Dendriosity":
 		$avatar = "//enviosity.com/assets/Dendriosity.jpg";
@@ -106,7 +122,6 @@ switch($names){
 	break;
 	case "Daddyosity":
 	case "Daddy Envi":
-	case "Boobiosity":
 	case "Mr. Polestripper":
 		$names .= " <img src='//enviosity.com/assets/enviGasm.png' width='32' alt='enviGasm' title='enviGasm'>";
 	break;
@@ -145,6 +160,9 @@ switch($names){
 	break;
 	case "YEPiosity":
 		$names .= " <img src='//enviosity.com/assets/YEP.png' width='32' alt='YEP' title='YEP'>";
+	break;
+	case "SHEESHiosity":
+		$names .= " <img src='//enviosity.com/assets/enviSHEESH.png' width='32' alt='enviSHEESH' title='enviSHEESH'>";
 	break;
 }
 
@@ -252,7 +270,7 @@ switch($names){
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
 				<a>0 days without <?=$without;?>!</a><br>
-				<a>GFUEL use code "ENVIOSITY" for 10% off!</a>
+				<a>GFUEL use code "ENVIOSITY" for 10% off!<?=$count;?></a>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br><br>
 				<div class="lines">

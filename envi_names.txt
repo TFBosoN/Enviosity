@@ -1,3 +1,4 @@
+
 #Envi
 
 Envi
@@ -12,7 +13,6 @@ N V
 
 Alatreonosity
 Artiosity
-Boobiosity
 Designosity
 EMviosity
 Elasticity
@@ -23,11 +23,9 @@ Greediosity
 Hoardiosity
 IKEAosity
 Monstrosity
-Pepegiosity
 Physicaldiosity
 Retroviosity
 Refusiosity
-SHEESHiosity
 Scamiosity
 Scammerosity
 Shamelessviosity
@@ -36,7 +34,6 @@ Smellyosity
 Snailiosity
 Stinkyosity
 Viscosity
-YEPiosity
 Sevenosity
 Kappiosity
 
@@ -71,13 +68,11 @@ Mr. Enigma
 Mr. Enterobacterium
 Mr. Equilibrium
 Mr. Entrapment
-Mr. F2P
 Mr. Fitness
 Mr. Lycanthropy
 Mr. Meticulosity
 Mr. Milla Jovovich
 Mr. Nucleophilicity
-Mr. Polestripper
 Mr. Physical Goblin
 Mr. Snicker
 Mr. Skeleton
@@ -113,12 +108,20 @@ Mr. ILLudium Pew Thirty Six Explosive Space Modulator
 Little Spoonosity
 Mr. Envi Taco Pee
 
-#special
+#Has a sticker next to it
+
+Donowalliosity
+YEPiosity
+Daddy Envi
+Daddyosity
+SHEESHiosity
+Mr. Polestripper
+Pepegiosity
+
+#special avatarts and modes
 
 Coderviosity
 Copiosity
-Daddy Envi
-Daddyosity
 Dylan the villain
 Dylanosity
 Eulanosity
@@ -126,7 +129,7 @@ Fishywishes
 Hackiosity
 Mr. Fishy
 Mr. Minimalist
-Donowalliosity
 Mr. Screamer
 Minimaliosity
 Dendriosity
+Mr. F2P
