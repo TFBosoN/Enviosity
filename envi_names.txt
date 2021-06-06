@@ -101,7 +101,7 @@ Mr. Sticker
 Mr. Garder Hose
 Mr. Legbone
 
-#Actially good
+#Actially good and stupid stuff
 
 Mr. Colonoscopy
 Mr. Envelope
@@ -110,9 +110,6 @@ Mr. New York City
 Mr. Obesity
 Mr. Rice Cooker
 Mr. Sausage
-
-#Some stupid stuff
-
 Mr. ILLudium Pew Thirty Six Explosive Space Modulator
 Little Spoonosity
 Mr. Envi Taco Pee

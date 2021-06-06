@@ -25,11 +25,11 @@ $promote_name[] = "Mr. Minimalist";
 $categories = array_filter(explode("#", file_get_contents("./envi_names.txt")));
 $rcat = rand(1, count($categories)-1); //Choosing rand category
 $names = array_filter(explode("\n", $categories[$rcat]));
-$count = rand(1,count($names)-1);
+$count = rand(2,count($names)-1);
 $promote_name[] = $names[$count];
 
 
-$names = $promote_name[rand(1,count($promote_name))];
+$names = $promote_name[rand(0,count($promote_name)-1)];
 
 //RNG phrases on load screen
 $phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--Barack Obama",'<img src="//enviosity.com/assets/enviLove.png" width="160" alt="enviLove" title="enviLove">', '<img src="//enviosity.com/assets/slime.png" width="185" alt="slime" title="slime">', '<img src="//enviosity.com/assets/enviAyaya.png" width="185" alt="enviAyaya" title="enviAyaya">');
@@ -248,7 +248,7 @@ switch($names){
 	</table>
 	<canvas id="canvas" width="100%" height="100%"></canvas>
 	<div class="container">
-		<div id="presentation"><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>"><?=$phrase;?></h1></div>
+		<div id="presentation" style='display:none'><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>"><?=$phrase;?></h1></div>
 		<div class="main" id="main" style="display:none;">
 			<a class="logo"><div></div></a>
 			<div class="AYAYA_social">
