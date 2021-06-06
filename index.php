@@ -145,6 +145,9 @@ switch($names){
 		$without = "HACKERMANS";
 		$alarm_msg = 'WARNING! SYSTEM OVERRIDE!<br><br><a id="hack_text">Hacking in progress..</a><div class="progress"><div class="bar"></div></div>';
 	break;
+	case "YEPiosity":
+		$names .= " <img src='//enviosity.com/assets/YEP.png' width='32' alt='YEP' title='YEP'>";
+	break;
 }
 
 
