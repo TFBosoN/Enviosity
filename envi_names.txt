@@ -39,6 +39,7 @@ Sevenosity
 Kappiosity
 Richviosity
 Scamtrainviosity
+Yoimiyosity
 
 #general autocorrect
 
@@ -140,3 +141,4 @@ Mr. Screamer
 Minimaliosity
 Dendriosity
 Mr. F2P
+Cabbage Head

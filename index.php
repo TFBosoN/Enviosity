@@ -32,8 +32,9 @@ $names = explode("\n", implode("\n",$names));
 $names = array_filter($names);
 $count = rand(0, count($names)-1);
 $names = $names[$count];
-/*
+
 $promote_name = array();
+$promote_name[] = "Cabbage Head";
 
 $categories = array_filter(explode("#", file_get_contents("./envi_names.txt")));
 $rcat = rand(1, count($categories)-1); //Choosing rand category
@@ -43,7 +44,7 @@ $promote_name[] = $names[$count];
 
 
 $names = $promote_name[rand(0,count($promote_name)-1)];
-*/
+
 
 //RNG phrases on load screen
 $phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--Barack Obama",'<img src="//enviosity.com/assets/enviLove.png" width="160" alt="enviLove" title="enviLove">', '<img src="//enviosity.com/assets/slime.png" width="185" alt="slime" title="slime">', '<img src="//enviosity.com/assets/enviAyaya.png" width="185" alt="enviAyaya" title="enviAyaya">');
@@ -162,6 +163,9 @@ switch($names){
 	break;
 	case "SHEESHiosity":
 		$names .= " <img src='//enviosity.com/assets/enviSHEESH.png' width='32' alt='enviSHEESH' title='enviSHEESH'>";
+	break;
+	case "Cabbage Head":
+		$avatar = "//enviosity.com/assets/enviCabbage.png";
 	break;
 }
 
