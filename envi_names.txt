@@ -41,7 +41,6 @@ Kappiosity
 Richviosity
 Scamtrainviosity
 Yoimiyosity
-Encryptocurrency
 
 #general autocorrect
 
@@ -117,6 +116,7 @@ Mr. Sausage
 Mr. ILLudium Pew Thirty Six Explosive Space Modulator
 Little Spoonosity
 Mr. Envi Taco Pee
+Mr. Encryptocurrency
 
 #Has a sticker next to it
 
