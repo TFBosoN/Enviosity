@@ -284,6 +284,7 @@ switch($names){
 				</div>
 				<div class="lines">
 					<span><a class="discord" href="https://discord.gg/enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-discord"></i>';?><br><b>Discord</b></a></span>
+					<span><a class="reddit" href="https://reddit.com/r/enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-reddit"></i>';?><br><b>Reddit</b></a></span>
 					<span><a class="instogram" href="https://merch.streamelements.com/enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fas fa-tshirt"></i>';?><br><b>Merch</b></a></span>
 				</div>
 				<br>

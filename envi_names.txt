@@ -37,6 +37,8 @@ Stinkyosity
 Viscosity
 Sevenosity
 Kappiosity
+Richviosity
+Scamtrainviosity
 
 #general autocorrect
 
