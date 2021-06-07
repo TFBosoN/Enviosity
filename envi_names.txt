@@ -1,5 +1,5 @@
 
-#Envi
+#Envi general names
 
 Envi
 EnviChad
@@ -8,10 +8,8 @@ Envy
 Mr. Environment
 Ms. Enviosity
 N V
-Momma Envy
-Epiphany
 
-#osity
+#Ends with osity
 
 Alatreonosity
 Artiosity
@@ -53,7 +51,7 @@ Mr. Skipper
 Mr. Steamer
 Mr. Street Light
 
-#Mr names
+#"Mr." names
 
 Mr. Anvil
 Mr. Aromatherapy
@@ -104,7 +102,7 @@ Mr. Letter Opener
 Mr. Entertainment
 Mr. Mango
 
-#Actially good and stupid stuff
+#Actially good stuff
 
 Mr. Colonoscopy
 Mr. Envelope
@@ -113,10 +111,13 @@ Mr. New York City
 Mr. Obesity
 Mr. Rice Cooker
 Mr. Sausage
+Mr. Encryptocurrency
+Momma Envy
+Epiphany
 Mr. ILLudium Pew Thirty Six Explosive Space Modulator
 Little Spoonosity
 Mr. Envi Taco Pee
-Encryptocurrency
+
 
 #Has a sticker next to it
 
@@ -128,7 +129,7 @@ SHEESHiosity
 Mr. Polestripper
 Pepegiosity
 
-#special avatarts and modes
+#special avatarts and site modes
 
 Coderviosity
 Copiosity
