@@ -292,7 +292,8 @@ switch($names){
 					<span><a class="reddit" href="https://reddit.com/r/enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-reddit"></i>';?><br><b>Reddit</b></a></span>
 					<span><a class="instogram" href="https://merch.streamelements.com/enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fas fa-tshirt"></i>';?><br><b>Merch</b></a></span>
 				</div>
-				<a style="font-size:20px">GENSHIN IMPACT</a>
+				<a style="font-size:20px">GENSHIN IMPACT</a><br>
+				<a style="font-size:11px">usefull tools</a>
 				<div class="lines">
 					<span><a class="discord" href="https://paimon.moe" target="_blank"><b>Paimon.moe</b></a></span>
 				</div>
