@@ -39,6 +39,8 @@ Kappiosity
 Richviosity
 Scamtrainviosity
 Yoimiyosity
+Lateosity
+Coughiosity
 
 #general autocorrect
 
@@ -101,6 +103,7 @@ Mr. Legbone
 Mr. Letter Opener
 Mr. Entertainment
 Mr. Mango
+Mr. Pencil
 
 #Actially good stuff
 
