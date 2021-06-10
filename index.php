@@ -293,9 +293,10 @@ switch($names){
 					<span><a class="instogram" href="https://merch.streamelements.com/enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fas fa-tshirt"></i>';?><br><b>Merch</b></a></span>
 				</div>
 				<a style="font-size:20px">GENSHIN IMPACT</a><br>
-				<a style="font-size:11px">usefull tools</a>
+				<a style="font-size:11px; color:#ccc">usefull tools</a>
 				<div class="lines">
-					<span><a class="discord" href="https://paimon.moe" target="_blank"><img src="./assets/paimonmoe.ico"><b>Paimon.moe</b></a></span>
+					<span style="width: auto;"><a class="discord" href="https://paimon.moe" target="_blank"><img src="./assets/paimonmoe.ico" style="vertical-align: middle;"><b style="font-family: sans-serif;
+position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9px; font-size: 14px; right: 0; color: rgb(78, 124, 255);">.moe</div></b></a></span>
 				</div>
 				<br>
 				<br>
