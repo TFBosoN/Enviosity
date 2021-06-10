@@ -48,8 +48,8 @@ $names = $promote_name[rand(0,count($promote_name)-1)];
 
 
 //RNG phrases on load screen
-$phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--Barack Obama",'<img src="//enviosity.com/assets/enviLove.png" width="160" alt="enviLove" title="enviLove">', '<img src="//enviosity.com/assets/slime.png" width="185" alt="slime" title="slime">', '<img src="//enviosity.com/assets/enviAyaya.png" width="185" alt="enviAyaya" title="enviAyaya">');
-//$phrase = array("0 days without<br><img src='//enviosity.com/assets/WeirdChamp.png' width='185' height='170' alt='WeirdChamp' title='WeirdChamp'> and <img src='//enviosity.com/assets/monkaTOS.png' width='185' height='170' alt='WeirdChamp' title='WeirdChamp'> in the chat");
+$phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--Barack Obama",'<img src="./assets/enviLove.png" width="160" alt="enviLove" title="enviLove">', '<img src="./assets/slime.png" width="185" alt="slime" title="slime">', '<img src="./assets/enviAyaya.png" width="185" alt="enviAyaya" title="enviAyaya">');
+//$phrase = array("0 days without<br><img src='./assets/WeirdChamp.png' width='185' height='170' alt='WeirdChamp' title='WeirdChamp'> and <img src='./assets/monkaTOS.png' width='185' height='170' alt='WeirdChamp' title='WeirdChamp'> in the chat");
 $phrase = $phrase[rand(0, count($phrase)-1)];
 
 /*/
@@ -92,81 +92,81 @@ if($names=="Coderviosity" && !isset($_GET["real_site_pls"])){
 }
 */
 
-$avatar = "//enviosity.com/assets/F2P.png";
+$avatar = "./assets/F2P.png";
 switch($names){
 	case "Dendriosity":
-		$avatar = "//enviosity.com/assets/Dendriosity.jpg";
+		$avatar = "./assets/Dendriosity.jpg";
 		$without = "being Envi";
 	break;
 	case "Mr. F2P":
-		$without = "F2P <s>damage</s> <img src='//enviosity.com/assets/KEKWait.png' width='32' alt='KEKWait' title='KEKWait' style='vertical-align:middle'>";
+		$without = "F2P <s>damage</s> <img src='./assets/KEKWait.png' width='32' alt='KEKWait' title='KEKWait' style='vertical-align:middle'>";
 	break;
 	case "Mr. Screamer":
-		$avatar = "//enviosity.com/assets/Screamer.png";
-		$phrase = '<img src="//enviosity.com/assets/Screamer.png" style="width:100%; height:100%;">';
+		$avatar = "./assets/Screamer.png";
+		$phrase = '<img src="./assets/Screamer.png" style="width:100%; height:100%;">';
 		$without = "SCREAMING";
 		$phrase_fs = true;
 	break;
 	case "Donowalliosity":
-		$names .= " <img src='//enviosity.com/assets/enviWall.png' width='32' alt='enviWall' title='enviWall'>";
+		$names .= " <img src='./assets/enviWall.png' width='32' alt='enviWall' title='enviWall'>";
 	break;
 	case "Coderviosity":
-		$names = "<a href='//enviosity.com/coderviosity.html' style='text-decoration:underline; cursor: pointer'>".$names."</a>";
+		$names = "<a href='./coderviosity.html' style='text-decoration:underline; cursor: pointer'>".$names."</a>";
 	break;
 	case "Pepegiosity":
-		$names .= " <img src='//enviosity.com/assets/Pepega.png' width='32' alt='Pepega' title='Pepega'><img src='//enviosity.com/assets/Clap.gif' width='32' alt='Clap' title='Clap'>";
+		$names .= " <img src='./assets/Pepega.png' width='32' alt='Pepega' title='Pepega'><img src='./assets/Clap.gif' width='32' alt='Clap' title='Clap'>";
 	break;
 	case "Mr. Minimalist":
 	case "Minimaliosity":
-		$avatar = "//enviosity.com/assets/minimalist.png";
+		$avatar = "./assets/minimalist.png";
 		$without = "minimalism";
 	break;
 	case "Daddyosity":
 	case "Daddy Envi":
 	case "Mr. Polestripper":
-		$names .= " <img src='//enviosity.com/assets/enviGasm.png' width='32' alt='enviGasm' title='enviGasm'>";
+		$names .= " <img src='./assets/enviGasm.png' width='32' alt='enviGasm' title='enviGasm'>";
 	break;
 	case "Dylan":
 	case "Dylan the villain":
 	case "Dylanosity":
-		$avatar = "//enviosity.com/assets/dylan.png";
+		$avatar = "./assets/dylan.png";
 	break;
 	case "Mr. Fishy":
 	case "Fishywishes":
-		$avatar = "//enviosity.com/assets/fishy.jpg";
-		$phrase = "<img src='//enviosity.com/assets/enviAyaya.png' width='160' alt='enviAyaya' title='enviAyaya'><img src='//enviosity.com/assets/Clap.gif' width='140' alt='Clap' title='Clap'>";
+		$avatar = "./assets/fishy.jpg";
+		$phrase = "<img src='./assets/enviAyaya.png' width='160' alt='enviAyaya' title='enviAyaya'><img src='./assets/Clap.gif' width='140' alt='Clap' title='Clap'>";
 	break;
 	case "Eulanosity":
-		$avatar = "//enviosity.com/assets/eulaviosity.png";
+		$avatar = "./assets/eulaviosity.png";
 	break;
 	case "Copiosity":
-		$avatar = rand(0,1)? "//i.imgur.com/wtaJ1zB.png" : "//enviosity.com/assets/enviCOPIUM.jpg";
+		$avatar = rand(0,1)? "//i.imgur.com/wtaJ1zB.png" : "./assets/enviCOPIUM.jpg";
 		$alarm = true;
-		$phrase = '<img src="//enviosity.com/assets/COPIUM.png" width="160" alt="COPIUM" title="COPIUM">';
-		$alarm_icon = '<img src="//enviosity.com/assets/COPIUM.png" width="64" alt="COPIUM" title="COPIUM">';
-		$alarm_icon_s = '<img src="//enviosity.com/assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">';
-		$alarm_img = '//enviosity.com/assets/COPIUM.png';
+		$phrase = '<img src="./assets/COPIUM.png" width="160" alt="COPIUM" title="COPIUM">';
+		$alarm_icon = '<img src="./assets/COPIUM.png" width="64" alt="COPIUM" title="COPIUM">';
+		$alarm_icon_s = '<img src="./assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">';
+		$alarm_img = './assets/COPIUM.png';
 		$without = "COPIUM";
 		$alarm_msg = "WARNING! COPIUM OVERDOSE!";
 	break;
 	case "Hackiosity":
-		$avatar = $alarm_img = "//enviosity.com/assets/HACKERMANS.gif";
+		$avatar = $alarm_img = "./assets/HACKERMANS.gif";
 		$alarm = true;
-		$phrase = '<img src="//enviosity.com/assets/HACKERMANS.gif" width="160" alt="HACKERMANS" title="HACKERMANS">';
-		$alarm_icon = '<img src="//enviosity.com/assets/HACKERMANS.gif" width="64" alt="HACKERMANS" title="HACKERMANS">';
-		$alarm_icon_s = '<img src="//enviosity.com/assets/HACKERMANS.gif" width="18" alt="HACKERMANS" title="HACKERMANS">';
-		$alarm_img = '//enviosity.com/assets/HACKERMANS.gif';
+		$phrase = '<img src="./assets/HACKERMANS.gif" width="160" alt="HACKERMANS" title="HACKERMANS">';
+		$alarm_icon = '<img src="./assets/HACKERMANS.gif" width="64" alt="HACKERMANS" title="HACKERMANS">';
+		$alarm_icon_s = '<img src="./assets/HACKERMANS.gif" width="18" alt="HACKERMANS" title="HACKERMANS">';
+		$alarm_img = './assets/HACKERMANS.gif';
 		$without = "HACKERMANS";
 		$alarm_msg = 'WARNING! SYSTEM OVERRIDE!<br><br><a id="hack_text">Hacking in progress..</a><div class="progress"><div class="bar"></div></div>';
 	break;
 	case "YEPiosity":
-		$names .= " <img src='//enviosity.com/assets/YEP.png' width='32' alt='YEP' title='YEP'>";
+		$names .= " <img src='./assets/YEP.png' width='32' alt='YEP' title='YEP'>";
 	break;
 	case "SHEESHiosity":
-		$names .= " <img src='//enviosity.com/assets/enviSHEESH.png' width='32' alt='enviSHEESH' title='enviSHEESH'>";
+		$names .= " <img src='./assets/enviSHEESH.png' width='32' alt='enviSHEESH' title='enviSHEESH'>";
 	break;
 	case "Cabbage Head":
-		$avatar = "//enviosity.com/assets/enviCabbage.png";
+		$avatar = "./assets/enviCabbage.png";
 	break;
 }
 
@@ -182,8 +182,8 @@ switch($names){
 	<meta name="keywords" content="enviosity, f2p, gamer, streamer, youtube, social, genshin, impact, genshin impact, slipper">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<!-- Fontawesome icons -->
-	<link rel="stylesheet" href="//enviosity.com/assets/fa/css/all.min.css">
-	<link rel="stylesheet" href="//enviosity.com/assets/main.css">
+	<link rel="stylesheet" href="./assets/fa/css/all.min.css">
+	<link rel="stylesheet" href="./assets/main.css">
 	<style>
 		.logo div{
 			background-image:url('<?=$avatar;?>');
@@ -247,7 +247,7 @@ switch($names){
 					echo alarm_html();
 				} ?>
 				<div class="slime">
-					<img src="<?=($alarm)? $alarm_img: '//enviosity.com/assets/slime.png';?>" style="width:150px">
+					<img src="<?=($alarm)? $alarm_img: './assets/slime.png';?>" style="width:150px">
 				</div>
 			</td>
 			<td style="width:150px;">
@@ -261,7 +261,7 @@ switch($names){
 					echo alarm_html();
 				} ?>
 				<div class="slime">
-					<img src="<?=($alarm)? $alarm_img : '//enviosity.com/assets/slime.png';?>" style="width:150px">
+					<img src="<?=($alarm)? $alarm_img : './assets/slime.png';?>" style="width:150px">
 				</div>
 			</td>
 		</tr>
@@ -295,7 +295,7 @@ switch($names){
 				<a style="font-size:20px">GENSHIN IMPACT</a><br>
 				<a style="font-size:11px">usefull tools</a>
 				<div class="lines">
-					<span><a class="discord" href="https://paimon.moe" target="_blank"><b>Paimon.moe</b></a></span>
+					<span><a class="discord" href="https://paimon.moe" target="_blank"><img src="./assets/paimonmoe.ico"><b>Paimon.moe</b></a></span>
 				</div>
 				<br>
 				<br>
@@ -307,7 +307,7 @@ switch($names){
 							<td style="text-align:center"><div style="display:none" id="slime_warning"><a style="font-size:11px">slimes are resource intence!</a> <a style="font-size:10px; text-decoration:underline; cursor:pointer" onclick='enable_slimes()'>Enable them</a></div></td>
 						</tr>
 						<tr>
-							<td style="text-align:center">Images by <a href="https://twitter.com/fishywishies" style="text-decoration:underline">@fishywishes!</a> <img src="//enviosity.com/assets/fishy.jpg" height="18" width="18" alt="fishy" title="fishy"> | Site by <a href="https://tfb.su" style="text-decoration:underline">@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="//enviosity.com/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?> | <a href='https://github.com/TFBosoN/enviosity' style="text-decoration:underline">GITHUB</a></td>
+							<td style="text-align:center">Images by <a href="https://twitter.com/fishywishies" style="text-decoration:underline">@fishywishes!</a> <img src="./assets/fishy.jpg" height="18" width="18" alt="fishy" title="fishy"> | Site by <a href="https://tfb.su" style="text-decoration:underline">@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="./assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?> | <a href='https://github.com/TFBosoN/enviosity' style="text-decoration:underline">GITHUB</a></td>
 						</tr>
 					</table>
 				</div>
@@ -347,6 +347,6 @@ switch($names){
 	}
 	?>
 	</script>
-	<script src='//enviosity.com/assets/main.js'></script>
+	<script src='./assets/main.js'></script>
 </body>
 </html>
