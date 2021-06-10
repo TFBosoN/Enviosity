@@ -189,7 +189,7 @@ canvas {
 	position:fixed;
 	left:0;
 	top:0;
-	background: radial-gradient(at center, rgba(20,22,28,0.78), rgba(20,22,28,0.98));
+	background: radial-gradient(at center, rgba(20,20,30,0.78), rgba(20,20,30,0.98));
 }
 .lines{
 	font-size: 64px;
