@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //After disabling slimes
 function enable_slimes(){
 	document.getElementById("slimes").style.opacity = '1';
-	document.getElementById("slimes").style.display = 'block';	
+	document.getElementById("slimes").style.display = 'inline-table';	
 }
 //Background
 function draw() {

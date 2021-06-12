@@ -5,7 +5,7 @@ $bg_images = json_decode(file_get_contents("./envi.json"));
 $imgh = 360;
 $zoom = 2;
 
-$without = "cursing";
+$without = "1 day without cursing";
 $phrase_fs = false;
 
 //COPIUM 
@@ -34,13 +34,19 @@ $count = rand(0, count($names)-1);
 $names = $names[$count];
 
 $promote_name = array();
-$promote_name[] = "Hackiosity";
-
 $categories = array_filter(explode("#", file_get_contents("./envi_names.txt")));
 $rcat = rand(1, count($categories)-1); //Choosing rand category
 $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(2,count($names)-1);
-$promote_name[] = $names[$count];
+
+
+if(isset($_COOKIE['no_hackermans'])){
+	$promote_name[] = $names[$count];
+}else{
+	$promote_name[] = "Hackiosity";
+	setcookie( "no_hackermans", true, time()+10 );
+}
+
 
 
 $names = $promote_name[rand(0,count($promote_name)-1)];
@@ -95,7 +101,7 @@ $avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/F2P
 switch($names){
 	case "Dendriosity":
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Dendriosity.jpg";
-		$without = "being Envi";
+		$without = "0 days without being Envi";
 	break;
 	case "Mr. F2P":
 		$without = "F2P <s>damage</s> <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/KEKWait.png' width='32' alt='KEKWait' title='KEKWait' style='vertical-align:middle'>";
@@ -103,7 +109,7 @@ switch($names){
 	case "Mr. Screamer":
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Screamer.png";
 		$phrase = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Screamer.png" style="width:100%; height:100%;">';
-		$without = "SCREAMING";
+		$without = "0 days without SCREAMING";
 		$phrase_fs = true;
 	break;
 	case "Donowalliosity":
@@ -118,7 +124,7 @@ switch($names){
 	case "Mr. Minimalist":
 	case "Minimaliosity":
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/minimalist.png";
-		$without = "minimalism";
+		$without = "0 days without minimalism";
 	break;
 	case "Daddyosity":
 	case "Daddy Envi":
@@ -145,17 +151,17 @@ switch($names){
 		$alarm_icon = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/COPIUM.png" width="64" alt="COPIUM" title="COPIUM">';
 		$alarm_icon_s = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">';
 		$alarm_img = '//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/COPIUM.png';
-		$without = "COPIUM";
+		$without = "0 days without COPIUM";
 		$alarm_msg = "WARNING! COPIUM OVERDOSE!";
 	break;
 	case "Hackiosity":
 		$avatar = $alarm_img = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif";
 		$alarm = true;
 		$phrase = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif" width="160" alt="HACKERMANS" title="HACKERMANS">';
-		$alarm_icon = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif" width="64" alt="HACKERMANS" title="HACKERMANS">';
+		//$alarm_icon = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif" width="64" alt="HACKERMANS" title="HACKERMANS">';
 		$alarm_icon_s = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif" width="18" alt="HACKERMANS" title="HACKERMANS">';
 		$alarm_img = '//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif';
-		$without = "HACKERMANS";
+		$without = "0 days without HACKERMANS";
 		$alarm_msg = 'WARNING! SYSTEM OVERRIDE!<br><br><a id="hack_text">Hacking in progress..</a><div class="progress"><div class="bar"></div></div>';
 	break;
 	case "YEPiosity":
@@ -168,8 +174,6 @@ switch($names){
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviCabbage.png";
 	break;
 }
-
-
 ?>
 
 <html>
@@ -272,24 +276,35 @@ switch($names){
 			<a class="logo"><div></div></a>
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
-				<a>0 days without <?=$without;?>!</a><br>
-				<a>GFUEL use code "ENVIOSITY" for 30% off until end of weekend!</a>
+				<a><?=$without;?>!</a><br><br>
+				<?php
+				if($names == "Hackiosity"){
+				?>
+				<a style="font-size:20px">PSST I HACKED YOU SOME CODE FOR GFUEL</a><br>
+				<a style="font-size:20px">use "ENVIOSITY" for 30% off until the end of weekend!</a>
+				<?php
+				}else{
+				?>
+				<a>GFUEL use code "ENVIOSITY" for 30% off until the end of weekend!</a>
+				<?php
+				}
+				?>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br><br>
 				<div class="lines">
-					<span><a class="youtube" href="https://youtube.com/Enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-youtube"></i>';?><br><b>Youtube</b></a></span>
-					<span><a class="twitch" href="https://www.twitch.tv/enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-twitch"></i>';?><br><b>Twitch</b></a></span>
-					<span><a class="youtube" href="https://www.youtube.com/channel/UCc-msH2ut_AGNtkZhLxOLew" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-youtube"></i>';?><br><b>VODs</b></a></span>
+					<span><a class="youtube" href="https://youtube.com/Enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-youtube"></i>';?><br><b>Youtube</b></a></span>
+					<span><a class="twitch" href="https://www.twitch.tv/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-twitch"></i>';?><br><b>Twitch</b></a></span>
+					<span><a class="youtube" href="https://www.youtube.com/channel/UCc-msH2ut_AGNtkZhLxOLew" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-youtube"></i>';?><br><b>VODs</b></a></span>
 				</div>
 				<div class="lines">
-					<span><a class="twittor" href="https://twitter.com/Enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-twitter"></i>';?><br><b>Twitter</b></a></span>
-					<span><a class="tiktok" href="https://www.tiktok.com/@enviosityclips" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-tiktok"></i>';?><br><b>Tiktok</b></a></span>
-					<span><a class="instogram" href="https://instagram.com/enviosity/" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-instagram"></i>';?><br><b>Instagram</b></a></span>
+					<span><a class="twittor" href="https://twitter.com/Enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-twitter"></i>';?><br><b>Twitter</b></a></span>
+					<span><a class="tiktok" href="https://www.tiktok.com/@enviosityclips" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-tiktok"></i>';?><br><b>Tiktok</b></a></span>
+					<span><a class="instogram" href="https://instagram.com/enviosity/" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-instagram"></i>';?><br><b>Instagram</b></a></span>
 				</div>
 				<div class="lines">
-					<span><a class="discord" href="https://discord.gg/enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-discord"></i>';?><br><b>Discord</b></a></span>
-					<span><a class="reddit" href="https://reddit.com/r/enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fab fa-reddit"></i>';?><br><b>Reddit</b></a></span>
-					<span><a class="instogram" href="https://merch.streamelements.com/enviosity" target="_blank"><?=($alarm)? $alarm_icon: '<i class="fas fa-tshirt"></i>';?><br><b>Merch</b></a></span>
+					<span><a class="discord" href="https://discord.gg/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-discord"></i>';?><br><b>Discord</b></a></span>
+					<span><a class="reddit" href="https://reddit.com/r/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-reddit"></i>';?><br><b>Reddit</b></a></span>
+					<span><a class="instogram" href="https://merch.streamelements.com/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fas fa-tshirt"></i>';?><br><b>Merch</b></a></span>
 				</div>
 				<a style="font-size:20px">GENSHIN IMPACT</a><br>
 				<a style="font-size:11px; color:#ccc">useful tools</a>
@@ -306,7 +321,7 @@ position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9
 						<tr>
 							<td style="text-align:center"><div style="display:none" id="slime_warning"><a style="font-size:11px">slimes are resource intence!</a> <a style="font-size:10px; text-decoration:underline; cursor:pointer" onclick='enable_slimes()'>Enable them</a></div></td>
 						</tr>
-							<td style="text-align:center; padding:10px"><a href='https://github.com/TFBosoN/enviosity' style="text-decoration:underline">GitHub</a> | <a href="./changelog.txt">Changelog</a></td>
+							<td style="text-align:center; padding:10px"><a href='https://github.com/TFBosoN/enviosity' style="text-decoration:underline">GitHub</a> | <a href="./changelog.txt">Changelog</a> | <a href="./envi_names.txt">This is how viewers call me</a></td>
 						</tr>
 						<tr>
 							<td style="text-align:center">Images by <a href="https://twitter.com/fishywishies" style="text-decoration:underline">@fishywishes!</a> <img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/fishy.jpg" height="18" width="18" alt="fishy" title="fishy"> | Site by <a href="https://tfb.su" style="text-decoration:underline">@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?></td>
@@ -333,6 +348,7 @@ position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9
 		}
 	?>
 	];
+	//HACKERMANS TEXT
 	text = [ "UPLOADING VIRUSES..", "INSTALLING BACKDOOR..", "LOGGING PASSWORDS..", "OVERRIDING SECURITY PROTOCOL..", "PENETRATING THE SYSTEM..", "HACKING THE IP-ADDRESS..", "DOWNLOADING SECRET PORN STASH..", "MINING DOGE-COINS..", "GETTING SATELLITE DATA..", "INSERTING KEYLOGGER.."];
 	var imgwidth = <?=$imgh/9*16;?>;
 	var imgheight = <?=$imgh;?>;
@@ -342,6 +358,7 @@ position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9
 	?>
 	function randomString(num){
 		console.log(num);
+		//not random KEKW
 		return text[num/*Math.floor(Math.random() * text.length)*/];
 	}
 	setInterval(function(){

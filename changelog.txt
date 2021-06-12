@@ -6,7 +6,8 @@
 Added changelog.txt
 Moved assets to CDN for loadtime improvement
 Set HACKERMANS as promote name
-Some fixes
+Changes to promo name showup
+Some bug fixes
 
 ===
 06/11/21
