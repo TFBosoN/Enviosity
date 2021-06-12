@@ -5,7 +5,7 @@ $bg_images = json_decode(file_get_contents("./envi.json"));
 $imgh = 360;
 $zoom = 2;
 
-$without = "streaming";
+$without = "cursing";
 $phrase_fs = false;
 
 //COPIUM 
