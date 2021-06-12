@@ -346,6 +346,6 @@ position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9
 	}
 	?>
 	</script>
-	<script src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/main.js'></script>
+	<script src='./assets/main.js'></script>
 </body>
 </html>
