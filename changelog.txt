@@ -1,0 +1,13 @@
+
+
+===
+06/12/21
+
+Added changelog.txt
+Moved assets to CDN for loadtime improvement
+Some fixes
+
+===
+06/11/21
+
+Added some names from stream
