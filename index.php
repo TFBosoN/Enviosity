@@ -34,6 +34,7 @@ $count = rand(0, count($names)-1);
 $names = $names[$count];
 
 $promote_name = array();
+$promote_name[] = "Eulaviosity";
 
 $categories = array_filter(explode("#", file_get_contents("./envi_names.txt")));
 $rcat = rand(1, count($categories)-1); //Choosing rand category
