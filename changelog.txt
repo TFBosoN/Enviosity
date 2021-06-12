@@ -5,6 +5,7 @@
 
 Added changelog.txt
 Moved assets to CDN for loadtime improvement
+Set HACKERMANS as promote name
 Some fixes
 
 ===

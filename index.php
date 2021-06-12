@@ -34,6 +34,7 @@ $count = rand(0, count($names)-1);
 $names = $names[$count];
 
 $promote_name = array();
+$promote_name[] = "Hackiosity";
 
 $categories = array_filter(explode("#", file_get_contents("./envi_names.txt")));
 $rcat = rand(1, count($categories)-1); //Choosing rand category
@@ -240,7 +241,7 @@ switch($names){
 	<table class="slimes" id="slimes" style="">
 		<tr>
 			<td class="first">
-				<?			
+				<?php			
 				if($alarm){
 					echo alarm_html();
 				} ?>
@@ -254,7 +255,7 @@ switch($names){
 				</div>
 			</td>
 			<td class="second">
-				<?			
+				<?php			
 				if($alarm){
 					echo alarm_html();
 				} ?>
@@ -305,8 +306,10 @@ position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9
 						<tr>
 							<td style="text-align:center"><div style="display:none" id="slime_warning"><a style="font-size:11px">slimes are resource intence!</a> <a style="font-size:10px; text-decoration:underline; cursor:pointer" onclick='enable_slimes()'>Enable them</a></div></td>
 						</tr>
+							<td style="text-align:center; padding:10px"><a href='https://github.com/TFBosoN/enviosity' style="text-decoration:underline">GitHub</a> | <a href="./changelog.txt">Changelog</a></td>
+						</tr>
 						<tr>
-							<td style="text-align:center">Images by <a href="https://twitter.com/fishywishies" style="text-decoration:underline">@fishywishes!</a> <img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/fishy.jpg" height="18" width="18" alt="fishy" title="fishy"> | Site by <a href="https://tfb.su" style="text-decoration:underline">@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?> | <a href='https://github.com/TFBosoN/enviosity' style="text-decoration:underline">GitHub</a> | <a href="./changelog.txt">Changelog</a></td>
+							<td style="text-align:center">Images by <a href="https://twitter.com/fishywishies" style="text-decoration:underline">@fishywishes!</a> <img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/fishy.jpg" height="18" width="18" alt="fishy" title="fishy"> | Site by <a href="https://tfb.su" style="text-decoration:underline">@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?></td>
 						</tr>
 					</table>
 				</div>
@@ -330,17 +333,24 @@ position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9
 		}
 	?>
 	];
+	text = [ "UPLOADING VIRUSES..", "INSTALLING BACKDOOR..", "LOGGING PASSWORDS..", "OVERRIDING SECURITY PROTOCOL..", "PENETRATING THE SYSTEM..", "HACKING THE IP-ADDRESS..", "DOWNLOADING SECRET PORN STASH..", "MINING DOGE-COINS..", "GETTING SATELLITE DATA..", "INSERTING KEYLOGGER.."];
 	var imgwidth = <?=$imgh/9*16;?>;
 	var imgheight = <?=$imgh;?>;
+	var num = 0;
 	<?php
 	if($names == "Hackiosity"){
 	?>
-	function randomString(){
-		text = ["DOWNLOADING SECRET PORN STASH..", "UPLOADING VIRUSES..", "INSTALLING BACKDOOR..", "LOGGING PASSWORDS..", "OVERRIDING SECURITY PROTOCOL..", "PENETRATING THE SYSTEM..", "HACKING THE IP-ADDRESS..", "MINING DOGE-COINS..", "GETTING SATELLITE DATA..", "INSERTING KEYLOGGER.."];
-		return text[Math.floor(Math.random() * text.length)];
+	function randomString(num){
+		console.log(num);
+		return text[num/*Math.floor(Math.random() * text.length)*/];
 	}
 	setInterval(function(){
-		document.getElementById("hack_text").innerHTML = randomString();
+		document.getElementById("hack_text").innerHTML = randomString(num);
+		if(num>=text.length-1){
+			num = 0;
+		}else{
+			num++;
+		}
 	},2707);
 	<?php
 	}
