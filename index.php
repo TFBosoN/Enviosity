@@ -34,7 +34,6 @@ $count = rand(0, count($names)-1);
 $names = $names[$count];
 
 $promote_name = array();
-$promote_name[] = "Eulaviosity";
 
 $categories = array_filter(explode("#", file_get_contents("./envi_names.txt")));
 $rcat = rand(1, count($categories)-1); //Choosing rand category
@@ -181,8 +180,8 @@ switch($names){
 	<meta name="keywords" content="enviosity, f2p, gamer, streamer, youtube, social, genshin, impact, genshin impact, slipper">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<!-- Fontawesome icons -->
-	<link rel="stylesheet" href="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/fa/css/all.min.css">
-	<link rel="stylesheet" href="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/main.css">
+	<link rel="stylesheet" href="./assets/fa/css/all.min.css">
+	<link rel="stylesheet" href="./assets/main.css">
 	<style>
 		.logo div{
 			background-image:url('<?=$avatar;?>');
