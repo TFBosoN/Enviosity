@@ -46,8 +46,8 @@ $names = $promote_name[rand(0,count($promote_name)-1)];
 
 
 //RNG phrases on load screen
-$phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--Barack Obama",'<img src="./assets/enviLove.png" width="160" alt="enviLove" title="enviLove">', '<img src="./assets/slime.png" width="185" alt="slime" title="slime">', '<img src="./assets/enviAyaya.png" width="185" alt="enviAyaya" title="enviAyaya">');
-//$phrase = array("0 days without<br><img src='./assets/WeirdChamp.png' width='185' height='170' alt='WeirdChamp' title='WeirdChamp'> and <img src='./assets/monkaTOS.png' width='185' height='170' alt='WeirdChamp' title='WeirdChamp'> in the chat");
+$phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--Barack Obama",'<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png" width="160" alt="enviLove" title="enviLove">', '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/slime.png" width="185" alt="slime" title="slime">', '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviAyaya.png" width="185" alt="enviAyaya" title="enviAyaya">');
+//$phrase = array("0 days without<br><img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/WeirdChamp.png' width='185' height='170' alt='WeirdChamp' title='WeirdChamp'> and <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/monkaTOS.png' width='185' height='170' alt='WeirdChamp' title='WeirdChamp'> in the chat");
 $phrase = $phrase[rand(0, count($phrase)-1)];
 
 /*/
@@ -90,81 +90,81 @@ if($names=="Coderviosity" && !isset($_GET["real_site_pls"])){
 }
 */
 
-$avatar = "./assets/F2P.png";
+$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/F2P.png";
 switch($names){
 	case "Dendriosity":
-		$avatar = "./assets/Dendriosity.jpg";
+		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Dendriosity.jpg";
 		$without = "being Envi";
 	break;
 	case "Mr. F2P":
-		$without = "F2P <s>damage</s> <img src='./assets/KEKWait.png' width='32' alt='KEKWait' title='KEKWait' style='vertical-align:middle'>";
+		$without = "F2P <s>damage</s> <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/KEKWait.png' width='32' alt='KEKWait' title='KEKWait' style='vertical-align:middle'>";
 	break;
 	case "Mr. Screamer":
-		$avatar = "./assets/Screamer.png";
-		$phrase = '<img src="./assets/Screamer.png" style="width:100%; height:100%;">';
+		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Screamer.png";
+		$phrase = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Screamer.png" style="width:100%; height:100%;">';
 		$without = "SCREAMING";
 		$phrase_fs = true;
 	break;
 	case "Donowalliosity":
-		$names .= " <img src='./assets/enviWall.png' width='32' alt='enviWall' title='enviWall'>";
+		$names .= " <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviWall.png' width='32' alt='enviWall' title='enviWall'>";
 	break;
 	case "Coderviosity":
 		$names = "<a href='./coderviosity.html' style='text-decoration:underline; cursor: pointer'>".$names."</a>";
 	break;
 	case "Pepegiosity":
-		$names .= " <img src='./assets/Pepega.png' width='32' alt='Pepega' title='Pepega'><img src='./assets/Clap.gif' width='32' alt='Clap' title='Clap'>";
+		$names .= " <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Pepega.png' width='32' alt='Pepega' title='Pepega'><img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Clap.gif' width='32' alt='Clap' title='Clap'>";
 	break;
 	case "Mr. Minimalist":
 	case "Minimaliosity":
-		$avatar = "./assets/minimalist.png";
+		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/minimalist.png";
 		$without = "minimalism";
 	break;
 	case "Daddyosity":
 	case "Daddy Envi":
 	case "Mr. Polestripper":
-		$names .= " <img src='./assets/enviGasm.png' width='32' alt='enviGasm' title='enviGasm'>";
+		$names .= " <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviGasm.png' width='32' alt='enviGasm' title='enviGasm'>";
 	break;
 	case "Dylan":
 	case "Dylan the villain":
 	case "Dylanosity":
-		$avatar = "./assets/dylan.png";
+		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/dylan.png";
 	break;
 	case "Mr. Fishy":
 	case "Fishywishes":
-		$avatar = "./assets/fishy.jpg";
-		$phrase = "<img src='./assets/enviAyaya.png' width='160' alt='enviAyaya' title='enviAyaya'><img src='./assets/Clap.gif' width='140' alt='Clap' title='Clap'>";
+		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/fishy.jpg";
+		$phrase = "<img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviAyaya.png' width='160' alt='enviAyaya' title='enviAyaya'><img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Clap.gif' width='140' alt='Clap' title='Clap'>";
 	break;
 	case "Eulanosity":
-		$avatar = "./assets/eulaviosity.png";
+		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/eulaviosity.png";
 	break;
 	case "Copiosity":
-		$avatar = rand(0,1)? "//i.imgur.com/wtaJ1zB.png" : "./assets/enviCOPIUM.jpg";
+		$avatar = rand(0,1)? "//i.imgur.com/wtaJ1zB.png" : "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviCOPIUM.jpg";
 		$alarm = true;
-		$phrase = '<img src="./assets/COPIUM.png" width="160" alt="COPIUM" title="COPIUM">';
-		$alarm_icon = '<img src="./assets/COPIUM.png" width="64" alt="COPIUM" title="COPIUM">';
-		$alarm_icon_s = '<img src="./assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">';
-		$alarm_img = './assets/COPIUM.png';
+		$phrase = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/COPIUM.png" width="160" alt="COPIUM" title="COPIUM">';
+		$alarm_icon = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/COPIUM.png" width="64" alt="COPIUM" title="COPIUM">';
+		$alarm_icon_s = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/COPIUM.png" width="18" alt="COPIUM" title="COPIUM">';
+		$alarm_img = '//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/COPIUM.png';
 		$without = "COPIUM";
 		$alarm_msg = "WARNING! COPIUM OVERDOSE!";
 	break;
 	case "Hackiosity":
-		$avatar = $alarm_img = "./assets/HACKERMANS.gif";
+		$avatar = $alarm_img = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif";
 		$alarm = true;
-		$phrase = '<img src="./assets/HACKERMANS.gif" width="160" alt="HACKERMANS" title="HACKERMANS">';
-		$alarm_icon = '<img src="./assets/HACKERMANS.gif" width="64" alt="HACKERMANS" title="HACKERMANS">';
-		$alarm_icon_s = '<img src="./assets/HACKERMANS.gif" width="18" alt="HACKERMANS" title="HACKERMANS">';
-		$alarm_img = './assets/HACKERMANS.gif';
+		$phrase = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif" width="160" alt="HACKERMANS" title="HACKERMANS">';
+		$alarm_icon = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif" width="64" alt="HACKERMANS" title="HACKERMANS">';
+		$alarm_icon_s = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif" width="18" alt="HACKERMANS" title="HACKERMANS">';
+		$alarm_img = '//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif';
 		$without = "HACKERMANS";
 		$alarm_msg = 'WARNING! SYSTEM OVERRIDE!<br><br><a id="hack_text">Hacking in progress..</a><div class="progress"><div class="bar"></div></div>';
 	break;
 	case "YEPiosity":
-		$names .= " <img src='./assets/YEP.png' width='32' alt='YEP' title='YEP'>";
+		$names .= " <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/YEP.png' width='32' alt='YEP' title='YEP'>";
 	break;
 	case "SHEESHiosity":
-		$names .= " <img src='./assets/enviSHEESH.png' width='32' alt='enviSHEESH' title='enviSHEESH'>";
+		$names .= " <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviSHEESH.png' width='32' alt='enviSHEESH' title='enviSHEESH'>";
 	break;
 	case "Cabbage Head":
-		$avatar = "./assets/enviCabbage.png";
+		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviCabbage.png";
 	break;
 }
 
@@ -180,8 +180,8 @@ switch($names){
 	<meta name="keywords" content="enviosity, f2p, gamer, streamer, youtube, social, genshin, impact, genshin impact, slipper">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<!-- Fontawesome icons -->
-	<link rel="stylesheet" href="./assets/fa/css/all.min.css">
-	<link rel="stylesheet" href="./assets/main.css">
+	<link rel="stylesheet" href="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/fa/css/all.min.css">
+	<link rel="stylesheet" href="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/main.css">
 	<style>
 		.logo div{
 			background-image:url('<?=$avatar;?>');
@@ -245,7 +245,7 @@ switch($names){
 					echo alarm_html();
 				} ?>
 				<div class="slime">
-					<img src="<?=($alarm)? $alarm_img: './assets/slime.png';?>" style="width:150px">
+					<img src="<?=($alarm)? $alarm_img: '//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/slime.png';?>" style="width:150px">
 				</div>
 			</td>
 			<td style="width:150px;">
@@ -259,7 +259,7 @@ switch($names){
 					echo alarm_html();
 				} ?>
 				<div class="slime">
-					<img src="<?=($alarm)? $alarm_img : './assets/slime.png';?>" style="width:150px">
+					<img src="<?=($alarm)? $alarm_img : '//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/slime.png';?>" style="width:150px">
 				</div>
 			</td>
 		</tr>
@@ -293,7 +293,7 @@ switch($names){
 				<a style="font-size:20px">GENSHIN IMPACT</a><br>
 				<a style="font-size:11px; color:#ccc">useful tools</a>
 				<div class="lines">
-					<span style="width: auto;"><a class="discord" href="https://paimon.moe" target="_blank"><img src="./assets/paimonmoe.ico" style="vertical-align: middle;"><b style="font-family: sans-serif;
+					<span style="width: auto;"><a class="discord" href="https://paimon.moe" target="_blank"><img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/paimonmoe.ico" style="vertical-align: middle;"><b style="font-family: sans-serif;
 position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9px; font-size: 14px; right: 0; color: rgb(78, 124, 255);">.moe</div></b></a></span>
 				</div>
 				<br>
@@ -306,7 +306,7 @@ position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9
 							<td style="text-align:center"><div style="display:none" id="slime_warning"><a style="font-size:11px">slimes are resource intence!</a> <a style="font-size:10px; text-decoration:underline; cursor:pointer" onclick='enable_slimes()'>Enable them</a></div></td>
 						</tr>
 						<tr>
-							<td style="text-align:center">Images by <a href="https://twitter.com/fishywishies" style="text-decoration:underline">@fishywishes!</a> <img src="./assets/fishy.jpg" height="18" width="18" alt="fishy" title="fishy"> | Site by <a href="https://tfb.su" style="text-decoration:underline">@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="./assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?> | <a href='https://github.com/TFBosoN/enviosity' style="text-decoration:underline">GITHUB</a></td>
+							<td style="text-align:center">Images by <a href="https://twitter.com/fishywishies" style="text-decoration:underline">@fishywishes!</a> <img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/fishy.jpg" height="18" width="18" alt="fishy" title="fishy"> | Site by <a href="https://tfb.su" style="text-decoration:underline">@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?> | <a href='https://github.com/TFBosoN/enviosity' style="text-decoration:underline">GITHUB</a></td>
 						</tr>
 					</table>
 				</div>
@@ -346,6 +346,6 @@ position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9
 	}
 	?>
 	</script>
-	<script src='./assets/main.js'></script>
+	<script src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/main.js'></script>
 </body>
 </html>
