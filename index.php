@@ -43,9 +43,7 @@ $count = rand(2,count($names)-1);
 if(isset($_COOKIE['no_promo']) /*|| true*/){
 	$promote_name[] = $names[$count];
 }else{
-	$promote_name[] = $names[$count];
-	$promote_name[] = $names[$count];
-	$promote_name[] = "Eulaviosity";
+	$promote_name[] = "Mr. Fishy";
 	setcookie( "no_promo", true, time()+10 );
 }
 
@@ -144,6 +142,7 @@ switch($names){
 		$phrase = "<img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviAyaya.png' width='160' alt='enviAyaya' title='enviAyaya'><img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Clap.gif' width='140' alt='Clap' title='Clap'>";
 	break;
 	case "Eulanosity":
+	case "Eulaviosity":
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/eulaviosity.png";
 	break;
 	case "Copiosity":

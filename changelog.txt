@@ -1,15 +1,15 @@
 ===
 06/13/21
-Changed promo name
+Changed promo name to Mr. Fishy
+Some optimizations
 
 ===
 06/12/21
 
 Added changelog.txt
 Moved assets to CDN for loadtime improvement
-Set HACKERMANS as promote name
+Changed promo name to HACKERMANS
 Changes to promo name showup
-Changes to 
 Some bug fixes
 
 ===
