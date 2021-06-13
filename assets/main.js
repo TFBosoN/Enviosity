@@ -23,19 +23,35 @@ function enable_slimes(){
 //Background
 function draw() {
   var k = 0;
-  var imgh = 8;
+  var imgh = 6;
+  var count = 0;
   var ctx = document.getElementById('canvas').getContext('2d');
+  t = [2,3,5,6,7,8,8,7,6,5,3];
+  kt = [1,2,3,4,5,6,5,4,3,2,1];
+  ctx.rotate(-30*Math.PI/180);
+  ctx.transform(2,0,0,2,0,0);
   data.forEach(function(item, i , arr){
 	  var img = new Image();
 	  img.onload = function() {
-		  ctx.drawImage(img, (k*imgwidth)%(imgh*imgwidth), parseInt(k/imgh)*imgheight, imgwidth, imgheight);
+		  count++;
+		  col = -0.5 + parseInt(count%t[k])-kt[k]/3;
+		  row = k;
+		  console.table(row, col);
+		  ctx.drawImage(img, col*imgwidth, row*imgheight, imgwidth, imgheight);
 		  console.log("loaded "+item);
-		  k=k+1;
+		  if(count%t[k]==0){
+			  k++;
+			  count = 0;
+			  console.log('nr');
+		  }
 	  }
 	  img.src = item;
   });
 
 }
 canvas = document.getElementById("canvas");
-canvas.width = document.body.clientWidth*3;
-canvas.height = document.body.clientHeight*3;
+scale = document.body.clientWidth/document.body.clientHeight;
+width = 2560*3;
+height = width/scale;
+canvas.width = width;
+canvas.height = height;

@@ -193,7 +193,7 @@ switch($names){
 			background-image:url('<?=$avatar;?>');
 		}
 		canvas {
-			transform: rotate(-30deg) scale(<?=$zoom;?>);
+			/transform: rotate(-30deg) scale(<?=$zoom;?>);
 		}
 		.slimes .second img{
 			<?php  
