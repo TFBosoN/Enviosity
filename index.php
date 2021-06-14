@@ -40,7 +40,7 @@ $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(2,count($names)-1);
 
 
-if(isset($_COOKIE['no_promo']) /*|| true*/){
+if(isset($_COOKIE['no_promo']) || true){
 	$promote_name[] = $names[$count];
 }else{
 	$promote_name[] = "Mr. Fishy";
@@ -286,7 +286,7 @@ switch($names){
 				<?php
 				}else{
 				?>
-				<a>GFUEL use code "ENVIOSITY" for 30% off until the end of weekend!</a>
+				<a>GFUEL last day to use code "ENVIOSITY" for 30% off!</a>
 				<?php
 				}
 				?>
@@ -304,7 +304,7 @@ switch($names){
 				</div>
 				<div class="lines">
 					<span><a class="discord" href="https://discord.gg/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-discord"></i>';?><br><b>Discord</b></a></span>
-					<span><a class="reddit" href="https://reddit.com/r/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-reddit"></i>';?><br><b>Reddit</b></a></span>
+					<span><a class="reddit" href="https://www.reddit.com/r/Enviosity/" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-reddit"></i>';?><br><b>Reddit</b></a></span>
 					<span><a class="instogram" href="https://merch.streamelements.com/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fas fa-tshirt"></i>';?><br><b>Merch</b></a></span>
 				</div>
 				<a style="font-size:20px">GENSHIN IMPACT</a><br>
