@@ -5,7 +5,7 @@ $bg_images = json_decode(file_get_contents("./envi.json"));
 $imgh = 360;
 $zoom = 2;
 
-$without = "2 days without cursing";
+$without = "3 days without cursing";
 $phrase_fs = false;
 
 //COPIUM 
@@ -40,10 +40,10 @@ $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(2,count($names)-1);
 
 
-if(isset($_COOKIE['no_promo']) || true){
+if(isset($_COOKIE['no_promo'])){
 	$promote_name[] = $names[$count];
 }else{
-	$promote_name[] = "Mr. Fishy";
+	$promote_name[] = "GIGACHAD";
 	setcookie( "no_promo", true, time()+10 );
 }
 
@@ -173,6 +173,9 @@ switch($names){
 	break;
 	case "Cabbage Head":
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviCabbage.png";
+	break;
+	case "GIGACHAD":
+		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623790335/envi/assets/Gigachad.jpg";
 	break;
 }
 ?>
