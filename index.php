@@ -281,18 +281,7 @@ switch($names){
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
 				<a><?=$without;?>!</a><br><br>
-				<?php
-				if($names == "Hackiosity"){
-				?>
-				<a style="font-size:20px">PSST I HACKED YOU SOME CODE FOR GFUEL</a><br>
-				<a style="font-size:20px">use "ENVIOSITY" for 30% off until the end of weekend!</a>
-				<?php
-				}else{
-				?>
-				<a>GFUEL last day to use code "ENVIOSITY" for 30% off!</a>
-				<?php
-				}
-				?>
+				<a>GFUEL use code "ENVIOSITY" for 10% off!</a>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br><br>
 				<div class="lines">
