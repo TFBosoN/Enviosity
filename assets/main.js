@@ -37,13 +37,10 @@ function draw() {
 		  count++;
 		  col = -0.5 + parseInt(count%t[k])-kt[k]/3;
 		  row = k;
-		  console.table(row, col);
 		  ctx.drawImage(img, col*imgwidth, row*imgheight, imgwidth, imgheight);
-		  console.log("loaded "+item);
 		  if(count%t[k]==0){
 			  k++;
 			  count = 0;
-			  console.log('nr');
 		  }
 	  }
 	  img.src = item;
