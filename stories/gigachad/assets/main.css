@@ -1,0 +1,489 @@
+* {
+	color: white;
+}
+@font-face {
+	font-family: 'Segoe Print';
+	src: url('//enviosity.com/assets/segoepr.ttf');  
+}
+body{
+	margin:0;
+	padding:0;
+	text-align: center;
+	user-select: none;
+	font-family: "Segoe Print";
+	overflow-y:scroll;
+}
+.container{
+	height:100%;
+	text-align: center;
+	z-index:12;
+	position: relative;
+}
+.main{
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+	height: 100%;
+}
+.logo{
+	margin-top: 50px;
+	position: relative;
+	display: block;
+	top: 20px;
+	left: 50%;
+	transform: translate(-50%, 20px);
+	width: 300px;
+}
+
+.logo div{
+	max-width: 100%;
+	width:100%;
+	height:auto;
+	display:block;
+	/* div height to be the same as width*/
+	padding-top:100%;
+
+	/* make it a circle */
+	border-radius:50%;
+
+	/* Centering on image`s center*/
+	background-position-y: center;
+	background-position-x: center;
+	background-repeat: no-repeat;
+
+	/* it makes the clue thing, takes smaller dimension to fill div */
+	background-size: cover;
+
+	/* it is optional, for making this div centered in parent*/
+	margin: 0 auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border:2px dashed black;
+}
+.button {
+	transition-duration: 0.4s;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	color:white;
+	border: 1px dashed white;
+	width: 120px;
+	border-radius: 50px;
+}
+
+.twitch:hover i{
+	color: #6441a5;
+}
+.merch:hover i{
+	color: #E88245;
+}
+.youtube:hover i{
+	color: #c4302b;
+}
+.twittor:hover i{
+	color: #00acee;
+}
+.discord:hover i{
+	color: #7289da;
+}
+/*misspell because of Adblock blocking icons*/
+.instogram:hover i{
+	color: #c13584;
+}
+.tiktok:hover i{
+	color: #111111;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+.reddit:hover i{
+	color:#FF4500;
+}
+.footer{
+	position:absolute;
+	bottom:20px;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+#popup{
+	display:block;
+	position:fixed;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
+	background: rgba(0,0,0,0.5);
+}
+#presentation{
+	display:block;
+	position:fixed;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
+	z-index:2;
+	overflow:hidden;
+	background: linear-gradient(to bottom right,#31394e,#1d212d,#191e33,#141829,#101321);
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+#presentation h1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	margin: 0;
+	width: 100%;
+}
+#popup_blocker{
+	display:block;
+	position:fixed;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
+	z-index:999;
+}
+.AYAYA_social h1{
+	font-size:40px;
+	height:30px;
+}
+.credits table{
+	font-size:12px;
+	opacity: 0.9;
+	color: lightgray;
+	margin-bottom: 20px;
+}
+.credits a{
+	color: lightgray;
+}
+.credits img{
+	vertical-align: middle;
+}
+.banner{
+	font-size: 100px;
+	width:100%;
+	text-align:center;
+}
+body{
+	background: black;
+	overflow-x: hidden;
+}
+canvas {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:-1;
+	display:block;
+	background:black;
+	transform-origin: 33.33% 25%;
+}
+#cover{
+	z-index:9;
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0;
+	top:0;
+	background: radial-gradient(at center, rgba(20,20,30,0.78), rgba(20,20,30,0.98));
+}
+.lines{
+	font-size: 64px;
+}
+.lines b{
+	font-size:16px;
+}
+.lines a{
+	text-decoration: none;
+}
+.lines span{
+	display: inline-block;
+	margin:20px;
+	width: 85px;
+}
+.slimes{
+	width:100%;
+	height:100%;
+	position: absolute;
+	text-align:center;
+	z-index:9;
+	transition: all 2s ease-in-out;
+	-webkit-transition: all 2s ease-in-out; /** Chrome & Safari **/
+	-moz-transition: all 2s ease-in-out; /** Firefox **/
+	-o-transition: all 2s ease-in-out; /** Opera **/
+}
+.slimes td{
+	width: 33%;
+}
+.slimes .first .slime, .slimes .second .slime{
+	transform-origin: 50% 50%;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@-moz-keyframes spins { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spins { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spins { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+@media screen and (max-width : 768px) and (orientation : portrait) {
+	.slimes {display:none;}  
+}
+
+@keyframes blinking {
+	0% {
+		color: #ff0000;
+	}
+	50% {
+		color: #ffffff;
+	}
+	100% {
+		color: #ff0000;
+	}
+}
+.red {
+	width: 300px;
+	height: 300px;
+	animation: blinking 1s infinite;
+	font-size: 20px;
+}
+.first, .second{
+	position: relative;
+}		
+.first .wrapper{
+	left: 50%;
+}		
+.second .wrapper{
+	right:50%;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	border-radius: 50%;
+	position: absolute;
+	top: -218px;
+	transform: rotate(180deg) scale(0.3);
+	z-index: -1;
+}
+@media (max-width: 600px) {
+	.wrapper {
+		transform: scale(0.7) translate(-71%, -71%);
+	}
+}
+
+.alarm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 400px;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+}
+.alarm .bulb {
+	width: 180px;
+	height: 180px;
+	border-top-left-radius: 100px;
+	border-top-right-radius: 100px;
+	background-color: #ff5722;
+	position: relative;
+}
+.alarm .bulb:after {
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border: 10px solid transparent;
+	border-top-color: rgba(255, 255, 255, 0.2);
+	top: 15%;
+	left: 50%;
+	transform: rotate(45deg);
+	border-radius: 50%;
+}
+.alarm .base {
+	width: 260px;
+	height: 40px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	margin-top: -4px;
+	background-color: #555;
+}
+.alarm .bulb, .alarm .base {
+	border: 5px solid #000000;
+	box-shadow: inset 15px 5px 0px 1px rgba(0, 0, 0, 0.15);
+}
+.alarm .light {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+}
+.alarm .light span {
+	position: absolute;
+	width: 0px;
+	height: 5px;
+	background-color: #e04311;
+	border-radius: 10px;
+}
+.alarm .light span:nth-child(1) {
+	left: 10%;
+	top: 50%;
+	transform-origin: right;
+}
+.alarm .light span:nth-child(2) {
+	transform: rotate(35deg);
+	left: 15%;
+	top: 25%;
+	transform-origin: right;
+}
+.alarm .light span:nth-child(3) {
+	transform: translate(-50%, 0%) rotate(90deg);
+	left: 44%;
+	top: 15%;
+	transform-origin: right;
+}
+.alarm .light span:nth-child(4) {
+	transform: rotate(145deg);
+	right: 30%;
+	top: 25%;
+	transform-origin: right;
+}
+.alarm .light span:nth-child(5) {
+	right: 10%;
+	top: 50%;
+	transform-origin: left;
+}
+.alarm .bulb {
+	animation: bulb 1s ease infinite;
+}
+.alarm .light span {
+	width: 50px;
+}
+.alarm .light span:nth-child(1) {
+	animation: light1 1s ease infinite;
+}
+.alarm .light span:nth-child(2) {
+	  animation: light2 1s ease infinite;
+}
+.alarm .light span:nth-child(3) {
+	  animation: light3 1s ease infinite;
+}
+.alarm .light span:nth-child(4) {
+	  animation: light4 1s ease infinite;
+}
+.alarm .light span:nth-child(5) {
+	  animation: light1 1s ease infinite;
+}
+
+@keyframes light1 {
+	0% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+@keyframes light2 {
+	0% {
+		transform: scale(0) rotate(35deg);
+	}
+	50% {
+		transform: scale(1) rotate(35deg);
+	}
+	100% {
+		transform: scale(0) rotate(35deg);
+	}
+}
+@keyframes light3 {
+	0% {
+		transform: scaleY(0) translate(-50%, 0%) rotate(90deg);
+		height: 0px;
+	}
+	50% {
+		transform: scaleY(1) translate(-50%, 0%) rotate(90deg);
+		height: 5px;
+	}
+	100% {
+		transform: scaleY(0) translate(-50%, 0%) rotate(90deg);
+		height: 0px;
+	}
+}
+@keyframes light4 {
+	0% {
+		transform: scale(0) rotate(145deg);
+	}
+	50% {
+		transform: scale(1) rotate(145deg);
+	}
+	100% {
+		transform: scale(0) rotate(145deg);
+	}
+}
+@keyframes bulb {
+	0% {
+		background-color: #500;
+		box-shadow: inset 15px 5px 0px 1px rgba(0, 0, 0, 0.15), 0px -10px 30px rgba(255, 87, 34, 0);
+	}
+	50% {
+		background-color: #f11;
+		box-shadow: inset 15px 5px 0px 1px rgba(0, 0, 0, 0.15), 0px -10px 30px rgba(255, 87, 34, 0.5);
+	}
+	100% {
+		background-color: #500;
+		box-shadow: inset 15px 5px 0px 1px rgba(0, 0, 0, 0.15), 0px -10px 30px rgba(255, 87, 34, 0);
+	}
+}
+
+#hack_text{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 99;
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+	text-shadow: 1px 1px 2px white, 0 0 1em green;
+}
+.progress {
+	background: rgba(20,255,20,0.1);
+	justify-content: flex-start;
+	border-radius: 100px;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	padding: 0 5px;
+	display: flex;
+	height: 40px;
+	width: 500px;
+}
+
+.bar {
+  animation: load 2.7s normal infinite;
+  box-shadow: 0 10px 40px -10px #2f2;
+  border-radius: 100px;
+  background: #2f2;
+  height: 30px;
+  width: 0;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  10% { width: 40%; }
+  25% { width: 48%; }
+  35% { width: 68%; }
+  65% { width: 80%; }
+  100% { width: 100%; }
+}
