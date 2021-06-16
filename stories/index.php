@@ -1,6 +1,12 @@
 <html>
 <head>
 <link rel="stylesheet" href="../assets/main.css">
+<title>Stories | Enviosity</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<meta charset="utf-8">
+<meta name="description" CONTENT="The library of Enviosity's f2p stories">
+<meta name="keywords" content="enviosity, f2p, gamer, streamer, youtube, social, genshin, impact, genshin impact, slipper">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <style>
 body{
 	background: url(./assets/bg.jpg);
