@@ -17,7 +17,7 @@ body{
 .library{
 	position: absolute;
 	left:50%;
-	top:200px;
+	top:150px;
 	transform: translate(-50%, 0);
 	text-align: center;
 }
@@ -37,7 +37,11 @@ body{
 <body>
 	<div class="container">
 		<div class="main" id="main">
+			
 			<table class="library">
+				<tr>
+					<td><h2>Bookshelf</h2></td>
+				</tr>
 				<tr>
 					<td><a href="./gigachad/"><div><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"> The story about F2P GIGACHAD</div></a></td>
 				</tr>
