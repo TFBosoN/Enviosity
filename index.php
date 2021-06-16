@@ -40,7 +40,7 @@ $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(2,count($names)-1);
 
 
-if(isset($_COOKIE['no_promo'])){
+if(isset($_COOKIE['no_promo']) || true){
 	$promote_name[] = $names[$count];
 }else{
 	$promote_name[] = "GIGACHAD";
@@ -298,16 +298,16 @@ switch($names){
 					<span><a class="discord" href="https://discord.gg/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-discord"></i>';?><br><b>Discord</b></a></span>
 					<span><a class="reddit" href="https://www.reddit.com/r/Enviosity/" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-reddit"></i>';?><br><b>Reddit</b></a></span>
 					<span><a class="instogram" href="https://merch.streamelements.com/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fas fa-tshirt"></i>';?><br><b>Merch</b></a></span>
-				</div>
-				<a style="font-size:20px">GENSHIN IMPACT</a><br>
+				</div><br>
+				<a style="font-size:20px">= GENSHIN IMPACT =</a><br>
 				<a style="font-size:11px; color:#ccc">useful tools</a>
 				<div class="lines">
 					<span style="width: auto;"><a class="discord" href="https://paimon.moe" target="_blank"><img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/paimonmoe.ico" style="vertical-align: middle;"><b style="font-family: sans-serif;
 position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9px; font-size: 14px; right: 0; color: rgb(78, 124, 255);">.moe</div></b></a> :(</span>
 				</div>
-				<a style="font-size:20px">MISC</a><br>
+				<a style="font-size:20px">= MISC =</a><br>
 				<div class="lines">
-					<span><a class="discord" href="./stories/" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><b>Stories</b></a></span>
+					<span><a class="discord" href="./stories/"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><b>Stories</b></a></span>
 				</div>
 				<br>
 				<br>
