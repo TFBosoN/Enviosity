@@ -5,7 +5,7 @@ $bg_images = json_decode(file_get_contents("./envi.json"));
 $imgh = 360;
 $zoom = 2;
 
-$without = "4 days without cursing";
+$without = "5 days without cursing";
 $phrase_fs = false;
 
 //COPIUM 
@@ -188,6 +188,8 @@ switch($names){
 	<meta name="description" CONTENT="Enviosity's f2p website">
 	<meta name="keywords" content="enviosity, f2p, gamer, streamer, youtube, social, genshin, impact, genshin impact, slipper">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 	<!-- Fontawesome icons -->
 	<link rel="stylesheet" href="./assets/fa/css/all.min.css">
 	<link rel="stylesheet" href="./assets/main.css">
@@ -241,6 +243,14 @@ switch($names){
 		.slimes .second img{
 			padding-left: <?=rand(-150, 150);?>px;
 			padding-top: <?=rand(-150, 150);?>px;
+		}
+		span .badge{
+			font-size: 12px;
+			position: absolute;
+			right: -5px;
+			top: -5px;
+			width: 20px;
+			margin:0;
 		}
 	</style>
 </head>
@@ -307,7 +317,7 @@ position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9
 				</div>
 				<a style="font-size:20px">= MISC =</a><br>
 				<div class="lines">
-					<span><a class="discord" href="./stories/"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><b>Stories</b></a></span>
+					<span style="position:relative"><a class="discord" href="./stories/"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><b>Stories</b></a><span class="badge badge-pill badge-danger">1</span></span>
 				</div>
 				<br>
 				<br>

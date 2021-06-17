@@ -70,10 +70,12 @@ switch($names){
 			width:100%;
 			height:100%;
 			transition: all 2s ease-in;
+			display:none;
 		}
 		#presentation{
 			transition: all 2s ease-in;
 			background: linear-gradient(170deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 33%, rgb(1, 20, 18) 55%, rgb(5, 41, 39) 65%, rgb(6, 73, 66) 80%, rgb(5, 75, 67) 100%);
+			display:none;
 		}
 		#dialog{
 			position:fixed;
@@ -81,14 +83,7 @@ switch($names){
 			height: 100%;
 			z-index: 90;
 			cursor: pointer;
-		}
-		#enviChadcuts img{
-			height: 500px;
-			transition: all 1s ease-in;
-		}
-		#enviChadcutseyes img{
-			height: 500px;
-			transition: all 1s ease-in;
+			display:none;
 		}
 		#glogin{
 			background:  url(./assets/genshin_login.png), 100%;
@@ -111,6 +106,7 @@ switch($names){
 			height: 100%;
 			transition: all 1s ease-in;
 			cursor: pointer;
+			display:none;
 		}
 		@font-face {
 			font-family: 'genshin';
@@ -153,30 +149,51 @@ switch($names){
 			left: 50%;
 			transform: translate(-50%,0);
 		}
-		@keyframes typing {
-		  from { width: 0 }
-		  to { width: 100% }
+		#enviChadcuts{
+			opacity: 0;
 		}
-		#Pepega, #sheeshf{
-			display:none;
-			margin-top: 100px;
-			height: 200px;
-			animation: typing 1s infinite linear;
+		#enviChadcuts, #enviChadcutseyes, #Gigachad_cut{
+			height: 420px;
+			transition: all 1s ease-in;
+		}
+		#enviWall, #monkaW, #enviEZ, #enviLate, #Kappa, #Pepega, #WeirdChamp, #sheeshf{
+			height: 300px;
+			transition: all 1s ease-in;
+		}
+		
+		#enviChadcuts img, #enviChadcutseyes img, #Gigachad_cut img, #enviLate img, #Kappa img, #WeirdChamp img{
+			animation: still 1s infinite linear;
 			animation-direction: alternate-reverse;
 		}
-		#BOPER{
-			animation: typing 1s infinite linear;
+		@keyframes still {
+		  from { transform: rotate(-4deg) }
+		  to { transform: rotate(4deg) }
+		}
+		#Pepega div, #sheeshf img{
+			animation: leaning 1s infinite linear;
 			animation-direction: alternate-reverse;
 		}
-		#enviWall, #monkaW, #enviEZ{
-			margin-top: 100px;
-			height: 200px;
-		}
-		@keyframes typing {
+		@keyframes leaning {
 		  from { transform: rotate(-20deg) }
 		  to { transform: rotate(20deg) }
 		}
-		#Pepega img, #enviWall img, #sheeshf img, #monkaW img, #enviEZ img{
+		#BOPER{
+			animation: waiving 0.2s infinite linear;
+			animation-direction: alternate-reverse;
+		}
+		@keyframes waiving {
+		  from { transform: rotate(-20deg) }
+		  to { transform: rotate(60deg) }
+		}
+		#enviChadcuts, #enviChadcutseyes, #enviWall, #monkaW, #enviEZ, #enviLate, #Kappa, #Pepega, #WeirdChamp, #sheeshf{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-60%);
+			display:none;
+		}
+		
+		#enviChadcuts img, #enviChadcutseyes img, #Pepega img, #enviWall img, #sheeshf img, #monkaW img, #enviEZ img, #enviLate img, #Kappa img, #WeirdChamp img{
 			height:100%;
 		}
 		#resin{
@@ -187,6 +204,7 @@ switch($names){
 			z-index: 98;
 			font-size: 36px;
 			font-weight: bold;
+			display:none;
 		}
 		#resin img{
 			width:48px;
@@ -195,7 +213,10 @@ switch($names){
 		#enviWall{
 			z-index: 98;
 		}
-		#lightning, #lightning img{
+		#lightning{
+			display:none;
+		}
+		#lightning img{
 			position:fixed;
 			top:0;
 			left:0;
@@ -238,21 +259,32 @@ switch($names){
 		}
 	</style>
 </head>
-<body onload="draw();">
-	<div id="cover"></div>
-	<canvas id="canvas" width="100%" height="100%"></canvas>
+<body>
 	<div class="container">
-		<div id="prestory" onclick="ramble()" style="display:none;">
+		<div id="prestory" onclick="ramble()">
 			<div style="position:absolute; left:0; top:0; width:100%; height:100%; transform: translate(0, 38%);">
 				<img src="//res.cloudinary.com/tfboson/image/upload/v1623846747/envi/assets/particle.jpg" style="width:150px; border-radius:50%;">
 				<img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/wave.gif" id="wave">
 			</div>
-			<div id="story">[click]</div>
+			<div id="story">[begin]</div>
 		</div>
-		<div id="dialog" onclick="con_dia()"><div id="Pepega"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Pepega.png"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846803/envi/assets/mega.gif"></div><div id="enviWall" style="display:none"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/enviWall.png"></div><div id="enviEZ" style="display:none"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/enviEZ.png"><img id="BOPER" src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/BOP.png"></div><div id="sheeshf" style="display:none"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/sheeshf.png"></div><div id="monkaW" style="display:none"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/monkaW.png"></div><div id="enviChadcuts" style="display:none; opacity: 0"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"></div><div id="lightning" style="display:none;"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/lightning_strike.gif"></div><div id="enviChadcutseyes" style="display:none;"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcutseyes.png"></div></div>
-		<div id="glogin" onclick="con_dia()"></div>
-		<div id="gload" onclick="con_dia()"></div>
-		<div id="dialog_box"  onclick="con_dia()"><div id="name">Enviosity</div><div id="dtext"><p></p></div></div>
+		<div id="dialog" onclick="con_dia()">
+			<div id="Pepega" class="actor"><div style="width:800px;"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Pepega.png"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846803/envi/assets/mega.gif"></div></div>
+			<div id="enviWall" class="actor"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/enviWall.png"></div>
+			<div id="enviEZ" class="actor"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/enviEZ.png"><img id="BOPER" src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/BOP.png"></div>
+			<div id="sheeshf" class="actor"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/sheeshf.png"></div>
+			<div id="monkaW" class="actor"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/monkaW.png"></div>
+			<div id="enviChadcuts" class="actor"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"></div>
+			<div id="enviChadcutseyes" class="actor"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcutseyes.png"></div>
+			<div id="enviLate" class="actor"><img src="//res.cloudinary.com/tfboson/image/upload/v1623948014/envi/assets/enviLate.png"></div>
+			<div id="WeirdChamp" class="actor"><img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/WeirdChamp.png"></div>
+			<div id="Kappa" class="actor"><img src="//res.cloudinary.com/tfboson/image/upload/v1623952170/envi/assets/Kappa.png"></div>
+			<div id="Gigachad_cut" class="actor"><img src="//res.cloudinary.com/tfboson/image/upload/v1623959384/envi/assets/Gigachad_cut.png"></div>
+		</div>
+		<div id="glogin" onclick="con_dia(); play_login()"></div>
+		<div id="gload"></div>
+		<div id="lightning"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/lightning_strike.gif"></div>
+		<div id="dialog_box" onclick="con_dia()"><div id="name">Enviosity</div><div id="dtext"><p></p></div></div>
 		<div id="presentation"><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>"><?=$phrase;?></h1></div>
 		<div id="gigaBG"></div>
 		<div id="resin"><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/resin.webp"> 160/160</div>
@@ -269,13 +301,17 @@ switch($names){
 			$("#prestory img").css("animation", "spin 10s linear infinite");
 			setTimeout(() => { 
 				$("#wave").css("display", "block"); 
-				types("Ello! Hope you enjoy this quick thing that I've made :)", 0);
+				types("Hello! This will be a multi-part story!", 0);
+				play_sound("Hello! This will be a multi-part story!", "Justin");
 				setTimeout(() => {
 					$("#wave").css("display", "none"); 
 					setTimeout(() => {
-						types("No sound :(<br>enviFlower in chat", 0);
+						types("Brian and special sound effects used!", 0);
+						play_sound("Brian and special sound effects used!", "Justin");
 						setTimeout(() => {
 							$("#prestory").css("opacity", "0"); 
+							types("Enjoy!", 0);
+							play_sound("Enjoy!", "Justin");
 							setTimeout(() => {
 								$("#prestory").css("display", "none"); 
 							}, 1000);
@@ -285,7 +321,23 @@ switch($names){
 			}, 1000);
 		}
 	}
-	
+	function loadAudio(url){
+		var audio = new Audio();
+		audio.src = url;
+		audio.preload = "auto";
+		return audio;
+	  }
+	var login_a = loadAudio("https://res.cloudinary.com/tfboson/video/upload/v1623956911/envi/assets/login.wav");
+	var triggered = loadAudio("https://res.cloudinary.com/tfboson/video/upload/v1623958470/envi/assets/triggered.mp3");
+	var transformation = loadAudio("https://res.cloudinary.com/tfboson/video/upload/v1623960042/envi/assets/8281.mp3");
+	var lightning = loadAudio("https://res.cloudinary.com/tfboson/video/upload/v1623960307/envi/assets/lightning.mp3");
+	function play_login(){
+		login_a.play();
+	}
+	function play_triggered(vol){
+		triggered.volume = vol;
+		triggered.play();
+	}
 	function types(caption, captionLength = 0) {
 		captionLength = parseInt(captionLength);
 		$('#story').html(caption.substr(0, captionLength++));
@@ -304,110 +356,195 @@ switch($names){
 		} else {
 			captionLength = 0;
 			caption = '';
+			finished_typing = true;
 		}
 	}
+	allow_input = true;
+	finished_typing = true;
 	function con_dia(){
-		console.log(dia_stage);
-		switch(dia_stage){
-			//logins screen
-			case 0:
-				document.getElementById("glogin").style.transform = 'scale(10)';
-				document.getElementById("glogin").style.opacity = '0';
-				setTimeout(() => { document.getElementById("glogin").style.display = 'none'; }, 150);
-				
-				setTimeout(() => { document.getElementById("gload").style.opacity = '0'; 
-					setTimeout(() => { document.getElementById("gload").style.display = 'none'; 
-						setTimeout(() => { document.getElementById("gigaBG").style.filter = "blur(20px)"; document.getElementById("enviChadcuts").style.display = 'block';document.getElementById("enviChadcuts").style.opacity = '1'; 
-							setTimeout(() => { document.getElementById("dialog_box").style.display = 'block'; document.getElementById("dialog_box").style.opacity = '1'; type("Ahhh, what a beautiful day!", 0);}, 500);}, 500);}, 1000); }, 1800);
-			break;
-			case 1:
-				type("Time to farm my daily crys..", 0);
-			break;
-			case 2:
-				$("#name").html("???");
-				type("Mr. Stripper!", 0);
-			break;
-			case 3:
-				$("#resin").css("display", "none");
-				$("#Pepega").css("display", "block");
-				$("#enviChadcuts").css("display", "none");
-				type("Mr. Stripper! Do you kn..", 0);
-				$("#name").html("Menga Reader");
-			break;
-			case 4:
-				$("#resin").css("display", "block");
-				$("#Pepega").css("display", "none");
-				$("#enviChadcuts").css("display", "block");
-				$("#name").html("Enviosity");
-				type(" crys..tals. Oh my god!  I'm ..", 0);
-			break;
-			case 5:
-				type("How did I get capped on resin?!", 0);
-			break;
-			case 6:
-				type("I thought I did math yesterday..", 0);
-			break;
-			case 7:
-				$("#enviWall").css("display", "block");
-				type("Ahh, what a fine taste of brick", 0);
-				$("#name").html("Menga Reader");
-				$("#resin").css("display", "none");
-				$("#enviChadcuts").css("display", "none");
-			break;
-			case 8:
-				$("#enviWall").css("display", "none");
-				$("#Pepega").css("display", "block");
-				$("#name").html("Menga Reader");
-				type("HAVE YOU SEEN THE NEW ABYSS? IT'S HARD", 0);
-			break;
-			case 9:
-				$("#Pepega").css("display", "none");
-				$("#sheeshf").css("display", "block");
-				$("#name").html("Menga Reader");
-				type("You know, I cleared it myself tho..", 0);
-			break;
-			case 10:
-				type("So you NEED to take THIS and THAT and THIS...", 0);
-			break;
-			case 11:
-				$("#sheeshf").css("display", "none");
-				$("#enviEZ").css("display", "block");
-				$("#name").html("QueenQ");
-				type("BOINK", 0);
-			break;
-			case 12:
-				$("#enviEZ").css("display", "none");
-				$("#monkaW").css("display", "block");
-				type("Oh no, it's too late", 0);
-			break;
-			case 13:
-				type("Hide, chat!", 0);
-			break;
-			case 14:
-				$("#name").html("Enviosity");
-				$("#monkaW").css("display", "none");
-				$("#enviChadcutseyes").css("display", "block");
-				type("Do I smell FLEX?!?!!", 0);
-			break;
-			case 15:
-				type("TIME TO TAKE THE SHACKLES OFF", 0);
-			break;
-			case 16:
-				type("BEHOLD THE SUPERIOR F2P PLAYER", 0);
-			break;
-			case 17:
-				$("#gigaBG").css("background", "black");
-				$("#enviChadcutseyes").css("display", "none");
-				$("#dialog_box").css("display", "none");
-				$("#lightning").css("display", "block");
-				setTimeout(() => { 
-					$("#gigaBG").css("display", "none");
-					$("#enviChadc").css("display", "block");
-				}, 200);
-				setTimeout(() => { show_giga(); }, 1000);
-			break;
+		if(allow_input && finished_typing){
+			allow_input = false;
+			finished_typing = false;
+			console.log(dia_stage);
+			text = "";
+			texts = "";
+			reader = "Brian";
+			$(".actor").css("display", "none"); 
+			switch(dia_stage){
+				//logins screen
+				case 0:
+					$("#glogin").css("transform", "scale(10)");
+					$("#glogin").css("opacity", "0");
+					$("#gload").css("display", "block");
+					setTimeout(() => { 
+						$("#glogin").css("display", "none"); 
+					}, 150);
+					
+					setTimeout(() => { 
+						$("#gigaBG").css("display", "block");
+						$("#resin").css("display", "block");
+						$("#dialog").css("display", "block");
+						$("#gload").css("opacity", "0");
+						setTimeout(() => { 
+							$("#gload").css("display", "none");
+							$("#enviChadcuts").css("opacity", "0");
+							setTimeout(() => {
+								$("#gigaBG").css("filter", "blur(20px)");
+								$("#enviChadcuts").css("display", "block");
+								$("#enviChadcuts").css("opacity", "1");
+								setTimeout(() => { 
+									$("#dialog_box").css("display", "block");
+									$("#dialog_box").css("opacity", "1");
+									text = "Ahhh, what a beautiful day in Genshin!";
+									play_sound(text);
+									type(text, 0);
+								}, 500);
+							}, 1000);
+						}, 1000);
+					}, 1800);
+				break;
+				case 1:
+					$("#resin").css("display", "block");
+					$("#enviLate").css("display", "block");
+					$("#name").html("Chat");
+					text = "Late again Mr. Lateosity!";
+					reader = "Emma";
+				break;
+				case 2:
+					$("#enviChadcuts").css("display", "block");
+					$("#name").html("Enviosity");
+					text = "What do you mean Chat! I'm never late!";
+				break;
+				case 3:
+					$("#Kappa").css("display", "block");
+					$("#name").html("Chat");
+					text = "...";
+				break;
+				case 4:
+					$("#enviChadcuts").css("display", "block");
+					$("#name").html("Enviosity");
+					text = "Anyways. Time to buy some water and farm my daily crystals!";
+				break;
+				case 5:
+					$("#WeirdChamp").css("display", "block");
+					$("#name").html("Chat");
+					text = "WeirdChamp CAPPED";
+					reader = "Emma";
+				break;
+				case 6:
+					$("#name").html("Someone in Chat");
+					text = "Mr. Stripper!";
+					reader = "Russell";
+				break;
+				case 7:
+					$("#Pepega").css("display", "block");
+					text = "Mr. Slipper! Do you know that..";
+					reader = "Russell";
+					$("#name").html("Menga Reader");
+				break;
+				case 8:
+					$("#enviChadcuts").css("display", "block");
+					$("#name").html("Enviosity");
+					text = "Oh my god!!  I'm ..";
+				break;
+				case 9:
+					$("#enviChadcuts").css("display", "block");
+					text = "How did I get capped on resin?!";
+				break;
+				case 10:
+					$("#enviChadcuts").css("display", "block");
+					text = "I thought I did my math yesterday..";
+				break;
+				case 11:
+					$("#enviWall").css("display", "block");
+					text = "Ahh, what a fine taste of brick";
+					reader = "Russell";
+					$("#name").html("Menga Reader");
+				break;
+				case 8:
+					$("#enviChadcuts").css("display", "block");
+					$("#name").html("Enviosity");
+					text = "Oh my god!!  I'm ..";
+				break;
+				case 12:
+					$("#resin").css("display", "none");
+					$("#Pepega").css("display", "block");
+					text = "HAVE YOU SEEN THE NEW ABYSS??? IT'S HARD!!";
+					reader = "Russell";
+				break;
+				case 13:
+					$("#sheeshf").css("display", "block");
+					text = "You know, I cleared it myself tho..";
+					reader = "Russell";
+				break;
+				case 14:
+					$("#Pepega").css("display", "block");
+					text = "So you NEED to take THIS and THAT and THIS...";
+					reader = "Russell";
+				break;
+				case 15:
+					$("#WeirdChamp").css("display", "block");
+					$("#name").html("Chat");
+					text = "WTF FLEXER";
+					reader = "Emma";
+				break;
+				case 16:
+					$("#enviEZ").css("display", "block");
+					$("#name").html("QueenQ");
+					text = "BOINK";
+					reader = "Salli";
+				break;
+				case 17:
+					$("#monkaW").css("display", "block");
+					text = "Oh no, it's too late";
+					reader = "Salli";
+					play_triggered(0.02);
+				break;
+				case 18:
+					$("#monkaW").css("display", "block");
+					text = "Hide chat!";
+					reader = "Salli";
+				break;
+				case 19:
+					$("#name").html("Enviosity");
+					$("#enviChadcutseyes").css("display", "block");
+					text = "Do I smell FLEX?!?!!";
+					texts = "Do I smell, FLEX?!?!!";
+					play_triggered(0.04);
+				break;
+				case 20:
+					$("#enviChadcutseyes").css("display", "block");
+					text = "TIME TO TAKE THE SHACKLES OFF";
+				break;
+				case 21:
+					$("#enviChadcutseyes").css("display", "block");
+					text = "BEHOLD THE SUPERIOR F2P PLAYER";
+				break;
+				case 22:
+					transformation.play();
+					lightning.play();
+					$("#gigaBG").css("background", "black");
+					$("#lightning").css("display", "block");
+					$("#dialog_box").css("display", "none");
+					$("#presentation").css("display", "block");
+					setTimeout(() => { 
+						$("#gigaBG").css("display", "none");
+						$("#enviChadc").css("display", "block");
+						$("#lightning").css("opacity", "0");
+					}, 300);
+					setTimeout(() => { show_giga(); }, 1000);
+				break;
+			}
+			texts = texts? texts: text;
+			play_sound(texts, reader);
+			type(text, 0);
+			dia_stage++;
+			allow_input = true;
 		}
-		dia_stage++;
+	}
+	function play_sound(text, whom = "Brian"){
+		var audio = new Audio("https://api.streamelements.com/kappa/v2/speech?voice="+whom+"&text="+encodeURIComponent(text.trim()));
+		audio.play();
 	}
 	function show_giga(){
 		console.log("clicked");
@@ -421,9 +558,27 @@ switch($names){
 			document.getElementById("gigaBG").style.opacity = '0';
 			document.getElementById("presentation").style.transition = 'all 0.5s ease';
 		},800);
-		setTimeout(() => { close_p(); }, 3500);
+		setTimeout(() => {
+			$("#dialog_box").css("display", "block");
+			type("To be continued..", 0);
+		}, 1000);
+		
 	}
+	//Close load screen on timeout
+function close_p(){
+	document.getElementById("slimes").style.opacity = '1';
+	document.getElementById("slimes").style.display = 'inline-table';
+	document.getElementById("main").style.display = 'block';
+	document.getElementById("presentation").style.opacity = '0';	
+	console.log("Presentation closed");
+	document.getElementById("main").style.opacity = '1';	
+	setTimeout(() => { document.getElementById("presentation").style.display = 'none';}, 400);
+	//Disabling slimes after some time because they are resource intence
+	setTimeout(() => { document.getElementById("slimes").style.opacity = '0';}, 20000);
+	setTimeout(() => { document.getElementById("slimes").style.display = 'none';}, 22000);
+	//Showing slime warning after
+	setTimeout(() => { document.getElementById("slime_warning").style.display = 'block';}, 22000);
+}
 	</script>
-	<script src='./assets/main.js'></script>
 </body>
 </html>

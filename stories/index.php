@@ -32,7 +32,19 @@ body{
 	border: 2px dashed white;
 	padding: 20px;
 }
+.badge{
+	position:absolute;
+	right:-5px;
+	top: -5px;
+}
+td{
+	position: relative;
+}
+.shelf{
+	background: rgba(0,0,0,0.3);
+}
 </style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 	<div class="container">
@@ -43,7 +55,7 @@ body{
 					<td><h2>Bookshelf</h2></td>
 				</tr>
 				<tr>
-					<td><a href="./gigachad/"><div><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"> The story about F2P GIGACHAD</div></a></td>
+					<td class="shelf"><a href="./gigachad/"><div><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"> The story about F2P GIGACHAD pt.1</div></a><span class="badge badge-pill badge-danger">updated & fixed</span></td>
 				</tr>
 				<tr>
 					<td><br>---<br>Remember to return your books in time!</td>
