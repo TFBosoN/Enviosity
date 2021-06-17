@@ -7,12 +7,14 @@
 <meta name="description" CONTENT="The library of Enviosity's f2p stories">
 <meta name="keywords" content="enviosity, f2p, gamer, streamer, youtube, social, genshin, impact, genshin impact, slipper">
 <link rel="shortcut icon" href="./enviNotes.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
 body{
 	background: url(./assets/bg.jpg);
 	background-size: 100%;
 	text-align:center;
 	color: white;
+	
 }
 .library{
 	position: absolute;
@@ -26,16 +28,20 @@ body{
 }
 .library img{
 	width: 50px;
+	height: 50px;
 	vertical-align: middle;
+	border-radius: 50%;
+	margin: 20px;
 }
 .library div{
 	border: 2px dashed white;
-	padding: 20px;
+	padding-right: 20px;
 }
 .badge{
 	position:absolute;
 	right:-5px;
 	top: -5px;
+	z-index: 99;
 }
 td{
 	position: relative;
@@ -43,8 +49,21 @@ td{
 .shelf{
 	background: rgba(0,0,0,0.3);
 }
+a{
+	white-space:nowrap;
+}
+a:hover{
+	text-decoration: none;
+	color: #ccc;
+}
+.wip a{
+	filter:grayscale(1);
+	transition: all 0.2s ease-in-out;
+}
+.wip:hover a{
+	filter:grayscale(0);
+}
 </style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 	<div class="container">
@@ -52,13 +71,13 @@ td{
 			
 			<table class="library">
 				<tr>
-					<td><h2>Bookshelf</h2></td>
+					<td colspan="2"><h2>Bookshelf</h2></td>
 				</tr>
 				<tr>
-					<td class="shelf"><a href="./gigachad/"><div><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"> The story about F2P GIGACHAD pt.1</div></a><span class="badge badge-pill badge-danger">updated & fixed</span></td><td class="shelf"><a href="./gigachad/"><div><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"> The story about F2P GIGACHAD pt.1</div></a><span class="badge badge-pill badge-warning">WIP</span></td>
+					<td class="shelf"><a href="./gigachad/"><div><span><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"></span><span>The story about F2P GIGACHAD pt.1</span></div></a><span class="badge badge-pill badge-danger">updated & fixed</span></td><td class="shelf wip"><a href="#"><div><span><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Fishy.png"></span><span>The princess Fishy</span></div></a><span class="badge badge-pill badge-warning">WIP</span></td>
 				</tr>
 				<tr>
-					<td><br>---<br>Remember to return your books in time!</td>
+					<td colspan="2"><br>---<br>Remember to return your books in time!</td>
 				</tr>
 			</table>
 		</div>
