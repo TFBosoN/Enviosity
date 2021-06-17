@@ -102,6 +102,9 @@ body{
 .book:hover i{
 	color:#ae2d05;
 }
+.alist:hover i{
+	color:#2E51A2;
+}
 .footer{
 	position:absolute;
 	bottom:20px;

@@ -314,10 +314,11 @@ switch($names){
 				<a style="font-size:11px; color:#ccc">useful tools</a>
 				<div class="lines">
 					<span style="width: auto;"><a class="discord" href="https://paimon.moe" target="_blank"><img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/paimonmoe.ico" style="vertical-align: middle;"><b style="font-family: sans-serif;
-position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9px; font-size: 14px; right: 0; color: rgb(78, 124, 255);">.moe</div></b></a> :(</span>
+position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9px; font-size: 14px; right: 0; color: rgb(78, 124, 255);">.moe</div></b></a></span>
 				</div>
 				<a style="font-size:20px">= MISC =</a><br>
 				<div class="lines">
+					<span style="position:relative"><a class="alist" href="https://myanimelist.net/animelist/Enviosity"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fas fa-list-alt"></i>';?><br><b style="margin-left:-5px;">MyAnimeList</b></a></span>
 					<span style="position:relative"><a class="book" href="./stories/"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><b>Stories</b></a><span class="badge badge-pill badge-danger">2</span></span>
 				</div>
 				<br>
