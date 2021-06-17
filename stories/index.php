@@ -55,7 +55,7 @@ td{
 					<td><h2>Bookshelf</h2></td>
 				</tr>
 				<tr>
-					<td class="shelf"><a href="./gigachad/"><div><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"> The story about F2P GIGACHAD pt.1</div></a><span class="badge badge-pill badge-danger">updated & fixed</span></td>
+					<td class="shelf"><a href="./gigachad/"><div><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"> The story about F2P GIGACHAD pt.1</div></a><span class="badge badge-pill badge-danger">updated & fixed</span></td><td class="shelf"><a href="./gigachad/"><div><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"> The story about F2P GIGACHAD pt.1</div></a><span class="badge badge-pill badge-warning">WIP</span></td>
 				</tr>
 				<tr>
 					<td><br>---<br>Remember to return your books in time!</td>

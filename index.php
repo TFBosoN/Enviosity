@@ -251,6 +251,7 @@ switch($names){
 			top: -5px;
 			width: 20px;
 			margin:0;
+			font-family:initial;
 		}
 	</style>
 </head>
@@ -317,7 +318,7 @@ position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9
 				</div>
 				<a style="font-size:20px">= MISC =</a><br>
 				<div class="lines">
-					<span style="position:relative"><a class="discord" href="./stories/"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><b>Stories</b></a><span class="badge badge-pill badge-danger">1</span></span>
+					<span style="position:relative"><a class="book" href="./stories/"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><b>Stories</b></a><span class="badge badge-pill badge-danger">1</span></span>
 				</div>
 				<br>
 				<br>

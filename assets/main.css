@@ -99,6 +99,9 @@ body{
 .reddit:hover i{
 	color:#FF4500;
 }
+.book:hover i{
+	color:#ae2d05;
+}
 .footer{
 	position:absolute;
 	bottom:20px;
