@@ -35,7 +35,7 @@ switch($names){
 	<meta charset="utf-8">
 	<meta name="description" CONTENT="Enviosity's f2p website">
 	<meta name="keywords" content="enviosity, f2p, gamer, streamer, youtube, social, genshin, impact, genshin impact, slipper">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="./enviNotes.ico" type="image/x-icon">
 	<!-- Fontawesome icons -->
 	<link rel="stylesheet" href="./assets/main.css">
 	<style>
