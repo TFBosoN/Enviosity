@@ -524,6 +524,7 @@ switch($names){
 					transformation.play();
 					lightning.play();
 					$("#gigaBG").css("background", "black");
+					$("#lightning").css("opacity", "1");
 					$("#lightning").css("display", "block");
 					$("#dialog_box").css("display", "none");
 					$("#presentation").css("display", "block");
@@ -531,8 +532,8 @@ switch($names){
 						$("#gigaBG").css("display", "none");
 						$("#enviChadc").css("display", "block");
 						$("#lightning").css("opacity", "0");
+						setTimeout(() => { show_giga(); }, 1000);
 					}, 300);
-					setTimeout(() => { show_giga(); }, 1000);
 				break;
 			}
 			texts = texts? texts: text;
