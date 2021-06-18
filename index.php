@@ -291,7 +291,7 @@ switch($names){
 			<a class="logo"><div></div></a>
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
-				<a><?=$without;?>!</a><br><br>
+				<a><?=$without;?></a><br><br>
 				<a>GFUEL use code "ENVIOSITY" for 10% off!</a>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br><br>
