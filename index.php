@@ -317,7 +317,7 @@ switch($names){
 				</div>
 				<a style="font-size:20px">= MISC =</a><br>
 				<div class="lines">
-					<span style="position:relative"><a class="alist" href="https://myanimelist.net/animelist/Enviosity"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fas fa-list-alt"></i>';?><br><b style="margin-left:-5px;">MyAnimeList</b></a></span>
+					<span style="position:relative"><a class="alist" href="https://myanimelist.net/animelist/Enviosity"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fas fa-list-alt"></i>';?><br><b style="margin-left:-10px;">MyAnimeList</b></a></span>
 					<span style="position:relative"><a class="book" href="./stories/"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><b>Stories</b></a><span class="badge badge-pill badge-danger">2</span></span>
 				</div>
 				<br>
@@ -340,6 +340,7 @@ switch($names){
 			</div>
 		</div>
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script>
 	//Background
 	/*/
