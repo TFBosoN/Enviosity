@@ -1,11 +1,12 @@
 <?php
 //background images from twitch thumbnails (populated daily)
+header("Access-Control-Allow-Origin: api.enviosity.com");
 $bg_images = json_decode(file_get_contents("./envi.json"));
 //Bg settings
 $imgh = 360;
 $zoom = 2;
 
-$without = "";
+$without = "0 days without streaming!";
 $phrase_fs = false;
 
 //COPIUM 
@@ -257,6 +258,14 @@ switch($names){
 			margin:0;
 			font-family:initial;
 		}
+		#first_logo{
+			transition: all 2s ease-in-out;
+			opacity:1;
+		}
+		#sec_logo{
+			position:absolute;
+			z-index:-9;
+		}
 	</style>
 </head>
 <body onload="draw();">
@@ -292,7 +301,7 @@ switch($names){
 	<div class="container">
 		<div id="presentation"><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>"><?=$phrase;?></h1></div>
 		<div class="main" id="main" style="display:none;">
-			<a class="logo"><div></div><div style="position:absolute"></div></a>
+			<a class="logo"><div id="first_logo"></div><div id="sec_logo"></div></a>
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
 				<a><?=$without;?></a><br><br>
@@ -322,8 +331,8 @@ switch($names){
 				</div>
 				<a style="font-size:20px">= MISC =</a><br>
 				<div class="lines">
-					<span style="position:relative"><a class="alist" href="https://myanimelist.net/animelist/Enviosity"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fas fa-list-alt"></i>';?><br><b style="margin-left:-12px;">MyAnimeList</b></a></span>
-					<span style="position:relative"><a class="book" href="./stories/"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><b>Stories</b></a><!--<span class="badge badge-pill badge-danger">2</span>--></span>
+					<span style="position:relative"><a class="alist" href="https://myanimelist.net/animelist/Enviosity"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fas fa-list-alt"></i>';?><br><b style="position: absolute; left: 50%; transform: translate(-50%);">MyAnimeList</b></a></span>
+					<span style="position:relative"><a class="book" href="./stories/"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><b style="position: absolute; left: 50%; transform: translate(-50%);">Stories</b></a><!--<span class="badge badge-pill badge-danger">2</span>--></span>
 				</div>
 				<br>
 				<br>
@@ -387,12 +396,28 @@ switch($names){
 	}
 	?>
 	$.ajax({
-		url: "//api.enviosity.com/v1/reddit/getFanArt",
+		url: "https://api.enviosity.com/v1/reddit/getFanArt/",
 		type: "GET",
-		dataType: "html"
-	}).done(function(data){
-		console.log(data);
+		dataType: "json"
+	}).done(function(rdata){
+		console.log(rdata);
+		show_image(rdata, 0);
 	});
+	function show_image(rdata, n){
+		if(n>rdata.length-1){
+			n = 0;
+		}
+		console.log(n);
+		$('#sec_logo').css("background-image", "url('"+rdata[n]+"')");
+		setTimeout(() => {
+			$('#first_logo').css("opacity", "0");
+			setTimeout(() => {
+				$('#first_logo').css("background-image", "url('"+rdata[n]+"')");
+				$('#first_logo').css("opacity", "1");
+				setTimeout(() => { show_image(rdata, n+1); }, 3200);
+			}, 2000);
+		}, 1000);
+	}
 	</script>
 	<script src='./assets/main.js'></script>
 </body>

@@ -74,7 +74,7 @@ a:hover{
 					<td colspan="2"><h2>Bookshelf</h2></td>
 				</tr>
 				<tr>
-					<td class="shelf"><a href="./gigachad/"><div><span><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"></span><span>The story about F2P GIGACHAD pt.1</span></div></a><span class="badge badge-pill badge-danger">updated & fixed</span></td><td class="shelf wip"><a href="#"><div><span><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Fishy.png"></span><span>The princess Fishy</span></div></a><span class="badge badge-pill badge-warning">WIP</span></td>
+					<td class="shelf"><a href="./gigachad/"><div><span><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"></span><span>The story about F2P GIGACHAD pt.1</span></div></a><!--<span class="badge badge-pill badge-danger">updated & fixed</span>--></td><td class="shelf wip"><a href="#"><div><span><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Fishy.png"></span><span>The princess Fishy</span></div></a><span class="badge badge-pill badge-warning">WIP</span></td>
 				</tr>
 				<tr>
 					<td colspan="2"><br>---<br>Remember to return your books in time!</td>
