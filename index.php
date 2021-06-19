@@ -98,6 +98,9 @@ if($names=="Coderviosity" && !isset($_GET["real_site_pls"])){
 */
 
 $avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/F2P.png";
+
+
+
 switch($names){
 	case "Dendriosity":
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Dendriosity.jpg";
@@ -129,6 +132,7 @@ switch($names){
 	case "Daddyosity":
 	case "Daddy Envi":
 	case "Mr. Polestripper":
+	case "Mr. Booty Slapper":
 		$names .= " <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviGasm.png' width='32' alt='enviGasm' title='enviGasm'>";
 	break;
 	case "Dylan":
@@ -288,7 +292,7 @@ switch($names){
 	<div class="container">
 		<div id="presentation"><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>"><?=$phrase;?></h1></div>
 		<div class="main" id="main" style="display:none;">
-			<a class="logo"><div></div></a>
+			<a class="logo"><div></div><div style="position:absolute"></div></a>
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
 				<a><?=$without;?></a><br><br>
@@ -318,8 +322,8 @@ switch($names){
 				</div>
 				<a style="font-size:20px">= MISC =</a><br>
 				<div class="lines">
-					<span style="position:relative"><a class="alist" href="https://myanimelist.net/animelist/Enviosity"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fas fa-list-alt"></i>';?><br><b style="margin-left:-15px;">MyAnimeList</b></a></span>
-					<span style="position:relative"><a class="book" href="./stories/"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><b>Stories</b></a><span class="badge badge-pill badge-danger">2</span></span>
+					<span style="position:relative"><a class="alist" href="https://myanimelist.net/animelist/Enviosity"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fas fa-list-alt"></i>';?><br><b style="margin-left:-12px;">MyAnimeList</b></a></span>
+					<span style="position:relative"><a class="book" href="./stories/"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><b>Stories</b></a><!--<span class="badge badge-pill badge-danger">2</span>--></span>
 				</div>
 				<br>
 				<br>
@@ -382,6 +386,13 @@ switch($names){
 	<?php
 	}
 	?>
+	$.ajax({
+		url: "//api.enviosity.com/v1/reddit/getFanArt",
+		type: "GET",
+		dataType: "html"
+	}).done(function(data){
+		console.log(data);
+	});
 	</script>
 	<script src='./assets/main.js'></script>
 </body>
