@@ -259,7 +259,7 @@ switch($names){
 			font-family:initial;
 		}
 		#first_logo{
-			transition: all 2s ease-in-out;
+			transition: opacity 2s ease-in-out;
 			opacity:1;
 		}
 		#sec_logo{
