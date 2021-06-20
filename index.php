@@ -306,7 +306,6 @@ switch($names){
 				<h1><?=$names;?></h1>
 				<a><?=$without;?></a><br><br>
 				<a>GFUEL use code "ENVIOSITY" for 10% off!</a><br>
-				<a href="http://bit.ly/Prime-E7-Enviosity-Twitch" style="color:white; text-decoration: underline"><b>Epic Seven Prime Gaming</b></a>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br><br>
 				<div class="lines">
