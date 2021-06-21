@@ -618,7 +618,7 @@ switch($names){
 					$("#name").html("Enviosity");
 					text = "NO MORE HYDRATES PLEASE!";
 				break;
-				case 29:
+				case 30:
 					$("#KEKWa").css("display", "block");
 					$("#name").html("Enviosity");
 					text = "I'VE LOST FULL CONTROL OF MY OFFLINE CHAT NOW";
