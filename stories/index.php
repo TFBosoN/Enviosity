@@ -57,11 +57,11 @@ a:hover{
 	text-decoration: none;
 	color: #ccc;
 }
-.wip a{
+.wip a, .wip img{
 	filter:grayscale(1);
 	transition: all 0.2s ease-in-out;
 }
-.wip:hover a{
+.wip:hover a, .wip:hover img{
 	filter:grayscale(0);
 }
 </style>
