@@ -1,11 +1,17 @@
+06/21/21
+===
+New "A rich muffin" story
+Removed promo names
+Name order update
+
 06/19/21
 ===
-Added logo changing
+Added logo randomizer
 Added api for reddit Fan Art
 
 06/17/21
 ===
-Compreted first chapter, fixed
+Completed first chapter of GIGACHAD story, fixed some issues
 Added Daily Login
 Added MyAnimeList
 Some improvements

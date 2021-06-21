@@ -13,6 +13,8 @@ N V
 
 Alatreonosity
 Artiosity
+Clickbaityosity
+Coughiosity
 Designosity
 EMviosity
 Elasticity
@@ -22,40 +24,41 @@ Fakeweebiosity
 Greediosity
 Hoardiosity
 IKEAosity
+Kappiosity
+Lateosity
 Monstrosity
 Physicaldiosity
-Retroviosity
 Refusiosity
+Retroviosity
+Richviosity
 Scamiosity
 Scammerosity
+Scamtrainviosity
+Sevenosity
 Shamelessviosity
 Shreliosity
 Smellyosity
 Snailiosity
 Stinkyosity
 Viscosity
-Sevenosity
-Kappiosity
-Richviosity
-Scamtrainviosity
 Yoimiyosity
-Lateosity
-Coughiosity
-Clickbaityosity
 
 #general autocorrect
 
-Mr. Streamer
-Mr. Stripper
-Mr. Strimmer
-Mr. Swimmer
-Mr. Slipper
 Mr. Skipper
+Mr. Slipper
 Mr. Steamer
+Mr. Sticker
+Mr. Streamer
 Mr. Street Light
+Mr. Strimmer
+Mr. Stripper
+Mr. Swimmer
 
 #"Mr." names
 
+Mr. Anemoculus
+Mr. Anti-Entropy
 Mr. Anvil
 Mr. Aromatherapy
 Mr. Atrocity
@@ -63,99 +66,97 @@ Mr. Audacity
 Mr. Avocado
 Mr. Banana
 Mr. Beef Jerkey
+Mr. Booty Scratcher
 Mr. Burger King
-Mr. Cracker
 Mr. Coconut
+Mr. Cracker
 Mr. Diabetes
 Mr. Electricity
+Mr. Embassy
 Mr. Encyclopedia
+Mr. Endiscopy
+Mr. Endocrine System
 Mr. Endoskeleton
 Mr. Enigma
 Mr. Enterobacterium
-Mr. Equilibrium
+Mr. Entertainment
+Mr. Entourage
 Mr. Entrapment
+Mr. Equilibrium
+Mr. Establishment
+Mr. Evanescence
 Mr. Fitness
+Mr. Garder Hose
+Mr. Invention
+Mr. Inventory
+Mr. Legbone
+Mr. Letter Opener
 Mr. Lycanthropy
+Mr. Mango
 Mr. Meticulosity
 Mr. Milla Jovovich
 Mr. Nucleophilicity
+Mr. Pencil
 Mr. Physical Goblin
+Mr. Refrigirator
+Mr. Skeleton
 Mr. Skinny Pop
 Mr. Snicker
-Mr. Skeleton
 Mr. Stapler
-Mr. Stepmother's friend
+Mr. Steam Bun
 Mr. Steam Client
+Mr. Stepmother's friend
 Mr. Stove
 Mr. Stroller
 Mr. Thunder Cheeks
 Mr. Watermelon
 Mr. Windmill
 Mr. Window Cleaner
-Mr. Invention
-Mr. Inventory
-Mr. Entourage
-Mr. Establishment
-Mr. Endocrine System
-Mr. Refrigirator
-Mr. Sticker
-Mr. Steam Bun
-Mr. Garder Hose
-Mr. Legbone
-Mr. Letter Opener
-Mr. Entertainment
-Mr. Mango
-Mr. Pencil
-Mr. Evanescence
-Mr. Endiscopy
-Mr. Embassy
-Mr. Anemoculus
-Mr. Booty Scratcher
 
-#Actially good stuff
+#Some funny ones
 
+Epiphany
+Little Spoonosity
+Momma Envy
 Mr. Colonoscopy
+Mr. Encryptocurrency
 Mr. Envelope
+Mr. Envi Taco Pee
+Mr. ILLudium Pew Thirty Six Explosive Space Modulator
 Mr. Microwaved icecream
 Mr. New York City
 Mr. Obesity
 Mr. Rice Cooker
 Mr. Sausage
-Mr. Encryptocurrency
-Momma Envy
-Epiphany
-Mr. ILLudium Pew Thirty Six Explosive Space Modulator
-Little Spoonosity
-Mr. Envi Taco Pee
 
 
 #Has a sticker next to it
 
-Donowalliosity
-YEPiosity
 Daddy Envi
 Daddyosity
-SHEESHiosity
+Donowalliosity
+Mr. Booty Slapper
 Mr. Polestripper
 Pepegiosity
-Mr. Booty Slapper
+SHEESHiosity
+YEPiosity
 
 #special avatarts and site modes
 
+Cabbage Head
+Chadiosity
 Coderviosity
 Copiosity
+Dendriosity
 Dylan the villain
 Dylanosity
 Eulanosity
 Eulaviosity
 Fishywishes
+GIGACHAD
 Hackiosity
+Minimaliosity
+Mr. F2P
 Mr. Fishy
 Mr. Minimalist
 Mr. Screamer
-Minimaliosity
-Dendriosity
-Mr. F2P
-Cabbage Head
-GIGACHAD
-Chadiosity
