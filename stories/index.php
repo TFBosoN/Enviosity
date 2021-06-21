@@ -72,7 +72,7 @@ a:hover{
 			
 			<table class="library">
 				<tr>
-					<td colspan="3"><h2>Bookshelf</h2></td>
+					<td colspan="4"><h2>Bookshelf</h2></td>
 				</tr>
 				<tr>
 					<td class="shelf"><a href="./gigachad/"><div><span><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"></span><span>The story about F2P GIGACHAD pt.1</span></div></a><!--<span class="badge badge-pill badge-danger">updated & fixed</span>--></td>
@@ -81,7 +81,7 @@ a:hover{
 					<td class="shelf wip"><a href="#"><div><span><img src="//res.cloudinary.com/tfboson/image/upload/v1623506132/envi/assets/COPIUM.png"></span><span>Streamer with no stream</span></div></a><span class="badge badge-pill badge-warning">WIP</span></td>
 				</tr>
 				<tr>
-					<td colspan="3"><br>---<br>Remember to return your books in time!</td>
+					<td colspan="4"><br>---<br>Remember to return your books in time!</td>
 				</tr>
 			</table>
 		</div>
