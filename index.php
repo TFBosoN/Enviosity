@@ -331,7 +331,7 @@ switch($names){
 				<a style="font-size:20px">= MISC =</a><br>
 				<div class="lines">
 					<span style="position:relative"><a class="alist" href="https://myanimelist.net/animelist/Enviosity"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fas fa-list-alt"></i>';?><br><b style="position: absolute; left: 50%; transform: translate(-50%);">MyAnimeList</b></a></span>
-					<span style="position:relative"><a class="book" href="./stories/"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><b style="position: absolute; left: 50%; transform: translate(-50%);">Stories</b></a><!--<span class="badge badge-pill badge-danger">2</span>--></span>
+					<span style="position:relative"><a class="book" href="./stories/"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><b style="position: absolute; left: 50%; transform: translate(-50%);">Stories</b></a><span class="badge badge-pill badge-danger">1</span></span>
 				</div>
 				<br>
 				<br>
