@@ -78,7 +78,7 @@ a:hover{
 					<td class="shelf"><a href="./gigachad/"><div><span><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Gigachadcuts.png"></span><span>The story about F2P GIGACHAD pt.1</span></div></a><!--<span class="badge badge-pill badge-danger">updated & fixed</span>--></td>
 					<td class="shelf"><a href="./muffin/"><div><span><img src="//res.cloudinary.com/tfboson/image/upload/v1624216699/envi/assets/102-1028135_muffin-cute-kawaii-chocolate-blueberry-freetoedit-cute-blueberry.png"></span><span>A rich muffin</span></div></a><!--<span class="badge badge-pill badge-danger">new</span>--></td>
 					<td class="shelf wip"><a href="#"><div><span><img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/Fishy.png"></span><span>The princess Fishy</span></div></a><span class="badge badge-pill badge-warning">WIP</span></td>
-					
+					<td class="shelf wip"><a href="#"><div><span><img src="//res.cloudinary.com/tfboson/image/upload/v1623506132/envi/assets/COPIUM.png"></span><span>Streamer with no stream</span></div></a><span class="badge badge-pill badge-warning">WIP</span></td>
 				</tr>
 				<tr>
 					<td colspan="3"><br>---<br>Remember to return your books in time!</td>
