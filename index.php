@@ -41,7 +41,7 @@ $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(2,count($names)-1);
 
 
-if(isset($_COOKIE['no_promo']) && true){
+if(isset($_COOKIE['no_promo']) || true){
 	$promote_name[] = $names[$count];
 }else{
 	$promote_name[] = "Daddyosity";
@@ -327,6 +327,7 @@ switch($names){
 				<div class="lines">
 					<span style="width: auto;"><a class="discord" href="https://paimon.moe" target="_blank"><img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/paimonmoe.ico" style="vertical-align: middle;"><b style="font-family: sans-serif; position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9px; font-size: 14px; right: 0; color: rgb(78, 124, 255);">.moe</div></b></a></span>
 					<span style="width: auto;"><a class="discord" href="https://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id=e202102251931481" target="_blank"><img src="//res.cloudinary.com/tfboson/image/upload/v1623974211/envi/assets/Paimon.png" style="vertical-align: middle; width:62px"><b style="font-family: sans-serif; position:relative; font-size:20px">Daily Login</b></a></span>
+					<span style="width: auto;"><a class="discord" href="https://webstatic-sea.mihoyo.com/app/ys-map-sea/" target="_blank"><img src="data:image/png;base64,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" style="vertical-align: middle; width:62px"><b style="font-family: sans-serif; position:relative; font-size:20px">HoYoLAB Map</b></a></span>
 				</div>
 				<a style="font-size:20px">= MISC =</a><br>
 				<div class="lines">
@@ -342,10 +343,10 @@ switch($names){
 						<tr>
 							<td style="text-align:center"><div style="display:none" id="slime_warning"><a style="font-size:11px">slimes are resource intence!</a> <a style="font-size:10px; text-decoration:underline; cursor:pointer" onclick='enable_slimes()'>Enable them</a></div></td>
 						</tr>
-							<td style="text-align:center; padding:10px"><a href='https://github.com/TFBosoN/enviosity' style="text-decoration:underline">GitHub</a> | <a href="./changelog.txt">Changelog</a> | <a href="./envi_names.txt">This is how viewers call me</a></td>
+							<td style="text-align:center; padding:10px"><a href='https://github.com/TFBosoN/enviosity'>GitHub</a> | <a href="./changelog.txt">Changelog</a> | <a href="./envi_names.txt">This is how viewers call me</a></td>
 						</tr>
 						<tr>
-							<td style="text-align:center">Images by <a href="https://twitter.com/fishywishies" style="text-decoration:underline">@fishywishes!</a> <img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/fishy.jpg" height="18" width="18" alt="fishy" title="fishy"> | Site by <a href="https://tfb.su" style="text-decoration:underline">@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?></td>
+							<td style="text-align:center">Images by <a href="https://twitter.com/fishywishies">@fishywishes!</a> <img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/fishy.jpg" height="18" width="18" alt="fishy" title="fishy"> | Site by <a href="https://tfb.su">@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?></td>
 						</tr>
 					</table>
 				</div>
@@ -394,6 +395,7 @@ switch($names){
 	<?php
 	}
 	?>
+	/*
 	$.ajax({
 		url: "https://api.enviosity.com/v1/reddit/getFanArt/",
 		type: "GET",
@@ -416,7 +418,7 @@ switch($names){
 				setTimeout(() => { show_image(rdata, n+1); }, 3200);
 			}, 2000);
 		}, 1000);
-	}
+	}*/
 	</script>
 	<script src='./assets/main.js'></script>
 </body>
