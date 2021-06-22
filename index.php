@@ -187,7 +187,7 @@ switch($names){
 
 <html>
 <head>
-	<title>Enviosity</title>
+	<title>Enviosity 🔴</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 	<meta charset="utf-8">
 	<meta name="description" CONTENT="Enviosity's f2p website">
