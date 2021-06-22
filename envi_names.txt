@@ -26,6 +26,7 @@ Hoardiosity
 IKEAosity
 Kappiosity
 Lateosity
+MiHoYosity
 Monstrosity
 Physicaldiosity
 Refusiosity
@@ -54,6 +55,7 @@ Mr. Street Light
 Mr. Strimmer
 Mr. Stripper
 Mr. Swimmer
+Mr. Stroker
 
 #"Mr." names
 
