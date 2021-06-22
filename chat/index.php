@@ -204,7 +204,7 @@ html,body {
 </head>
 <body>
 	<div id="chat"></div>
-	<iframe src="https://www.twitch.tv/embed/enviosity/chat?parent=localhost" height="100" width="400">
+	<iframe src="https://www.twitch.tv/embed/enviosity/chat?parent=enviosity.com" height="100" width="400">
 </iframe>
 
 <script src="tmi.min.js"></script>
