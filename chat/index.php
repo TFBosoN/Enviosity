@@ -204,7 +204,7 @@ html,body {
 </style>
 </head>
 <body style="overflow: none;">
-	<div id="chat" style="position:absolute; bottom:100px; width:400px; height:calc(100% - 100px); z-index:99; background-color: hsla(0, 0%, 12%, 1);"></div>
+	<div id="chat" style="position:absolute; bottom:120px; width:400px; height:calc(100% - 120px); z-index:99; background-color: hsla(0, 0%, 12%, 1);"></div>
 	<div><iframe src="https://www.twitch.tv/embed/enviosity/chat?parent=enviosity.com" height="500" width="396" style="position:absolute; bottom:0; left:0;"></div>
 </iframe>
 
