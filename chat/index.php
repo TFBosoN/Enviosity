@@ -203,9 +203,9 @@ html,body {
 }
 </style>
 </head>
-<body>
+<body style="overflow: none;">
 	<div id="chat" style="position:absolute; bottom:100px; width:400px"></div>
-	<div><iframe src="https://www.twitch.tv/embed/enviosity/chat?parent=enviosity.com" height="100" width="400" style="position:absolute; bottom:0;"></div>
+	<div><iframe src="https://www.twitch.tv/embed/enviosity/chat?parent=enviosity.com" height="100" width="400" style="position:absolute; bottom:0; left:0;"></div>
 </iframe>
 
 <script src="tmi.min.js"></script>
