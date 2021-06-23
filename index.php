@@ -314,8 +314,6 @@ switch($names){
 	<div id="twitch_chat"><iframe src="./chat/short.php" frameborder="0" border="0" cellspacing="0"></iframe><div><a style="font-size:24px;cursor:pointer" onclick="window.open('//enviosity.com/chat/', 'popup', 'location=0,width=800,height=800,left=500,top=55'); return false;">I want to chat!<br>(scuffed, normal soon)</a></div></div>
 	<div class="container">
 		<!-- window.open('//enviosity.com/chat/', 'popup', 'location=0,width=400,height=800,left=500,top=55'); return false; -->
-		<div id="dialog_box" onclick="con_dia()"><div id="name">A strange stranger</div><div id="dtext"><p></p></div></div>
-		<div id="bg_fon" style="display:none; opacity: 0; position: fixed; left: 0; top: 0; width: 100%; height:100%; background: rgba(0,0,0,0.6); transition: all 1s ease-in-out;z-index:99"></div>
 		<div id="presentation"><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>"><?=$phrase;?></h1></div>
 		<div class="main" id="main" style="display:none;">
 			<a class="logo"><div id="first_logo"></div><div id="sec_logo"></div></a>
