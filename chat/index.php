@@ -6,14 +6,51 @@ html,body {
 	font-family: 'Roboto', sans-serif;
 	background-color: hsla(0, 0%, 12%, 1);
 	color: hsla(0, 0%, 100%, .95);
-	font-size: 24px;
+	font-size: 16px;
+	line-height:1.5;
 }
 #chat {
 	position: absolute;
-	bottom: 0px;
 	left: 0;
-	right: 0;
 	padding: 2px;
+	bottom:0; 
+	width:396px; 
+	height:100%; 
+	z-index:99; 
+	background-color: hsla(0, 0%, 12%, 1);
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+#chat::-webkit-scrollbar-button {
+background-image:url('');
+background-repeat:no-repeat;
+width:5px;
+height:0px
+}
+
+#chat::-webkit-scrollbar-track {
+background-color:#ecedee
+}
+
+#chat::-webkit-scrollbar-thumb {
+-webkit-border-radius: 0px;
+border-radius: 0px;
+background-color:#6dc0c8;
+}
+
+#chat::-webkit-scrollbar-thumb:hover{
+background-color:#56999f;
+}
+
+#chat::-webkit-resizer{
+background-image:url('');
+background-repeat:no-repeat;
+width:4px;
+height:0px
+}
+
+#chat::-webkit-scrollbar{
+width: 4px;
 }
 .chat-line {
 	-webkit-transition: all 1s ease-in;
@@ -23,7 +60,7 @@ html,body {
 	transition: all 1s ease-in;
 }
 .chat-line[data-faded] {
-	opacity: .8;
+	opacity: 1;
 }
 .chat-line.chat-action {
 }
@@ -201,12 +238,17 @@ html,body {
 
 .chat-crash {
 }
+#twitch{
+	position:absolute;
+	top:0;
+	left:400px;
+	height:100%;
+}
 </style>
 </head>
-<body style="overflow: none;">
-	<div id="chat" style="position:absolute; bottom:120px; width:396px; height:calc(100% - 120px); z-index:99; background-color: hsla(0, 0%, 12%, 1);overflow-y: auto;
-"></div>
-	<div><iframe src="https://www.twitch.tv/embed/enviosity/chat?parent=enviosity.com" height="500" width="396" border="0" style="position:absolute; bottom:0; left:0;"></div>
+<body>
+	<div id="chat"></div>
+	<div id="twitch"><iframe name="iframe1" id="iframe1" src="https://www.twitch.tv/embed/enviosity/chat?parent=enviosity.com" height="100%" width="396" frameborder="0" border="0" cellspacing="0" style="position:absolute; bottom:0; left:0;"></div>
 </iframe>
 
 <script src="tmi.min.js"></script>
@@ -222,7 +264,7 @@ showEmotes = true, // Show emotes in the chat
 doTimeouts = true, // Hide the messages of people who are timed-out
 doChatClears = true, // Hide the chat from an entire channel
 showHosting = true, // Show when the channel is hosting or not
-showConnectionNotices = true; // Show messages like "Connected" and "Disconnected"
+showConnectionNotices = false; // Show messages like "Connected" and "Disconnected"
 
 	randomColorsChosen = {},
 	clientOptions = {
@@ -256,7 +298,7 @@ var frankerz = {
 	subEmotesCodeList: [], // I don't have a restriction set for Night-sub-only emotes, but the data's here.
 	allowEmotesAnyChannel: true // Allow all BTTV emotes that are loaded no matter the channel restriction
 };
-var emoteScale = 3;
+var emoteScale = 2;
 
 
 var chat = document.getElementById('chat');
@@ -450,7 +492,8 @@ function handleChat(channel, user, message, self) {
 		var oldMessages = [].slice.call(chat.children).slice(0, 10);
 		for(var i in oldMessages) oldMessages[i].remove();
 	}
-	
+	var objDiv = document.getElementById("chat");
+	objDiv.scrollTop = objDiv.scrollHeight;
 }
 
 function badges(chan, user, isBot) {
@@ -485,7 +528,7 @@ function badges(chan, user, isBot) {
 function testMessage(channel, user, message, self) { // Throw away when done
 	handleChat(channel || tmi.opts.channels[0], user || { 'display-name': 'TFBosoN', emotes: null }, message || '(chompy) bttvNice domeHey domeLit splinCreep', self || false);
 }
-testMessage('enviosity', null, 'Hey~! This is a secret underground chat! You can use BOOBA and PagMan! Secret Chat (beta) v0.1!');
+testMessage('enviosity', null, "Hey~! This is (not) a secret chat! You can use emotes Envi removed or didn't add! (peepoTub, BOOBA, PagMan) Secret Chat (beta) v0.1!");
 function chatNotice(information, noticeFadeDelay, level, additionalClasses) {
 	var ele = document.createElement('div');
 	
@@ -625,8 +668,8 @@ function hosting(channel, target, viewers, unhost) {
 		asyncCalls.push(get('https://api.betterttv.net/3/cached/users/twitch/44390855', {}, { Accept: 'application/json' }, 'GET', function(data) {
 			mergeBTTVEmotes(data, channel);
 		}), false);
-		data = {"channelEmotes": [{"id": "60ccf3bf8ed8b373e4215f11", "code":"BOOBA", "imgType":"png"},{"id": "60cd12318ed8b373e421601f", "code":"PagMan", "imgType":"png"}], "sharedEmotes":[]};
-		mergeBTTVEmotes(data, channel);
+		data = {"channelEmotes": [{"id": "60ccf3bf8ed8b373e4215f11", "code":"BOOBA", "imgType":"png"},{"id": "60cd12318ed8b373e421601f", "code":"PagMan", "imgType":"png"},{"id": "6084d05039b5010444d05be1", "code":"peepoTub", "imgType":"gif"},{"id": "60c9849df8b3f62601c3e7e3", "code":"Madge", "imgType":"png"},{"id": "60cdb2f28ed8b373e421641b", "code":"YEAHBUT7TV", "imgType":"png"},{"id": "60d15cd08ed8b373e4217a33", "code":"peepoHappy", "imgType":"png"}], "sharedEmotes":[]};
+		mergeBTTVEmotes(data, channel); 
 		asyncCallss.push(get('https://api.betterttv.net/3/cached/frankerfacez/users/twitch/44390855', {}, { Accept: 'application/json' }, 'GET', function(data) {
 			mergeBTTVEmotess(data, channel);
 		}), false);

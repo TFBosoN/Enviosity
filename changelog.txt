@@ -1,3 +1,7 @@
+06/23/21
+===
+Added secret (not) twitch chat
+
 06/22/21
 ===
 FUWAQ homework video in library
