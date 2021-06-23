@@ -304,7 +304,8 @@ switch($names){
 			<a class="logo"><div id="first_logo"></div><div id="sec_logo"></div></a>
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
-				<a><?=$without;?> <!--🔴 NOW LIVE!--></a><br><br>
+				<a><?=$without;?> <!--🔴 NOW LIVE!--> <!--<a onclick="window.open('//enviosity.com/chat/', 'popup', 'location=0,width=400,height=800,left=500,top=55'); return false;" class="btn btn-primary btn-sm">+</a>-->
+</a><br><br>
 				<a>GFUEL use code "ENVIOSITY" for 10% off!</a><br>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br><br>

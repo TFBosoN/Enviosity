@@ -5,7 +5,7 @@ html,body {
 	font-family: 'Roboto', sans-serif;
 	background-color: hsla(0, 0%, 12%, 1);
 	color: hsla(0, 0%, 100%, .95);
-	font-size: 24px;
+	font-size: 20px;
 }
 #chat {
 	position: absolute;
@@ -202,9 +202,9 @@ html,body {
 }
 </style>
 </head>
-<body>
-	<div id="chat" style="position:absolute; bottom:100px; width:400px"></div>
-	<div><iframe src="https://www.twitch.tv/embed/enviosity/chat?parent=enviosity.com" height="100" width="400" style="position:absolute; bottom:0;"></div>
+<body style="overflow: none">
+	<div id="chat" style="position:absolute; bottom:120px; width:400px; margin:0; padding: 0;"></div>
+	<div><iframe src="https://www.twitch.tv/embed/enviosity/chat?parent=enviosity.com" height="100" width="400" style="position:absolute; bottom:0; left:0;"></div>
 </iframe>
 
 <script src="tmi.min.js"></script>
