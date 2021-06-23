@@ -211,8 +211,8 @@ html,body {
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 <script>
-
-var fadeDelay = 5000, // Set to false to disable chat fade
+var channels = ['enviosity'], // Channels to initially join
+fadeDelay = 5000, // Set to false to disable chat fade
 showChannel = true, // Show repespective channels if the channels is longer than 1
 useColor = true, // Use chatters' colors or to inherit
 showBadges = true, // Show chatters' badges
@@ -221,10 +221,21 @@ doTimeouts = true, // Hide the messages of people who are timed-out
 doChatClears = true, // Hide the chat from an entire channel
 showHosting = true, // Show when the channel is hosting or not
 showConnectionNotices = true; // Show messages like "Connected" and "Disconnected"
+
+	randomColorsChosen = {},
+	clientOptions = {
+			options: {
+					debug: true
+				},
+			channels: channels
+		},
+	client = new tmi.client(clientOptions);
+
+
 var twitchEmotes = {
-			urlTemplate: 'http://static-cdn.jtvnw.net/emoticons/v1/{{id}}/{{image}}',
-			scales: { 1: '1.0', 2: '2.0', 3: '3.0' }
-		};
+	urlTemplate: 'http://static-cdn.jtvnw.net/emoticons/v1/{{id}}/{{image}}',
+	scales: { 1: '1.0', 2: '2.0', 3: '3.0' }
+};
 var bttvEmotes = {
 	urlTemplate: 'https://cdn.betterttv.net/emote/{{id}}/{{image}}',
 	scales: { 1: '1x', 2: '2x', 3: '3x' },
@@ -543,151 +554,133 @@ function hosting(channel, target, viewers, unhost) {
 		chatNotice(chan + ' is no longer hosting.', null, null, 'chat-hosting-no');
 	}
 }
-$(document).ready(function(e) {
 		
-		var channels = ['enviosity']; // Join these channels
 		
-		console.log('%cThere\'s a function called \'testMessage\' that you can use to manually input messages', 'color:orange;');
-		
-		tmi = new tmi.client({ // A tmi.js client
-				options: { debug: true },
-				channels: channels
-			});
-		
-		/*tmi.on('connected', function() { // On connect
-					testMessage(null, null, 'Open the console!');
-					testMessage();
-					testMessage('enviosity', null, '(chompy) enviLate KEKWait paimonTantrum BOOBA');
-				});*/
-		
-		tmi.on('message', handleChat); // Received a message
-		
-		function mergeBTTVEmotes(data, channel) {
-			console.log('Got BTTV emotes for ' + channel);
-			bttvEmotes.emotes = bttvEmotes.emotes.concat(data.channelEmotes.map(function(n) {
-					if(!_.has(n, 'restrictions')) {
-						n.restrictions = {
-								channels: [],
-								games: []
-							};
-					}
-					if(n.restrictions.channels.indexOf(channel) == -1) {
-						n.restrictions.channels.push(channel);
-					}
-					return n;
-				}));
-			bttvEmotes.emotes = bttvEmotes.emotes.concat(data.sharedEmotes.map(function(n) {
-					if(!_.has(n, 'restrictions')) {
-						n.restrictions = {
-								channels: [],
-								games: []
-							};
-					}
-					if(n.restrictions.channels.indexOf(channel) == -1) {
-						n.restrictions.channels.push(channel);
-					}
-					return n;
-				}));
-		}
-		function mergeBTTVEmotess(data, channel) {
-			console.log('Got Frankerz emotes for ' + channel);
-			frankerz.emotes = frankerz.emotes.concat(data.map(function(n) {
-					if(!_.has(n, 'restrictions')) {
-						n.restrictions = {
-								channels: [],
-								games: []
-							};
-					}
-					if(n.restrictions.channels.indexOf(channel) == -1) {
-						n.restrictions.channels.push(channel);
-					}
-					return n;
-				}));
-		}
-		
-		var asyncCalls = [get('https://api.betterttv.net/3/cached/emotes/global', {}, { Accept: 'application/json' }, 'GET', function(data) {
-			console.log('Got BTTV global emotes');
-			bttvEmotes.emotes = bttvEmotes.emotes.concat(data.map(function(n) {
-					n.global = true;
-					return n;
-				}));
-			bttvEmotes.subEmotesCodeList = _.chain(bttvEmotes.emotes).where({ global: true }).reject(function(n) { return _.isNull(n.channel); }).pluck('code').value();
-		}, false)];
-		var asyncCallss = [get('https://api.betterttv.net/3/cached/frankerfacez/users/twitch/44390855', {}, { Accept: 'application/json' }, 'GET', function(data) {
-			console.log('Got Frankerz global emotes');
-			frankerz.emotes = frankerz.emotes.concat(data.map(function(n) {
+	console.log('%cThere\'s a function called \'testMessage\' that you can use to manually input messages', 'color:orange;');
+	
+	
+	function mergeBTTVEmotes(data, channel) {
+		console.log('Got BTTV emotes for ' + channel);
+		bttvEmotes.emotes = bttvEmotes.emotes.concat(data.channelEmotes.map(function(n) {
+				if(!_.has(n, 'restrictions')) {
+					n.restrictions = {
+							channels: [],
+							games: []
+						};
+				}
+				if(n.restrictions.channels.indexOf(channel) == -1) {
+					n.restrictions.channels.push(channel);
+				}
 				return n;
 			}));
-			frankerz.subEmotesCodeList = _.chain(frankerz.emotes).where({ global: true }).reject(function(n) { return _.isNull(n.channel); }).pluck('code').value();
-		}, false)];
-		
-		function addAsyncCall(channel) {
-			asyncCalls.push(get('https://api.betterttv.net/3/cached/users/twitch/44390855', {}, { Accept: 'application/json' }, 'GET', function(data) {
-				mergeBTTVEmotes(data, channel);
-			}), false);
-			data = {"channelEmotes": [{"id": "60ccf3bf8ed8b373e4215f11", "code":"BOOBA", "imgType":"png"}], "sharedEmotes":[]};
+		bttvEmotes.emotes = bttvEmotes.emotes.concat(data.sharedEmotes.map(function(n) {
+				if(!_.has(n, 'restrictions')) {
+					n.restrictions = {
+							channels: [],
+							games: []
+						};
+				}
+				if(n.restrictions.channels.indexOf(channel) == -1) {
+					n.restrictions.channels.push(channel);
+				}
+				return n;
+			}));
+	}
+	function mergeBTTVEmotess(data, channel) {
+		console.log('Got Frankerz emotes for ' + channel);
+		frankerz.emotes = frankerz.emotes.concat(data.map(function(n) {
+				if(!_.has(n, 'restrictions')) {
+					n.restrictions = {
+							channels: [],
+							games: []
+						};
+				}
+				if(n.restrictions.channels.indexOf(channel) == -1) {
+					n.restrictions.channels.push(channel);
+				}
+				return n;
+			}));
+	}
+	
+	var asyncCalls = [get('https://api.betterttv.net/3/cached/emotes/global', {}, { Accept: 'application/json' }, 'GET', function(data) {
+		console.log('Got BTTV global emotes');
+		bttvEmotes.emotes = bttvEmotes.emotes.concat(data.map(function(n) {
+				n.global = true;
+				return n;
+			}));
+		bttvEmotes.subEmotesCodeList = _.chain(bttvEmotes.emotes).where({ global: true }).reject(function(n) { return _.isNull(n.channel); }).pluck('code').value();
+	}, false)];
+	var asyncCallss = [get('https://api.betterttv.net/3/cached/frankerfacez/users/twitch/44390855', {}, { Accept: 'application/json' }, 'GET', function(data) {
+		console.log('Got Frankerz global emotes');
+		frankerz.emotes = frankerz.emotes.concat(data.map(function(n) {
+			return n;
+		}));
+		frankerz.subEmotesCodeList = _.chain(frankerz.emotes).where({ global: true }).reject(function(n) { return _.isNull(n.channel); }).pluck('code').value();
+	}, false)];
+	
+	function addAsyncCall(channel) {
+		asyncCalls.push(get('https://api.betterttv.net/3/cached/users/twitch/44390855', {}, { Accept: 'application/json' }, 'GET', function(data) {
 			mergeBTTVEmotes(data, channel);
-			asyncCallss.push(get('https://api.betterttv.net/3/cached/frankerfacez/users/twitch/44390855', {}, { Accept: 'application/json' }, 'GET', function(data) {
-				mergeBTTVEmotess(data, channel);
-			}), false);
-		}
-		
-		for(var i in channels) { // Add BTTV emotes for the channels we're connecting to.
-			addAsyncCall(channels[i]);
-		}
-		
-		$.when.apply({}, asyncCalls).always(function() {
-			bttvEmotes.emoteCodeList = _.pluck(bttvEmotes.emotes, 'code');
-			tmi.connect();
-		});
-		$.when.apply({}, asyncCallss).always(function() {
-			frankerz.emoteCodeList = _.pluck(frankerz.emotes, 'code');
-			tmi.connect();
-		});
-		tmi.addListener('message', handleChat);
-	tmi.addListener('timeout', timeout);
-	tmi.addListener('clearchat', clearChat);
-	tmi.addListener('hosting', hosting);
-	tmi.addListener('unhost', function(channel, viewers) { hosting(channel, null, viewers, true) });
-
-	tmi.addListener('connecting', function (address, port) {
-			if(showConnectionNotices) chatNotice('Connecting', 1000, -4, 'chat-connection-good-connecting');
-		});
-	tmi.addListener('logon', function () {
-			if(showConnectionNotices) chatNotice('Authenticating', 1000, -3, 'chat-connection-good-logon');
-		});
-	tmi.addListener('connectfail', function () {
-			if(showConnectionNotices) chatNotice('Connection failed', 1000, 3, 'chat-connection-bad-fail');
-		});
-	tmi.addListener('connected', function (address, port) {
-			if(showConnectionNotices) chatNotice('Connected', 1000, -2, 'chat-connection-good-connected');
-			joinAccounced = [];
-		});
-	tmi.addListener('disconnected', function (reason) {
-			if(showConnectionNotices) chatNotice('Disconnected: ' + (reason || ''), 3000, 2, 'chat-connection-bad-disconnected');
-		});
-	tmi.addListener('reconnect', function () {
-			if(showConnectionNotices) chatNotice('Reconnected', 1000, 'chat-connection-good-reconnect');
-		});
-	tmi.addListener('join', function (channel, username) {
-			if(username == tmi.getUsername()) {
-				if(showConnectionNotices) chatNotice('Joined ' + capitalize(dehash(channel)), 1000, -1, 'chat-room-join');
-				joinAccounced.push(channel);
-			}
-		});
-	tmi.addListener('part', function (channel, username) {
-			var index = joinAccounced.indexOf(channel);
-			if(index > -1) {
-				if(showConnectionNotices) chatNotice('Parted ' + capitalize(dehash(channel)), 1000, -1, 'chat-room-part');
-				joinAccounced.splice(joinAccounced.indexOf(channel), 1)
-			}
-		});
-
-	tmi.addListener('crash', function () {
-			chatNotice('Crashed', 10000, 4, 'chat-crash');
+		}), false);
+		data = {"channelEmotes": [{"id": "60ccf3bf8ed8b373e4215f11", "code":"BOOBA", "imgType":"png"}], "sharedEmotes":[]};
+		mergeBTTVEmotes(data, channel);
+		asyncCallss.push(get('https://api.betterttv.net/3/cached/frankerfacez/users/twitch/44390855', {}, { Accept: 'application/json' }, 'GET', function(data) {
+			mergeBTTVEmotess(data, channel);
+		}), false);
+	}
+	client.connect();
+	for(var i in channels) { // Add BTTV emotes for the channels we're connecting to.
+		addAsyncCall(channels[i]);
+	}
+	
+	$.when.apply({}, asyncCalls).always(function() {
+		bttvEmotes.emoteCodeList = _.pluck(bttvEmotes.emotes, 'code');
 	});
-		
+	$.when.apply({}, asyncCallss).always(function() {
+		frankerz.emoteCodeList = _.pluck(frankerz.emotes, 'code');
 	});
+	client.addListener('message', handleChat);
+client.addListener('timeout', timeout);
+client.addListener('clearchat', clearChat);
+client.addListener('hosting', hosting);
+client.addListener('unhost', function(channel, viewers) { hosting(channel, null, viewers, true) });
+
+client.addListener('connecting', function (address, port) {
+		if(showConnectionNotices) chatNotice('Connecting', 1000, -4, 'chat-connection-good-connecting');
+	});
+client.addListener('logon', function () {
+		if(showConnectionNotices) chatNotice('Authenticating', 1000, -3, 'chat-connection-good-logon');
+	});
+client.addListener('connectfail', function () {
+		if(showConnectionNotices) chatNotice('Connection failed', 1000, 3, 'chat-connection-bad-fail');
+	});
+client.addListener('connected', function (address, port) {
+		if(showConnectionNotices) chatNotice('Connected', 1000, -2, 'chat-connection-good-connected');
+		joinAccounced = [];
+	});
+client.addListener('disconnected', function (reason) {
+		if(showConnectionNotices) chatNotice('Disconnected: ' + (reason || ''), 3000, 2, 'chat-connection-bad-disconnected');
+	});
+client.addListener('reconnect', function () {
+		if(showConnectionNotices) chatNotice('Reconnected', 1000, 'chat-connection-good-reconnect');
+	});
+client.addListener('join', function (channel, username) {
+		if(username == client.getUsername()) {
+			if(showConnectionNotices) chatNotice('Joined ' + capitalize(dehash(channel)), 1000, -1, 'chat-room-join');
+			joinAccounced.push(channel);
+		}
+	});
+client.addListener('part', function (channel, username) {
+		var index = joinAccounced.indexOf(channel);
+		if(index > -1) {
+			if(showConnectionNotices) chatNotice('Parted ' + capitalize(dehash(channel)), 1000, -1, 'chat-room-part');
+			joinAccounced.splice(joinAccounced.indexOf(channel), 1)
+		}
+	});
+
+client.addListener('crash', function () {
+		chatNotice('Crashed', 10000, 4, 'chat-crash');
+});
 </script>
 </body>
 </html>
