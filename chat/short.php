@@ -15,7 +15,7 @@ html,body {
 	padding: 2px;
 	top:0; 
 	width:396px; 
-	height: calc(100% - 112px);
+	height: 100%;
 	z-index:99; 
 	background-color: hsla(0, 0%, 12%, 1);
 	overflow-y: scroll;
