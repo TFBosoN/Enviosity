@@ -6,16 +6,16 @@ html,body {
 	font-family: 'Roboto', sans-serif;
 	background-color: hsla(0, 0%, 12%, 1);
 	color: hsla(0, 0%, 100%, .95);
-	font-size: 16px;
+	font-size: 15px;
 	line-height:1.5;
 }
 #chat {
 	position: absolute;
 	left: 0;
 	padding: 2px;
-	bottom:0; 
+	top:0; 
 	width:396px; 
-	height:100%; 
+	height: calc(100% - 112px);
 	z-index:99; 
 	background-color: hsla(0, 0%, 12%, 1);
 	overflow-y: scroll;
@@ -298,7 +298,7 @@ var frankerz = {
 	subEmotesCodeList: [], // I don't have a restriction set for Night-sub-only emotes, but the data's here.
 	allowEmotesAnyChannel: true // Allow all BTTV emotes that are loaded no matter the channel restriction
 };
-var emoteScale = 2;
+var emoteScale = 3;
 
 
 var chat = document.getElementById('chat');
