@@ -668,7 +668,40 @@ function hosting(channel, target, viewers, unhost) {
 		asyncCalls.push(get('https://api.betterttv.net/3/cached/users/twitch/44390855', {}, { Accept: 'application/json' }, 'GET', function(data) {
 			mergeBTTVEmotes(data, channel);
 		}), false);
-		data = {"channelEmotes": [{"id": "60ccf3bf8ed8b373e4215f11", "code":"BOOBA", "imgType":"png"},{"id": "60cd12318ed8b373e421601f", "code":"PagMan", "imgType":"png"},{"id": "6084d05039b5010444d05be1", "code":"peepoTub", "imgType":"gif"},{"id": "60c9849df8b3f62601c3e7e3", "code":"Madge", "imgType":"png"},{"id": "60cdb2f28ed8b373e421641b", "code":"YEAHBUT7TV", "imgType":"png"},{"id": "60d15cd08ed8b373e4217a33", "code":"peepoHappy", "imgType":"png"}], "sharedEmotes":[]};
+		data = {"channelEmotes": [
+			{"id": "60ccf3bf8ed8b373e4215f11", "code":"BOOBA", "imgType":"png"},
+			{"id": "60cd12318ed8b373e421601f", "code":"PagMan", "imgType":"png"},
+			{"id": "6084d05039b5010444d05be1", "code":"peepoTub", "imgType":"gif"},
+			{"id": "60c9849df8b3f62601c3e7e3", "code":"Madge", "imgType":"png"},
+			{"id": "60cdb2f28ed8b373e421641b", "code":"YEAHBUT7TV", "imgType":"png"},
+			{"id": "60d15cd08ed8b373e4217a33", "code":"peepoHappy", "imgType":"png"},
+			{"id": "60aa4edc67644f1d67e8b71f", "code":"WineTime", "imgType":"gif"},
+			{"id": "60a1d54767644f1d67e87924", "code":"FeelsDankMan", "imgType":"png"},
+			{"id": "5f1b0186cf6d2144653d2970", "code":"catJAM", "imgType":"gif"},
+			{"id": "60c5c4baf8b3f62601c3d213", "code":"Smadge", "imgType":"png"},
+			{"id": "60c50b98f8b3f62601c3cdac", "code":"Bedge", "imgType":"png"},
+			{"id": "60cd057e8ed8b373e4215fb6", "code":"PogU", "imgType":"png"},
+			{"id": "60d384858ed8b373e42186d7", "code":"PogO", "imgType":"png"},
+			{"id": "60d1a04d8ed8b373e4217b42", "code":"Wiggle", "imgType":"gif"},
+			{"id": "606572e4a407570b72f28fa6", "code":"aquaJAM", "imgType":"gif"},
+			{"id": "60ae6487f8b3f62601c33659", "code":"peepoFat", "imgType":"gif"},
+			{"id": "5f43037db2efd65d77e8a88f", "code":"ratJAM", "imgType":"gif"},
+			{"id": "60757a7339b5010444cfe592", "code":"downBadge", "imgType":"png"},
+			{"id": "5ed9a91f924aa35e32a6f5b7", "code":"SuiseiFukireta", "imgType":"gif"},
+			{"id": "601e833ef4d51165feda0e3e", "code":"FeelsWeirdMan", "imgType":"png"},
+			{"id": "60a4b3a567644f1d67e88e99", "code":"ppOverheat", "imgType":"gif"},
+			{"id": "60b99d3cf8b3f62601c383bc", "code":"ppHop", "imgType":"gif"},
+			{"id": "60577f3761e7e44b5aa4ecc3", "code":"gachiW", "imgType":"gif"},
+			{"id": "600c004c4e3ab965ef757f9e", "code":"KEKL", "imgType":"png"},
+			{"id": "60586872dfaae06e7d60c464", "code":"HandsUp", "imgType":"png"},
+			{"id": "60b52d97f8b3f62601c36482", "code":"gachiHYPER", "imgType":"gif"},
+			{"id": "5fdab6e1f0c5583492692c36", "code":"PEPSICLE", "imgType":"gif"},
+			{"id": "60a0bbcf67644f1d67e870d6", "code":"agreeGe", "imgType":"png"},
+			{"id": "60819d1f39b5010444d0427c", "code":"PepePls", "imgType":"png"},
+			{"id": "60586872dfaae06e7d60c464", "code":"HandsUp", "imgType":"png"},
+			{"id": "60586872dfaae06e7d60c464", "code":"HandsUp", "imgType":"png"},
+			{"id": "60586872dfaae06e7d60c464", "code":"HandsUp", "imgType":"png"},
+		], "sharedEmotes":[]};
 		mergeBTTVEmotes(data, channel); 
 		asyncCallss.push(get('https://api.betterttv.net/3/cached/frankerfacez/users/twitch/44390855', {}, { Accept: 'application/json' }, 'GET', function(data) {
 			mergeBTTVEmotess(data, channel);
