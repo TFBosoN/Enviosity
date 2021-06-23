@@ -485,6 +485,7 @@ function testMessage(channel, user, message, self) { // Throw away when done
 	handleChat(channel || tmi.opts.channels[0], user || { 'display-name': 'TFBosoN', emotes: null }, message || '(chompy) bttvNice domeHey domeLit splinCreep', self || false);
 }
 testMessage('enviosity', null, 'Hey~! This is a secret underground chat! You can use BOOBA and PagMan !');
+testMessage('enviosity', null, 'Secret Chat (beta) v0.1!');
 function chatNotice(information, noticeFadeDelay, level, additionalClasses) {
 	var ele = document.createElement('div');
 	
