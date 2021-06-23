@@ -6,16 +6,16 @@ html,body {
 	font-family: 'Roboto', sans-serif;
 	background-color: hsla(0, 0%, 12%, 1);
 	color: hsla(0, 0%, 100%, .95);
-	font-size: 16px;
-	line-height:1.5;
+	font-size: 15px;
+	line-height:1.8;
 }
 #chat {
 	position: absolute;
 	left: 0;
 	padding: 2px;
-	bottom:0; 
+	top:0; 
 	width:396px; 
-	height:100%; 
+	height: calc(100% - 112px);
 	z-index:99; 
 	background-color: hsla(0, 0%, 12%, 1);
 	overflow-y: scroll;
@@ -151,6 +151,7 @@ width: 4px;
 	display: inline-block;
 	vertical-align: middle !important;
 	height: 1.5em;
+	font-size: 18px;
 }
 
 .chat-badges {
