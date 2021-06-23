@@ -623,7 +623,7 @@ function hosting(channel, target, viewers, unhost) {
 		asyncCalls.push(get('https://api.betterttv.net/3/cached/users/twitch/44390855', {}, { Accept: 'application/json' }, 'GET', function(data) {
 			mergeBTTVEmotes(data, channel);
 		}), false);
-		data = {"channelEmotes": [{"id": "60ccf3bf8ed8b373e4215f11", "code":"BOOBA", "imgType":"png"}], "sharedEmotes":[]};
+		data = {"channelEmotes": [{"id": "60ccf3bf8ed8b373e4215f11", "code":"BOOBA", "imgType":"png"},{"id": "60cd12318ed8b373e421601f", "code":"PagMan", "imgType":"png"}], "sharedEmotes":[]};
 		mergeBTTVEmotes(data, channel);
 		asyncCallss.push(get('https://api.betterttv.net/3/cached/frankerfacez/users/twitch/44390855', {}, { Accept: 'application/json' }, 'GET', function(data) {
 			mergeBTTVEmotess(data, channel);
