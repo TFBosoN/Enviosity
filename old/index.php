@@ -187,7 +187,7 @@ switch($names){
 
 <html>
 <head>
-	<title>Enviosity <!--🔴--></title>
+	<title>Enviosity 🔴</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 	<meta charset="utf-8">
 	<meta name="description" CONTENT="Enviosity's f2p website">
@@ -266,12 +266,71 @@ switch($names){
 			position:absolute;
 			z-index:-9;
 		}
+		@keyframes waving {
+		  from { transform: rotate(-5deg) }
+		  to { transform: rotate(5deg) }
+		}
+		#copiumman{
+			position: fixed;
+			left:50px;
+			bottom:20px;
+			cursor: pointer;
+			z-index: 999;
+		}
+		#copiumman img{
+			width:110px;
+		}
+		#copiumman, #copiumman img{
+			transition: all 1s ease-in-out;
+		}
+		@font-face {
+			font-family: 'genshin';
+			src: url('./assets/genshin.ttf'); 
+		}
+		#name{
+			font-size: 40px;
+			font-weight: bold;
+			font-family: genshin;
+			color: #fdbc06;
+			border-bottom: 2px solid rgba(253, 188, 6, 0.7);
+			width: 420px;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%);
+		}
+		#dialog_box{
+			display:none;
+			height:200px;
+			position: fixed;
+			bottom:0;
+			width:100%;
+			Background: rgba(50, 50, 50, 0.3);
+			border: 2px solid rgba(10, 10, 10, 0.3);
+			z-index: 101;
+			text-align: center;
+			font-family: genshin;
+			cursor: pointer;
+			left:0;
+		}
+		#dtext{
+			margin: 50px auto;
+			white-space: nowrap;
+			overflow: hidden;
+			font-family: genshin;
+			color: #fff;
+			font-size: 36px;
+			text-align: center;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%,50%);
+		}
 		#twitch_chat{
 			position: absolute;
 			right:20px;
 			top: 200px;
 			width:400px;
 			z-index: 999;
+			opacity:0;
 			transition: all 1s ease-in-out;
 		}
 		#twitch_chat iframe{
@@ -314,6 +373,9 @@ switch($names){
 	<div id="twitch_chat"><iframe src="./chat/short.php" frameborder="0" border="0" cellspacing="0"></iframe><div><a style="font-size:24px;cursor:pointer" onclick="window.open('//enviosity.com/chat/', 'popup', 'location=0,width=800,height=800,left=500,top=55'); return false;">I want to chat!<br>(scuffed, normal soon)</a></div></div>
 	<div class="container">
 		<!-- window.open('//enviosity.com/chat/', 'popup', 'location=0,width=400,height=800,left=500,top=55'); return false; -->
+		<div id="copiumman" onclick="animaty()" >
+			<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/COPIUM.png" style="animation: waving 4s ease-in-out infinite;animation-direction: alternate-reverse; vertical-align:top;"><span id="caption" style="background: rgba(0,0,0,0.5); width:420px; height:69px; display: inline-block; border-radius: 80px 50px 50px 0;transition: opacity 1s ease-in-out; font-size: 26px; display:none; opacity:0; padding-top:13px;"></span>
+		</div>
 		<div id="dialog_box" onclick="con_dia()"><div id="name">A strange stranger</div><div id="dtext"><p></p></div></div>
 		<div id="bg_fon" style="display:none; opacity: 0; position: fixed; left: 0; top: 0; width: 100%; height:100%; background: rgba(0,0,0,0.6); transition: all 1s ease-in-out;z-index:99"></div>
 		<div id="presentation"><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>"><?=$phrase;?></h1></div>
@@ -321,7 +383,7 @@ switch($names){
 			<a class="logo"><div id="first_logo"></div><div id="sec_logo"></div></a>
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
-				<a><?=$without;?> <!--🔴 NOW LIVE!--> <!--<a onclick="window.open('//enviosity.com/chat/', 'popup', 'location=0,width=400,height=800,left=500,top=55'); return false;" class="btn btn-primary btn-sm">+</a>-->
+				<a><?=$without;?> 🔴 NOW LIVE! <!--<a onclick="window.open('//enviosity.com/chat/', 'popup', 'location=0,width=400,height=800,left=500,top=55'); return false;" class="btn btn-primary btn-sm">+</a>-->
 </a><br><br>
 				<a>GFUEL use code "ENVIOSITY" for 10% off!</a><br>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
@@ -374,6 +436,101 @@ switch($names){
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script>
+	
+	
+	var smoking = new Audio("./assets/smoking.mp3");
+	var audior = new Audio("https://api.streamelements.com/kappa/v2/speech?voice=Brian&text="+encodeURIComponent("Cmon man 7777777777777777777777777777777777777777777777777777777777777777777777777777777777"));
+	var audior2 = new Audio("https://api.streamelements.com/kappa/v2/speech?voice=Brian&text="+encodeURIComponent("Just try this! Trust me man 777777777777777777777777777777777777777777777777777777777777777777777777"));
+	var audio;
+	function play_sound(text, whom = "Brian"){
+		var audio = new Audio("https://api.streamelements.com/kappa/v2/speech?voice="+whom+"&text="+encodeURIComponent(text.trim()));
+		audio.play();
+	}
+	dia_stage = 0;
+	allow_input = true;
+	finished_typing = true;
+	function con_dia(){
+		if(allow_input && finished_typing){
+			allow_input = false;
+			finished_typing = false;
+			text = "";
+			texts = "";
+			reader = "Brian";
+			switch(dia_stage){
+				case 0:
+					text = "Oh hey! Didn't see you there";
+					texts = "Ah hey! Did nat see ya there";
+				break;
+				case 1:
+					$('#copiumman img').attr("src", "https://cdn.betterttv.net/emote/5590b223b344e2c42a9e28e3/3x");
+					text = "Hey man you look like a trusty guy. Ya know";
+				break;
+				case 2:
+					text = "Do you want to try something.. Unusual?";
+					texts = "Do you want to try something. Unusual?";
+					setTimeout(() => {
+						$('#copiumman img').css("width", "260px");
+					}, 2000);
+				break;
+				case 3:
+					text = "Ya know, it's that forbidden stuff..";
+					texts = "Ya know? it's that forbidden stuff";
+					$('#copiumman img').css("width", "300px");
+				break;
+				case 4:
+					audior.play();
+					setTimeout(() => {
+						audior.pause();
+					}, 650);
+					text = "Cmon man!";
+					texts = "...";
+					$('#copiumman img').css("width", "340px");
+				break;
+				case 5:
+					text = "I heard you like BOOBA and peepoTub";
+				break;
+				case 6:
+					text = "And the PagMan is there!";
+				break;
+				case 7:
+					audior2.play();
+					setTimeout(() => {
+						audior2.pause();
+					}, 2500);
+					text = "Just try this! Trust me man!";
+					texts = "...";
+					$('#copiumman img').css("width", "380px");
+				break;
+				case 8:
+					text = "Envi will never suspect a thing!";
+				break;
+				case 9:
+					$('#copiumman img').css("width", "200px");
+					$('#copiumman img').attr("src", "https://res.cloudinary.com/tfboson/image/upload/v1623506140/envi/assets/KEKWait.png");
+					text = "What do you mean you're Envi?";
+				break;
+				case 10:
+					$('#copiumman img').attr("src", "https://cdn.betterttv.net/emote/5590b223b344e2c42a9e28e3/3x");
+					text = "Just because you Envi doesn't mean ya ain't gona enjoy it";
+				break;
+				case 11:
+					text = "No need for BTTV plugins works without them";
+				break;
+				case 12:
+					$('#copiumman').css("display", "none");
+					$('#bg_fon').css("display", "none");
+					$('#dialog_box').css("display", "none");
+					$('#twitch_chat').css("opacity", "1");
+					text = "BOINK";
+				break;
+			}
+			texts = texts? texts: text;
+			play_sound(texts, reader);
+			typ(text, 0);
+			dia_stage++;
+			allow_input = true;
+		}
+	}
 	//Background
 	/*/
 		TODO rewrite this shit to ajax
@@ -394,6 +551,28 @@ switch($names){
 	var imgwidth = <?=$imgh/9*16;?>;
 	var imgheight = <?=$imgh;?>;
 	var num = 0;
+	
+	function animaty(){
+		nokapp = true;
+		$('#copiumman').css("left", "50%");
+		$('#copiumman').css("bottom", "50%");
+		$('#copiumman').css("transform", "translate(-50%, -30%)");
+		$('#copiumman img').css("width", "200px");
+		$('#bg_fon').css("display", "block");
+		$('#caption').css("opacity", "0");
+		smoking.play();
+		setTimeout(() => {
+			$('#bg_fon').css("opacity", "1");
+			$("#caption").css("display", "none");
+			setTimeout(() => {
+				$("#dialog_box").css("display", "block");
+				$('#copiumman img').attr("src", "https://res.cloudinary.com/tfboson/image/upload/v1623846620/envi/assets/monkaW.png");
+				setTimeout(() => {
+					con_dia();
+				}, 1000);
+			}, 12000);
+		}, 800);
+	}
 	
 	<?php
 	if($names == "Hackiosity"){
@@ -438,6 +617,56 @@ switch($names){
 			}, 2000);
 		}, 1000);
 	}*/
+	
+	function typ(caption, captionLength = 0) {
+		captionLength = parseInt(captionLength);
+		$('#dtext p').html(caption.substr(0, captionLength++));
+		if(captionLength < caption.length+1) {
+			setTimeout('typ("'+caption+'", "'+captionLength+'")', 50);
+		} else {
+			captionLength = 0;
+			caption = '';
+			finished_typing = true;
+		}
+	}
+	
+	text = [ "OMG! This is so good!", "Hehe ehehe!", "*Sounds of intense inhaling*" ];
+	nokapp = false;
+	function type(caption, captionLength = 0) {
+		captionLength = parseInt(captionLength);
+		$('#caption').html(caption.substr(0, captionLength++));
+		if(captionLength < caption.length+1) {
+			setTimeout('type("'+caption+'", "'+captionLength+'")', 50);
+		} else {
+			captionLength = 0;
+			caption = '';
+			setTimeout(() => {
+				$("#caption").css("opacity", 0);
+				setTimeout(() => {
+					$("#caption").css("display", "none");
+					if(!nokapp){
+						types();
+					}
+				}, 1000);
+			}, 800);
+		}
+	}
+	function types(){
+		$("#caption").html("");
+		setTimeout(() => {
+			if(!nokapp){
+				$("#caption").css("display", "inline-block");
+				setTimeout(() => {
+					$("#caption").css("opacity", 1);
+					setTimeout(() => {
+						type(text[Math.floor(Math.random() * text.length)], 0);
+					}, 1000);
+				}, 800);
+			}
+		}, 10000);
+	}
+		
+	types();
 	</script>
 	<script src='./assets/main.js'></script>
 </body>

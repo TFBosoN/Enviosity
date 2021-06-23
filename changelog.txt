@@ -8,6 +8,7 @@ FUWAQ homework video in library
 Added HoYoLAB map
 Some fixes
 Added twitch chat with something special
+Added FUWAQ's homework video
 
 06/21/21
 ===
