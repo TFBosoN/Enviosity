@@ -1,5 +1,6 @@
 <html>
 <head>
+<title>BOOBA chat</title>
 <style>
 html,body {
 	font-family: 'Roboto', sans-serif;
