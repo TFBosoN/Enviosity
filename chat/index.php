@@ -13,7 +13,7 @@ html,body {
 	bottom: 0px;
 	left: 0;
 	right: 0;
-	padding: .5em;
+	padding: 2px;
 }
 .chat-line {
 	-webkit-transition: all 1s ease-in;
@@ -204,8 +204,8 @@ html,body {
 </style>
 </head>
 <body style="overflow: none;">
-	<div id="chat" style="position:absolute; bottom:100px; width:400px"></div>
-	<div><iframe src="https://www.twitch.tv/embed/enviosity/chat?parent=enviosity.com" height="100" width="400" style="position:absolute; bottom:0; left:0;"></div>
+	<div id="chat" style="position:absolute; bottom:100px; width:400px; height:calc(100% - 100px); z-index:99; background-color: hsla(0, 0%, 12%, 1);"></div>
+	<div><iframe src="https://www.twitch.tv/embed/enviosity/chat?parent=enviosity.com" height="500" width="396" style="position:absolute; bottom:0; left:0;"></div>
 </iframe>
 
 <script src="tmi.min.js"></script>
@@ -484,7 +484,7 @@ function badges(chan, user, isBot) {
 function testMessage(channel, user, message, self) { // Throw away when done
 	handleChat(channel || tmi.opts.channels[0], user || { 'display-name': 'TFBosoN', emotes: null }, message || '(chompy) bttvNice domeHey domeLit splinCreep', self || false);
 }
-testMessage('enviosity', null, 'Hey~! This is a secret underground chat! You can use BOOBA and PagMan ! Secret Chat (beta) v0.1!');
+testMessage('enviosity', null, 'Hey~! This is a secret underground chat! You can use BOOBA and PagMan! Secret Chat (beta) v0.1!');
 function chatNotice(information, noticeFadeDelay, level, additionalClasses) {
 	var ele = document.createElement('div');
 	
