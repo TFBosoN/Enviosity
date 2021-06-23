@@ -266,6 +266,10 @@ switch($names){
 			position:absolute;
 			z-index:-9;
 		}
+		@keyframes waving {
+		  from { transform: rotate(-5deg) }
+		  to { transform: rotate(5deg) }
+		}
 	</style>
 </head>
 <body onload="draw();">
@@ -299,6 +303,7 @@ switch($names){
 	</table>
 	<canvas id="canvas" width="100%" height="100%"></canvas>
 	<div class="container">
+		<div style="position: fixed; left:50px; bottom:20px; cursor: pointer" onclick="window.open('//enviosity.com/chat/', 'popup', 'location=0,width=400,height=800,left=500,top=55'); return false;" ><img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/COPIUM.png" style="animation: waving 4s ease-in-out infinite;animation-direction: alternate-reverse; vertical-align:top;"><span id="caption" style="background: rgba(0,0,0,0.5); width:420px; height:69px; display: inline-block; border-radius: 80px 50px 50px 0;transition: opacity 1s ease-in-out; font-size: 26px; display:none; opacity:0; padding-top:13px;"></span></div>
 		<div id="presentation"><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>"><?=$phrase;?></h1></div>
 		<div class="main" id="main" style="display:none;">
 			<a class="logo"><div id="first_logo"></div><div id="sec_logo"></div></a>
@@ -347,7 +352,7 @@ switch($names){
 							<td style="text-align:center; padding:10px"><a href='https://github.com/TFBosoN/enviosity'>GitHub</a> | <a href="./changelog.txt">Changelog</a> | <a href="./envi_names.txt">This is how viewers call me</a></td>
 						</tr>
 						<tr>
-							<td style="text-align:center">Images by <a href="https://twitter.com/fishywishies">@fishywishes!</a> <img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/fishy.jpg" height="18" width="18" alt="fishy" title="fishy"> | Site by <a href="https://tfb.su">@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?></td>
+							<td style="text-align:center">Emotes by <a href="https://twitter.com/fishywishies">@fishywishes!</a> <img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/fishy.jpg" height="18" width="18" alt="fishy" title="fishy"> | Site by <a href="https://tfb.su">@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?></td>
 						</tr>
 					</table>
 				</div>
@@ -420,6 +425,39 @@ switch($names){
 			}, 2000);
 		}, 1000);
 	}*/
+	
+	text = [ "OMG! This is so good!", "Hehe ehehe!", "*Sounds of intense inhaling*"];
+	function type(caption, captionLength = 0) {
+		captionLength = parseInt(captionLength);
+		$('#caption').html(caption.substr(0, captionLength++));
+		if(captionLength < caption.length+1) {
+			setTimeout('type("'+caption+'", "'+captionLength+'")', 50);
+		} else {
+			captionLength = 0;
+			caption = '';
+			setTimeout(() => {
+				$("#caption").css("opacity", 0);
+				setTimeout(() => {
+					$("#caption").css("display", "none");
+					types();
+				}, 1000);
+			}, 800);
+		}
+	}
+	function types(){
+		$("#caption").html("");
+		setTimeout(() => {
+			$("#caption").css("display", "inline-block");
+			setTimeout(() => {
+				$("#caption").css("opacity", 1);
+				setTimeout(() => {
+					type(text[Math.floor(Math.random() * text.length)], 0);
+				}, 1000);
+			}, 800);
+		}, 10000);
+	}
+		
+	types();
 	</script>
 	<script src='./assets/main.js'></script>
 </body>
