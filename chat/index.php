@@ -7,7 +7,7 @@ html,body {
 	background-color: hsla(0, 0%, 12%, 1);
 	color: hsla(0, 0%, 100%, .95);
 	font-size: 15px;
-	line-height:1.5;
+	line-height:1.8;
 }
 #chat {
 	position: absolute;
@@ -151,6 +151,7 @@ width: 4px;
 	display: inline-block;
 	vertical-align: middle !important;
 	height: 1.5em;
+	font-size: 18px;
 }
 
 .chat-badges {
