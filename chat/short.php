@@ -13,7 +13,7 @@ html,body {
 	position: absolute;
 	left: 0;
 	padding: 2px;
-	top:0; 
+	bottom:0; 
 	width:396px; 
 	height: 100%;
 	z-index:99; 
