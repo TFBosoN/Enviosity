@@ -482,9 +482,9 @@ function badges(chan, user, isBot) {
 }
 
 function testMessage(channel, user, message, self) { // Throw away when done
-	handleChat(channel || tmi.opts.channels[0], user || { 'display-name': 'Alca', emotes: null }, message || '(chompy) bttvNice domeHey domeLit splinCreep', self || false);
+	handleChat(channel || tmi.opts.channels[0], user || { 'display-name': 'TFBosoN', emotes: null }, message || '(chompy) bttvNice domeHey domeLit splinCreep', self || false);
 }
-testMessage('TFBosoN', null, 'Hey~! This is a secret underground chat! You can use BOOBA and PagMan !');
+testMessage('enviosity', null, 'Hey~! This is a secret underground chat! You can use BOOBA and PagMan !');
 function chatNotice(information, noticeFadeDelay, level, additionalClasses) {
 	var ele = document.createElement('div');
 	
