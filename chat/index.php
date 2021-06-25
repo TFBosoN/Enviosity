@@ -529,7 +529,7 @@ function badges(chan, user, isBot) {
 function testMessage(channel, user, message, self) { // Throw away when done
 	handleChat(channel || tmi.opts.channels[0], user || { 'display-name': 'TFBosoN', emotes: null }, message || '(chompy) bttvNice domeHey domeLit splinCreep', self || false);
 }
-testMessage('enviosity', null, "Hey~! This is (not) a secret chat! You can use emotes Envi removed or didn't add! Secret Chat (beta) v0.2! We have this additional emotes: BOOBA PagMan peepoTub Madge YEAHBUT7TV peepoHappy WineTime FeelsDankMan catJAM Smadge Bedge PogU PogO Wiggle aquaJAM peepoFat ratJAM downBadge SuiseiFukireta FeelsWeirdMan ppOverheat ppHop gachiW KEKL HandsUp gachiHYPER PEPSICLE agreeGe pepePls Kissahomie Sadeg YAAY");
+testMessage('enviosity', null, "Hey~! This is (not) a secret chat! You can use emotes Envi removed or didn't add! Secret Chat (beta) v0.2! We have this additional emotes: BOOBA PagMan peepoTub Madge YEAHBUT7TV peepoHappy WineTime FeelsDankMan catJAM Smadge Bedge PogU PogO Wiggle aquaJAM peepoFat ratJAM downBadge SuiseiFukireta FeelsWeirdMan ppOverheat ppHop gachiW KEKL HandsUp gachiHYPER PEPSICLE agreeGe pepePls Kissahomie Sadeg YAAY Tssk");
 function chatNotice(information, noticeFadeDelay, level, additionalClasses) {
 	var ele = document.createElement('div');
 	
@@ -702,6 +702,7 @@ function hosting(channel, target, viewers, unhost) {
 			{"id": "60ae8a98f8b3f62601c337c2", "code":"Kissahomie", "imgType":"gif"},
 			{"id": "60cf7d388ed8b373e4216e41", "code":"Sadeg", "imgType":"png"},
 			{"id": "608f93de39b5010444d0ab22", "code":"YAAY", "imgType":"png"},
+			{"id": "60426995306b602acc59777b", "code":"Okayeg", "imgType":"png"},
 		], "sharedEmotes":[]};
 		mergeBTTVEmotes(data, channel); 
 		asyncCallss.push(get('https://api.betterttv.net/3/cached/frankerfacez/users/twitch/44390855', {}, { Accept: 'application/json' }, 'GET', function(data) {
