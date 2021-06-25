@@ -700,7 +700,7 @@ function hosting(channel, target, viewers, unhost) {
 			{"id": "60a0bbcf67644f1d67e870d6", "code":"agreeGe", "imgType":"png"},
 			{"id": "5964f26d2e496b208df497a5", "code":"pepePls", "imgType":"png"},
 			{"id": "60ae8a98f8b3f62601c337c2", "code":"Kissahomie", "imgType":"gif"},
-			{"id": "60586872dfaae06e7d60c464", "code":"HandsUp", "imgType":"png"},
+			{"id": "60cf7d388ed8b373e4216e41", "code":"Sadeg", "imgType":"png"},
 			{"id": "60586872dfaae06e7d60c464", "code":"HandsUp", "imgType":"png"},
 		], "sharedEmotes":[]};
 		mergeBTTVEmotes(data, channel); 
