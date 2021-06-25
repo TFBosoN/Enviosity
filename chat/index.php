@@ -529,7 +529,7 @@ function badges(chan, user, isBot) {
 function testMessage(channel, user, message, self) { // Throw away when done
 	handleChat(channel || tmi.opts.channels[0], user || { 'display-name': 'TFBosoN', emotes: null }, message || '(chompy) bttvNice domeHey domeLit splinCreep', self || false);
 }
-testMessage('enviosity', null, "Hey~! This is (not) a secret chat! You can use emotes Envi removed or didn't add! (peepoTub, BOOBA, PagMan) Secret Chat (beta) v0.2!");
+testMessage('enviosity', null, "Hey~! This is (not) a secret chat! You can use emotes Envi removed or didn't add! Secret Chat (beta) v0.2! We have this additional emotes: BOOBA PagMan peepoTub Madge YEAHBUT7TV peepoHappy WineTime FeelsDankMan catJAM Smadge Bedge PogU PogO Wiggle aquaJAM peepoFat ratJAM downBadge SuiseiFukireta FeelsWeirdMan ppOverheat ppHop gachiW KEKL HandsUp gachiHYPER PEPSICLE agreeGe pepePls Kissahomie");
 function chatNotice(information, noticeFadeDelay, level, additionalClasses) {
 	var ele = document.createElement('div');
 	
@@ -698,7 +698,7 @@ function hosting(channel, target, viewers, unhost) {
 			{"id": "60b52d97f8b3f62601c36482", "code":"gachiHYPER", "imgType":"gif"},
 			{"id": "5fdab6e1f0c5583492692c36", "code":"PEPSICLE", "imgType":"gif"},
 			{"id": "60a0bbcf67644f1d67e870d6", "code":"agreeGe", "imgType":"png"},
-			{"id": "60819d1f39b5010444d0427c", "code":"PepePls", "imgType":"png"},
+			{"id": "5964f26d2e496b208df497a5", "code":"pepePls", "imgType":"png"},
 			{"id": "60ae8a98f8b3f62601c337c2", "code":"Kissahomie", "imgType":"gif"},
 			{"id": "60586872dfaae06e7d60c464", "code":"HandsUp", "imgType":"png"},
 			{"id": "60586872dfaae06e7d60c464", "code":"HandsUp", "imgType":"png"},
