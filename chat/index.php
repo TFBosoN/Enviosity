@@ -529,7 +529,7 @@ function badges(chan, user, isBot) {
 function testMessage(channel, user, message, self) { // Throw away when done
 	handleChat(channel || tmi.opts.channels[0], user || { 'display-name': 'TFBosoN', emotes: null }, message || '(chompy) bttvNice domeHey domeLit splinCreep', self || false);
 }
-testMessage('enviosity', null, "Hey~! This is (not) a secret chat! You can use emotes Envi removed or didn't add! Secret Chat (beta) v0.2! We have this additional emotes: BOOBA PagMan peepoTub Madge YEAHBUT7TV peepoHappy WineTime FeelsDankMan catJAM Smadge Bedge PogU PogO Wiggle aquaJAM peepoFat ratJAM downBadge SuiseiFukireta FeelsWeirdMan ppOverheat ppHop gachiW KEKL HandsUp gachiHYPER PEPSICLE agreeGe pepePls Kissahomie");
+testMessage('enviosity', null, "Hey~! This is (not) a secret chat! You can use emotes Envi removed or didn't add! Secret Chat (beta) v0.2! We have this additional emotes: BOOBA PagMan peepoTub Madge YEAHBUT7TV peepoHappy WineTime FeelsDankMan catJAM Smadge Bedge PogU PogO Wiggle aquaJAM peepoFat ratJAM downBadge SuiseiFukireta FeelsWeirdMan ppOverheat ppHop gachiW KEKL HandsUp gachiHYPER PEPSICLE agreeGe pepePls Kissahomie Sadeg YAAY");
 function chatNotice(information, noticeFadeDelay, level, additionalClasses) {
 	var ele = document.createElement('div');
 	
