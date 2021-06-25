@@ -702,6 +702,7 @@ function hosting(channel, target, viewers, unhost) {
 			{"id": "60cf7d388ed8b373e4216e41", "code":"Sadeg", "imgType":"png"},
 			{"id": "608f93de39b5010444d0ab22", "code":"YAAY", "imgType":"png"},
 			{"id": "60426995306b602acc59777b", "code":"Okayeg", "imgType":"png"},
+			{"id": "60a8d02c67644f1d67e8ace7", "code":"NOPERS", "imgType":"png"},
 		], "sharedEmotes":[]};
 		mergeBTTVEmotes(data, channel); 
 		asyncCallss.push(get('https://api.betterttv.net/3/cached/frankerfacez/users/twitch/44390855', {}, { Accept: 'application/json' }, 'GET', function(data) {
