@@ -4,7 +4,7 @@ function close_p(){
 	document.getElementById("presentation").style.opacity = '0';	
 	console.log("closed");
 	document.getElementById("main").style.opacity = '1';	
-	setTimeout(() => { document.getElementById("presentation").style.display = 'none';}, 500);
+	setTimeout(() => { document.getElementById("presentation").style.display = 'none';}, 800);
 	//Disabling slimes after some time because they are resource intence
 	setTimeout(() => { document.getElementById("slimes").style.opacity = '0';}, 20000);
 	setTimeout(() => { document.getElementById("slimes").style.display = 'none';}, 22000);

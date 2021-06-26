@@ -7,6 +7,7 @@ body{
 	text-align: center;
 	user-select: none;
 	font-family: 'Staatliches', 'Open Sans', sans-serif;
+	font-size: 20px;
 }
 .container{
 	height:100%;
@@ -137,6 +138,7 @@ body{
 	transform: translate(-50%,-50%);
 	margin: 0;
 	width: 100%;
+	font-size: 200px;
 }
 #popup_blocker{
 	display:block;
@@ -148,11 +150,11 @@ body{
 	z-index:999;
 }
 .AYAYA_social h1{
-	font-size:40px;
-	height:30px;
+	font-size:50px;
+	height:38px;
 }
 .credits table{
-	font-size:12px;
+	font-size:20px;
 	opacity: 0.9;
 	color: lightgray;
 	margin-bottom: 20px;
@@ -194,8 +196,8 @@ canvas {
 .lines{
 	font-size: 64px;
 }
-.lines b{
-	font-size:16px;
+.lines l{
+	font-size:20px;
 }
 .lines a{
 	text-decoration: none;
@@ -476,6 +478,9 @@ canvas {
   background: #2f2;
   height: 30px;
   width: 0;
+}
+.bot_links a{
+	padding: 0 8px;
 }
 
 @keyframes load {

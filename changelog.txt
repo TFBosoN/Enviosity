@@ -1,3 +1,11 @@
+06/26/21
+===
+Added watch page to embed twitch played
+Moved chat to watch page
+Changed site font to not so scuffed 'Staatliches'
+Added sponsored banner
+Added new splash messages
+
 06/25/21
 ===
 Added event links
