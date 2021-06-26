@@ -21,15 +21,15 @@
                             <div class="dd-container">
                                 <div class="dd-tab tcg_">
                                     <dl>
-                                        <dd><a href="//enviosity.com/galery/"><span><i class="fal fa-images"></i></span> Galery</a></dd>
+                                        <dd><!--<a href="//enviosity.com/galery/"><span><i class="fal fa-images"></i></span> Galery</a>--></dd>
                                     </dl>
                                 </div>
-                                <div class="dd-tab tcg_galery">
+                                <!--<div class="dd-tab tcg_galery">
                                      <?php if($user['access']>=2){ ?>
                                     <dl>
                                         <dd><a href="//enviosity.com/galery/add/"><span><i class="fal fa-plus"></i></span> Add</a></dd>
                                     </dl>
-                                    <?php } ?>
+                                    <?php } ?>-->
                                 </div>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                     <li tabindex="-1" class="top-table-icons user">
                         <a class="dd-link "><img class="avatar img-circle" src="//enviosity.com/galery/avatars/<?=$user['avatar'];?>"></a>
                         <div class="dd-content">
-						<!--
+						<!
                         <?php if($user['access']>=1){ ?>
                             <div class="dd-profile">
                                 <div class="dd-username"><?=$user["username"];?></div>
@@ -69,10 +69,9 @@
                             <a href="//enviosity.com/settings/"><span><i class="far fa-cog"></i></span> Settings</a>
                             <a href="//enviosity.com/logout/"><span><i class="far fa-sign-out"></i></span> Logout</a>
                         <?php }else{ ?>
-                            <a href="//enviosity.com/login/"><span><i class="far fa-sign-in"></i></span> Login | Register</a>
+                            <a href="#"><span><i class="far fa-sign-in"></i></span>Soon (going through redesign)</a>
                         <?php } ?>
                         </div>
-						-->
                     </li>
                 </ul>
             </nav>
