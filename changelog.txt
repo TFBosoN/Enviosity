@@ -1,3 +1,9 @@
+06/25/21
+===
+Added event links
+Added a bunch of emotes
+Some fixes
+
 06/24/21
 ===
 Updated gfuel

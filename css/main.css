@@ -1,0 +1,5 @@
+.layout {
+    background: linear-gradient(-180deg, rgba(21, 21, 21, .5) 0px, #171717 800px), url(https://res.cloudinary.com/tfboson/main.jpg);
+    background-size: 100%, 100%, cover;
+    margin-top: 66px;
+}

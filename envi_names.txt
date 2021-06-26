@@ -56,6 +56,7 @@ Mr. Strimmer
 Mr. Stripper
 Mr. Swimmer
 Mr. Stroker
+Mr. Strecher
 
 #"Mr." names
 
@@ -74,6 +75,7 @@ Mr. Coconut
 Mr. Cracker
 Mr. Diabetes
 Mr. Electricity
+Mr. Elements
 Mr. Embassy
 Mr. Encyclopedia
 Mr. Endiscopy
@@ -146,6 +148,7 @@ YEPiosity
 
 #special avatarts and site modes
 
+A blue haired idiot
 Cabbage Head
 Chadiosity
 Coderviosity

@@ -1,0 +1,212 @@
+.layout {
+    background: linear-gradient(-180deg, rgba(21, 21, 21, .5) 0px, rgba(21, 21, 21, .88) 800px), url(https://res.cloudinary.com/tfboson/cinema.jpg);
+    background-size: 100%, 100%, cover;
+    margin-top: 66px;
+}
+
+.header_buttons{
+    float:right;
+}
+
+.header_buttons span{
+    border: 1px solid #444;
+    font-size: 16px;
+    color: #777;
+}
+
+.btn_all{
+    margin-right:10px;
+    padding: 5px 12px 3px;
+    border-radius: 20px;
+}
+
+.btn_left{
+    padding: 5px 10px 3px 12px;
+    border-radius: 20px 0 0 20px;
+}
+
+.btn_right{
+    margin-left: -5px;
+    padding: 5px 12px 3px 10px;
+    border-radius: 0 20px 20px 0;
+}
+.btn_all:hover, .btn_left:hover, .btn_right:hover{
+    color: white;
+}
+.btn_left:active, .btn_right:active{
+    background-color:#2d2d2d;
+}
+
+.item {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    margin:5px;
+    transform: scale(.9);
+    transition: .15s transform cubic-bezier(.175, .885, .32, 1.275);
+}
+.overlay{
+    background-color: rgba(0,0,0,0.6);
+    display:none;
+}
+
+.overlay, .overlay a{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left:0;
+}
+
+.overlay a{
+    z-index: 5;
+}
+
+.item img {
+    height: 300px;
+    width:200px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .5);
+}
+
+.item_buttons{
+    position: absolute;
+    left: calc(50% - 58px);
+    top: calc(50% - 58px);
+    z-index: 6;
+}
+
+.item_buttons span{
+    border-radius: 60px;
+    padding: 10px 9px 8px;
+    font-size:28px;
+    margin:6px;
+    width:46px;
+    height:46px;
+    cursor: pointer;
+    position:relative;
+}
+
+.watched:hover{
+    color:dodgerblue;
+}
+.favorite:hover{
+    color:red;
+}
+
+.item_title {
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    font-size: 16px;
+}
+
+.item_title span{
+    margin-top: 10px;
+}
+
+.item_buttons, .item_title{
+    text-shadow: 1px 2px black;
+}
+
+.item span{
+    color:white;
+    display: none;
+}
+
+.item:hover {
+    transform: scale(1);
+    box-shadow: 0 0 3px black;
+}
+
+.item:hover span{
+    display:inline-block;
+}
+
+.item:hover > .overlay{
+    display:block;
+}
+
+.item:hover .item_title span{
+    display: block;
+}
+.slider{
+    display:flex;
+    overflow: hidden;    
+}
+
+.half{
+    width: calc(50% - 60px - 2px);
+    display: inline-block;
+}
+
+.upcoming, .similar{
+    margin-left:120px;
+}
+
+.slider_header{
+    font-size: 20px;
+    margin:10px;
+    text-align: left;
+}
+
+.description{
+    position: absolute;
+    padding: 10px;
+    text-align: justify;
+    font-size: 13px;
+}
+
+@media (min-width: 1200px) {
+    .item{
+        width: 220px;
+    }
+    .item img {
+        height: 320px;
+        width: 220px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .item{
+        width: 230px;
+    }
+    .item img {
+        height: 345px;
+        width: 230px;
+    }
+    .item_title {
+        font-size: 15px;
+    }
+    .item_buttons{
+        left: calc(50% - 70px);
+        top: calc(50% - 70px);
+    }
+    .item_buttons span{
+        padding: 10px;
+        margin:10px;
+        font-size:30px;
+        width:50px;
+        height:50px;
+    }
+    .slider_header{
+        font-size: 22px;
+    }
+    .header_buttons span{
+        font-size: 18px;
+    }
+
+    .btn_all{
+        margin-right:10px;
+        padding: 5px 14px 3px;
+        border-radius: 20px;
+    }
+
+    .btn_left{
+        padding: 5px 12px 3px 14px;
+    }
+
+    .btn_right{
+        margin-left: -6px;
+        padding: 5px 14px 3px 12px;
+    }
+}

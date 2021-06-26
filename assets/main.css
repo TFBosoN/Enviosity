@@ -234,7 +234,7 @@ canvas {
 @keyframes spins { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
 
 @media screen and (max-width : 768px) and (orientation : portrait) {
-	.slimes {display:none;}  
+	#twitch_chat, .slimes {display:none;}
 }
 
 @keyframes blinking {
