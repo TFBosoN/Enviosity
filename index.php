@@ -309,6 +309,9 @@ switch($names){
 				<h1><?=$names;?></h1>
 				<a><?=$without;?><!--<a onclick="window.open('//enviosity.com/chat/', 'popup', 'location=0,width=400,height=800,left=500,top=55'); return false;" class="btn btn-primary btn-sm">+</a>-->
 </a><br><br>
+				<div class="lines">
+					<span style="width: auto;"><a class="discord" href="https://qr.streamelements.com/summonerswar/enviosity" target="_blank"><img src="https://cdn.streamelements.com/infinity/summoners/logo_lost_centuria.png" style="vertical-align: middle; height:162px"></a></span>
+				</div>
 				<a>GFUEL use code "ENVIOSITY" for 30% off until 28th!</a><br>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br>

@@ -1,16 +1,13 @@
 * {
 	color: white;
 }
-@font-face {
-	font-family: 'Segoe Print';
-	src: url('//enviosity.com/assets/segoepr.ttf');  
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Staatliches&display=swap');
 body{
 	margin:0;
 	padding:0;
 	text-align: center;
 	user-select: none;
-	font-family: "Segoe Print";
+	font-family: 'Staatliches', 'Open Sans', sans-serif;
 }
 .container{
 	height:100%;
