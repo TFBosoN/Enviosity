@@ -105,7 +105,7 @@ $avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/F2P
 switch($names){
 	case "Dendriosity":
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Dendriosity.jpg";
-		$without = "0 days without being Envi";
+		$without = "0 days without you <3";
 	break;
 	case "Mr. F2P":
 		$without = "F2P <s>damage</s> <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/KEKWait.png' width='32' alt='KEKWait' title='KEKWait' style='vertical-align:middle'>";
