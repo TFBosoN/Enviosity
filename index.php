@@ -189,7 +189,7 @@ switch($names){
 
 <html>
 <head>
-	<title>Enviosity 🔴 NOW LIVE!</title>
+	<title>Enviosity</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 	<meta charset="utf-8">
 	<meta name="description" CONTENT="Enviosity's f2p website">
@@ -317,7 +317,7 @@ switch($names){
 				<a>GFUEL use code "ENVIOSITY" for 30% off until 28th!</a><br>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br>
-				<a href="./watch/" style="color:white; font-size: 26px;">Watch Enviosity 🔴 NOW LIVE!</a><br>
+				<a href="./watch/" style="color:white; font-size: 26px;">Watch Enviosity</a><br>
 				<div class="lines">
 					<span><a class="youtube" href="https://youtube.com/Enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-youtube"></i>';?><br><l>Youtube</l></a></span>
 					<span><a class="twitch" href="https://www.twitch.tv/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-twitch"></i>';?><br><l>Twitch</l></a></span>
