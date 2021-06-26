@@ -41,10 +41,10 @@ $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(2,count($names)-1);
 
 
-if(isset($_COOKIE['no_promo']) || true){
+if(isset($_COOKIE['no_promo'])){
 	$promote_name[] = $names[$count];
 }else{
-	$promote_name[] = "Daddyosity";
+	$promote_name[] = "Dendriosity";
 	setcookie( "no_promo", true, time()+10 );
 }
 
