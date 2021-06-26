@@ -29,8 +29,8 @@
                                     <dl>
                                         <dd><a href="//enviosity.com/galery/add/"><span><i class="fal fa-plus"></i></span> Add</a></dd>
                                     </dl>
-                                    <?php } ?>-->
-                                </div>
+                                    <?php } ?>
+                                </div>-->
                             </div>
                         </div>
                     </li>
@@ -59,7 +59,6 @@
                     <li tabindex="-1" class="top-table-icons user">
                         <a class="dd-link "><img class="avatar img-circle" src="//enviosity.com/galery/avatars/<?=$user['avatar'];?>"></a>
                         <div class="dd-content">
-						
                         <?php if($user['access']>=1){ ?>
                             <div class="dd-profile">
                                 <div class="dd-username"><?=$user["username"];?></div>
