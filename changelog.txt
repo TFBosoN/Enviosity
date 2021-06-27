@@ -19,6 +19,9 @@ Updated gfuel
 06/23/21
 ===
 Added secret (not) twitch chat
+06/23/21
+===
+Removed chat project due to irrelevancy
 
 06/22/21
 ===

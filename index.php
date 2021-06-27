@@ -189,7 +189,7 @@ switch($names){
 
 <html>
 <head>
-	<title>Enviosity</title>
+	<title>Enviosity 🔴 NOW LIVE!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 	<meta charset="utf-8">
 	<meta name="description" CONTENT="Enviosity's f2p website">
@@ -312,12 +312,12 @@ switch($names){
 				<a><?=$without;?><!--<a onclick="window.open('//enviosity.com/chat/', 'popup', 'location=0,width=400,height=800,left=500,top=55'); return false;" class="btn btn-primary btn-sm">+</a>-->
 </a><br><br>
 				<div class="lines">
-					<span style="width: auto;"><a class="discord" href="https://qr.streamelements.com/summonerswar/enviosity" target="_blank"><img src="https://cdn.streamelements.com/infinity/summoners/logo_lost_centuria.png" style="vertical-align: middle; height:162px"></a></span>
-				</div>
+					<span style="width: auto;"><a class="discord" href="https://qr.streamelements.com/summonerswar/enviosity" target="_blank"><img src="https://cdn.streamelements.com/infinity/summoners/logo_lost_centuria.png" style="vertical-align: middle; height:162px"><br><img src="https://cdn.streamelements.com/infinity/eb5f37f6-aa22-4261-ba39-c40cad4ba544.png" style="vertical-align: middle; height:162px"></a></span>
+				</div><br>
 				<a>GFUEL use code "ENVIOSITY" for 30% off until 28th!</a><br>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br>
-				<a href="./watch/" style="color:white; font-size: 26px;">Watch Enviosity</a><br>
+				<a href="./watch/" style="color:white; font-size: 26px;">Watch Enviosity 🔴 NOW LIVE!</a><br>
 				<div class="lines">
 					<span><a class="youtube" href="https://youtube.com/Enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-youtube"></i>';?><br><l>Youtube</l></a></span>
 					<span><a class="twitch" href="https://www.twitch.tv/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-twitch"></i>';?><br><l>Twitch</l></a></span>
