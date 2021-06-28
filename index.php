@@ -189,7 +189,7 @@ switch($names){
 
 <html>
 <head>
-	<title>Enviosity LIVE NOW! 🔴</title>
+	<title>Enviosity</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 	<meta charset="utf-8">
 	<meta name="description" CONTENT="Enviosity's f2p website">
@@ -309,7 +309,7 @@ switch($names){
 			<a class="logo"><div id="first_logo"></div><div id="sec_logo"></div></a>
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
-				<a><?=$without;?> LIVE NOW! 🔴</a><br><br>
+				<a><?=$without;?></a><br><br>
 				<div class="lines">
 					<span style="width: auto;"><a class="discord" href="https://qr.streamelements.com/summonerswar/enviosity" target="_blank"><img src="https://cdn.streamelements.com/infinity/summoners/logo_lost_centuria.png" style="vertical-align: middle; height:162px"><br><img src="https://cdn.streamelements.com/infinity/eb5f37f6-aa22-4261-ba39-c40cad4ba544.png" style="vertical-align: middle; height:162px"></a></span>
 				</div><br>
