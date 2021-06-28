@@ -41,7 +41,7 @@ $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(2,count($names)-1);
 
 
-if(isset($_COOKIE['no_promo'])){
+if(isset($_COOKIE['no_promo']) || true){
 	$promote_name[] = $names[$count];
 }else{
 	$promote_name[] = "Dendriosity";
@@ -189,7 +189,7 @@ switch($names){
 
 <html>
 <head>
-	<title>Enviosity</title>
+	<title>Enviosity LIVE NOW! 🔴</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 	<meta charset="utf-8">
 	<meta name="description" CONTENT="Enviosity's f2p website">
@@ -309,8 +309,7 @@ switch($names){
 			<a class="logo"><div id="first_logo"></div><div id="sec_logo"></div></a>
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
-				<a><?=$without;?><!--<a onclick="window.open('//enviosity.com/chat/', 'popup', 'location=0,width=400,height=800,left=500,top=55'); return false;" class="btn btn-primary btn-sm">+</a>-->
-</a><br><br>
+				<a><?=$without;?> LIVE NOW! 🔴</a><br><br>
 				<div class="lines">
 					<span style="width: auto;"><a class="discord" href="https://qr.streamelements.com/summonerswar/enviosity" target="_blank"><img src="https://cdn.streamelements.com/infinity/summoners/logo_lost_centuria.png" style="vertical-align: middle; height:162px"><br><img src="https://cdn.streamelements.com/infinity/eb5f37f6-aa22-4261-ba39-c40cad4ba544.png" style="vertical-align: middle; height:162px"></a></span>
 				</div><br>

@@ -1,3 +1,11 @@
+06/28/21
+===
+Added new servers in Europe (should improve load time)
+
+06/27/21
+===
+Removed twitch chat project
+
 06/26/21
 ===
 Added watch page to embed twitch played
@@ -19,9 +27,6 @@ Updated gfuel
 06/23/21
 ===
 Added secret (not) twitch chat
-06/23/21
-===
-Removed chat project due to irrelevancy
 
 06/22/21
 ===
