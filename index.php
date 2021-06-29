@@ -313,7 +313,7 @@ switch($names){
 				<div class="lines">
 					<span style="width: auto;"><a class="discord" href="https://qr.streamelements.com/summonerswar/enviosity" target="_blank"><img src="https://cdn.streamelements.com/infinity/summoners/logo_lost_centuria.png" style="vertical-align: middle; height:162px"><br><img src="https://cdn.streamelements.com/infinity/eb5f37f6-aa22-4261-ba39-c40cad4ba544.png" style="vertical-align: middle; height:162px"></a></span>
 				</div><br>
-				<a>GFUEL use code "ENVIOSITY" for 30% off until 28th!</a><br>
+				<a>GFUEL use code "ENVIOSITY" for 10% off!</a><br>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br>
 				<a href="./watch/" style="color:white; font-size: 26px;">Watch Enviosity</a><br>
