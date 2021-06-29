@@ -3,7 +3,7 @@
 header("Access-Control-Allow-Origin: api.enviosity.com");
 $bg_images = json_decode(file_get_contents("./envi.json"));
 //Bg settings
-$imgh = 360;
+$imgh = 160;
 $zoom = 2;
 
 $without = "0 days without streaming!";
@@ -373,9 +373,9 @@ switch($names){
 	<?php
 		foreach($bg_images->data as $dat){
 			if(!empty($dat->thumbnail_url)){
-				$dat->thumbnail_url = str_replace("%{width}", $imgh/9*16, $dat->thumbnail_url);
-				$dat->thumbnail_url = str_replace("%{height}", $imgh, $dat->thumbnail_url);
-				echo '"'.$dat->thumbnail_url.'",';
+				$dat->thumbnail_url = str_replace("%{width}", 284, $dat->thumbnail_url);
+				$dat->thumbnail_url = str_replace("%{height}", 160, $dat->thumbnail_url);
+				echo '"'.explode("cf_vods/", $dat->thumbnail_url)[1].'",';
 			}
 		}
 	?>

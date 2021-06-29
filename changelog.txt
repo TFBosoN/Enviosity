@@ -1,3 +1,7 @@
+06/29/21
+===
+Optimizations to background images
+
 06/28/21
 ===
 Added new servers in Europe (should improve load time)

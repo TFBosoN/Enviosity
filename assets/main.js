@@ -30,7 +30,7 @@ function draw() {
   t = [2,3,5,6,7,8,8,7,6,5,3];
   kt = [1,2,3,4,5,6,5,4,3,2,1];
   ctx.rotate(-30*Math.PI/180);
-  ctx.transform(2,0,0,2,0,0);
+  ctx.transform(4.5,0,0,4.5,0,0);
   data.forEach(function(item, i , arr){
 	  var img = new Image();
 	  img.onload = function() {
@@ -43,7 +43,7 @@ function draw() {
 			  count = 0;
 		  }
 	  }
-	  img.src = item;
+	  img.src = "https://static-cdn.jtvnw.net/cf_vods/"+item;
   });
 
 }
