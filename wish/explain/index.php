@@ -2,7 +2,7 @@
 	<link rel="stylesheet" href="../../stories/gigachad/assets/main.css">
 	<style>
 		*{
-			font-family: initial;
+			font-family: sans-serif!important;
 		}
 		#prestory{
 			z-index: 200;
