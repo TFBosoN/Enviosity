@@ -5,7 +5,7 @@ if(isset($_GET['rolled'])){
 }
 
 
-if(!isset($_COOKIE['rolled']) && !isset($_GET['no_wish'])){
+if(!isset($_GET['rolled']) && !isset($_GET['no_wish'])){
 	header('Location: ./wish/', true, 302);
 	exit();
 }
