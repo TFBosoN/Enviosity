@@ -1,13 +1,7 @@
 <?php
 //background images from twitch thumbnails (populated daily)
-if(isset($_GET['rolled'])){
+if(isset($_GET['rolled']) || isset($_GET['no_wish'])){
 	setcookie("rolled", 1, time()+60*60*24*30, "/");
-}
-
-
-if(!isset($_GET['rolled']) && !isset($_GET['no_wish']) && !isset($_COOKIE['rolled'])){
-	header('Location: ./wish/', true, 302);
-	exit();
 }
 
 header("Access-Control-Allow-Origin: api.enviosity.com");
@@ -201,7 +195,7 @@ switch($names){
 
 <html>
 <head>
-	<title>Enviosity LIVE NOW! 🔴</title>
+	<title>Enviosity</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 	<meta charset="utf-8">
 	<meta name="description" CONTENT="Enviosity's f2p website">
@@ -328,7 +322,7 @@ switch($names){
 				<a>GFUEL use code "ENVIOSITY" for 10% off!</a><br>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br>
-				<a href="./watch/" style="color:white; font-size: 26px;">Watch Enviosity LIVE NOW! 🔴</a><br>
+				<a href="./watch/" style="color:white; font-size: 26px;">Watch Enviosity</a><br>
 				<div class="lines">
 					<span><a class="youtube" href="https://youtube.com/Enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-youtube"></i>';?><br><l>Youtube</l></a></span>
 					<span><a class="twitch" href="https://www.twitch.tv/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-twitch"></i>';?><br><l>Twitch</l></a></span>
