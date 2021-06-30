@@ -124,9 +124,9 @@
 	dialog.push("Just wanted to dispel the delusion that I drew it");
 	dialog.push("");
 	dialog.push("Second, big congrats on your rolls Envi!");
-	dialog.push("I see yesterdays' inside joke, that you pull once, get everything C6 didn't work");
+	dialog.push("I see yesterday's inside joke, that you pull once, get everything C6 didn't work");
 	dialog.push("You even said 'wakey wakey', which made me excited");
-	dialog.push("But something gone wrong..");
+	dialog.push("But something went wrong..");
 	dialog.push("You probably thought it was stuck on the OC pull..");
 	dialog.push("But I never make broken things! Kapp");
 	dialog.push("My bad, will make it clearer next time");
