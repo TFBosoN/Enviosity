@@ -1,6 +1,9 @@
 <head>
 	<link rel="stylesheet" href="../../stories/gigachad/assets/main.css">
 	<style>
+		*{
+			font-family: initial;
+		}
 		#prestory{
 			z-index: 200;
 			width: 100%;
