@@ -45,10 +45,10 @@ $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(2,count($names)-1);
 
 
-if(isset($_COOKIE['no_promo']) || true){
+if(isset($_COOKIE['no_promo'])){
 	$promote_name[] = $names[$count];
 }else{
-	$promote_name[] = "Dendriosity";
+	$promote_name[] = "Dogiosity";
 	setcookie( "no_promo", true, time()+10 );
 }
 
@@ -109,6 +109,10 @@ if(isset($_COOKIE['rolled'])){
 }
 
 switch($names){
+	case "Dogiosity":
+		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1625171913/envi/assets/Doggiosity.png.jpg";
+		$without = "0 days without woof";
+	break;
 	case "Dendriosity":
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Dendriosity.jpg";
 		$without = "0 days without you <3";
