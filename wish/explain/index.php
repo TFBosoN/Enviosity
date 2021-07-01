@@ -45,7 +45,7 @@
 				<img src="//res.cloudinary.com/tfboson/image/upload/v1623846747/envi/assets/particle.jpg" style="width:150px; border-radius:50%;">
 				<img src="//res.cloudinary.com/tfboson/image/upload/v1623846621/envi/assets/wave.gif" id="wave">
 			</div>
-			<div id="story"><span id="begin" style="cursor: pointer; margin-right:10px; text-decoration: underline"  onclick="next()">[Very boring ramble (1:30)]</span><span><a href="../../?rolled" style="color:white!important">[Get me outa here]</a></span></div>
+			<div id="story"><span id="begin" style="cursor: pointer; margin-right:10px; text-decoration: underline"  onclick="next()">[Very boring long ramble (pls not on stream) (1:45)]</span><br><br><span><a href="../../?rolled" style="color:white!important">[Get me outa here]</a></span></div>
 		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -143,5 +143,8 @@
 	dialog.push("This is my contribution to this wholesome community!");
 	dialog.push("enviLove to everyone!");
 	dialog.push("");
+	dialog.push("You know, Envi, I was thinking the site is a lot of your work too!");
+	dialog.push("Background on a main page is auto updates everyday");
+	dialog.push("If you would stop streaming it would slowly go blank");
 	</script>
 </body>
