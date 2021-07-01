@@ -118,14 +118,14 @@
 	dialog.push("");
 	dialog.push("Ello cuties! AYAYA HYPERCLAP!");
 	dialog.push("It's me again!");
-	dialog.push("I want to make some things clear if it's not..");
+	dialog.push("I want to make some things clear..");
 	dialog.push("First of all, big shout out to @napmangastudio for the drawings used in this project!");
 	dialog.push("The more talented person than I am..");
 	dialog.push("Just wanted to dispel the delusion that I drew it");
 	dialog.push("");
 	dialog.push("Second, big congrats on your rolls Envi!");
-	dialog.push("I see yesterday's inside joke, that you pull once, get everything C6 didn't work");
-	dialog.push("You even said 'wakey wakey', which made me excited");
+	dialog.push("I see yesterday's inside joke, that you pull once, get everyone C6 didn't work here");
+	dialog.push("You even said 'wakey wakey', on that dono which made me excited");
 	dialog.push("But something went wrong..");
 	dialog.push("You probably thought it was stuck on the OC pull..");
 	dialog.push("But I never make broken things! Kapp");
