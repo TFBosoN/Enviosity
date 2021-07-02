@@ -45,7 +45,7 @@ $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(2,count($names)-1);
 
 
-if(isset($_COOKIE['no_promo'])){
+if(isset($_COOKIE['no_promo']) || true){
 	$promote_name[] = $names[$count];
 }else{
 	$promote_name[] = "Dogiosity";
