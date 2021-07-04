@@ -29,6 +29,7 @@ IKEAosity
 Kappiosity
 Laggiosity
 Lateosity
+Luckyosity
 MiHoYosity
 Monstrosity
 Physicaldiosity
