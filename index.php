@@ -120,12 +120,12 @@ switch($names){
 	case "Mr. F2P":
 		$without = "F2P <s>damage</s> <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/KEKWait.png' width='32' alt='KEKWait' title='KEKWait' style='vertical-align:middle'>";
 	break;
-	case "Mr. Screamer":
+	/*case "Mr. Screamer":
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Screamer.png";
 		$phrase = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/Screamer.png" style="width:100%; height:100%;">';
 		$without = "0 days without SCREAMING";
 		$phrase_fs = true;
-	break;
+	break;*/
 	case "Donowalliosity":
 		$names .= " <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviWall.png' width='32' alt='enviWall' title='enviWall'>";
 	break;
@@ -172,7 +172,7 @@ switch($names){
 		$without = "0 days without COPIUM";
 		$alarm_msg = "WARNING! COPIUM OVERDOSE!";
 	break;
-	case "Hackiosity":
+	/*case "Hackiosity":
 	case "Hackerosity":
 		$avatar = $alarm_img = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif";
 		$alarm = true;
@@ -182,7 +182,7 @@ switch($names){
 		$alarm_img = '//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif';
 		$without = "0 days without HACKERMANS";
 		$alarm_msg = 'WARNING! SYSTEM OVERRIDE!<br><br><a id="hack_text">Hacking in progress..</a><div class="progress"><div class="bar"></div></div>';
-	break;
+	break;*/
 	case "YEPiosity":
 		$names .= " <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/YEP.png' width='32' alt='YEP' title='YEP'>";
 	break;
