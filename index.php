@@ -196,7 +196,7 @@ switch($names){
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623790335/envi/assets/Gigachad.jpg";
 	break;
 }
-$without = "WE LOVE YOU ENVI  <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviSHEESH.png' width='32' alt='enviLove' title='enviLove'>";
+$without = "WE LOVE YOU ENVI  <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png' width='32' alt='enviLove' title='enviLove'>";
 ?>
 
 <html>
