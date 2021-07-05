@@ -26,6 +26,9 @@
 			background-repeat: no-repeat;
 			background-position: center;
 		}
+		#scene{
+			z-index: 99;
+		}
 		#bg{
 			background-size: 100% auto;
 			filter: blur(20px);
@@ -234,6 +237,7 @@
 		<div id="prestory" onclick="con_dia()" style="display:block">
 			<div id="story">This story contains amazing drawings<br>made by @peachesforbreakfast<br><br>[begin]</div>
 		</div>
+		<div id="scene"></div>
 		<div id="dialog" onclick="con_dia()">
 			<div id="Jebaited" class="actor"><img src="https://res.cloudinary.com/tfboson/image/upload/v1624280022/envi/muffin/assets/Jebaited.png"></div>
 			<div id="Washing" class="actor"><img src="https://res.cloudinary.com/tfboson/image/upload/v1624280022/envi/muffin/assets/Washing.png"></div>
