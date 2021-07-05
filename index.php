@@ -325,7 +325,7 @@ $without = "WE LOVE YOU ENVI  <img src='//res.cloudinary.com/tfboson/image/uploa
 				<a>GFUEL use code "ENVIOSITY" for 10% off!</a><br>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br>
-				<!--<a href="./watch/" style="color:white; font-size: 26px;">Watch Enviosity LIVE NOW! 🔴</a><br>-->
+				<a href="" style="color:white; font-size: 26px;">Watch Enviosity LIVE NOW! 🔴</a><br>
 				<div class="lines">
 					<span><a class="youtube" href="https://youtube.com/Enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-youtube"></i>';?><br><l>Youtube</l></a></span>
 					<span><a class="twitch" href="https://www.twitch.tv/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-twitch"></i>';?><br><l>Twitch</l></a></span>
