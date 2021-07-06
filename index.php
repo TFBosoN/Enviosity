@@ -162,7 +162,7 @@ switch($names){
 	case "Eulaviosity":
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/eulaviosity.png";
 	break;
-	case "Copiosity":
+	/*case "Copiosity":
 		$avatar = rand(0,1)? "//i.imgur.com/wtaJ1zB.png" : "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviCOPIUM.jpg";
 		$alarm = true;
 		$phrase = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/COPIUM.png" width="160" alt="COPIUM" title="COPIUM">';
@@ -172,7 +172,7 @@ switch($names){
 		$without = "0 days without COPIUM";
 		$alarm_msg = "WARNING! COPIUM OVERDOSE!";
 	break;
-	/*case "Hackiosity":
+	case "Hackiosity":
 	case "Hackerosity":
 		$avatar = $alarm_img = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif";
 		$alarm = true;
