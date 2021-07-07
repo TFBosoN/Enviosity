@@ -327,7 +327,7 @@ $without = "WE LOVE YOU ENVI  <img src='//res.cloudinary.com/tfboson/image/uploa
 				<a>GFUEL use code "ENVIOSITY" for 10% off!</a><br>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br>
-				<a href="//twitch.tv/enviosity" style="color:white; font-size: 26px;">Watch Enviosity <?=($live)?"🔴 NOW LIVE!":"";?></a><br>
+				<a href="https://www.twitch.tv/genshinimpactofficial" style="color:white; font-size: 26px;" id="timer"><?=($live)?"🔴 NOW LIVE!":"";?></a><br>
 				<div class="lines">
 					<span><a class="youtube" href="https://youtube.com/Enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-youtube"></i>';?><br><l>Youtube</l></a></span>
 					<span><a class="twitch" href="https://www.twitch.tv/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-twitch"></i>';?><br><l>Twitch</l></a></span>
@@ -440,7 +440,29 @@ $without = "WE LOVE YOU ENVI  <img src='//res.cloudinary.com/tfboson/image/uploa
 			}, 2000);
 		}, 1000);
 	}*/
+	
 	</script>
+
+<script>
+var countDownDate = new Date(Date.UTC(2021, 7, 5, 12, 0, 0)).getTime();
+var now = new Date;
+var x = setInterval(function() {
+	now = new Date();
+	now = Date.UTC(now.getUTCFullYear(),now.getUTCMonth(), now.getUTCDate() , 
+      now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds(), now.getUTCMilliseconds());
+  var distance = countDownDate - now;
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  $("#timer").html("1.7 update stream in " + hours + "h "
+  + minutes + "m " + seconds + "s ");
+  distance-=1;
+  if (distance < 0) {
+    clearInterval(x);
+     $("#timer").html("1.7 update stream 🔴 LIVE NOW!");
+  }
+}, 1000);
+</script>
 	<script src='./assets/main.js'></script>
 </body>
 </html>
