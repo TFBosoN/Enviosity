@@ -10,6 +10,8 @@ $bg_images = json_decode(file_get_contents("./envi.json"));
 $imgh = 160;
 $zoom = 2;
 
+$live = true;
+
 $without = "0 days without streaming!";
 $phrase_fs = false;
 
@@ -201,7 +203,7 @@ $without = "WE LOVE YOU ENVI  <img src='//res.cloudinary.com/tfboson/image/uploa
 
 <html>
 <head>
-	<title>Enviosity</title>
+	<title>Enviosity<?=($live)?"🔴 NOW LIVE!":"";?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 	<meta charset="utf-8">
 	<meta name="description" CONTENT="Enviosity's f2p website">
@@ -325,7 +327,7 @@ $without = "WE LOVE YOU ENVI  <img src='//res.cloudinary.com/tfboson/image/uploa
 				<a>GFUEL use code "ENVIOSITY" for 10% off!</a><br>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br>
-				<a href="" style="color:white; font-size: 26px;">Watch Enviosity</a><br>
+				<a href="//twitch.tv/enviosity" style="color:white; font-size: 26px;">Watch Enviosity <?=($live)?"🔴 NOW LIVE!":"";?></a><br>
 				<div class="lines">
 					<span><a class="youtube" href="https://youtube.com/Enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-youtube"></i>';?><br><l>Youtube</l></a></span>
 					<span><a class="twitch" href="https://www.twitch.tv/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-twitch"></i>';?><br><l>Twitch</l></a></span>
