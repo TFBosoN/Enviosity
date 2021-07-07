@@ -25,6 +25,7 @@
 			z-index:1;
 			background-repeat: no-repeat;
 			background-position: center;
+			display:none;
 		}
 		#scene{
 			z-index: 99;
@@ -229,6 +230,59 @@
 			background: url(https://res.cloudinary.com/tfboson/image/upload/v1624280022/envi/muffin/assets/hydrated.jpg), 100%;
 			z-index: 97;
 		}
+		#book{
+			position:fixed;
+			left:0;
+			top:0;
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url(./assets/book.png);
+			background-size: auto 100%;
+			z-index: 200;
+		}
+		
+.flip-card {
+  perspective: 1000px;
+  z-index: 300;
+  display:none;
+  width: fit-content;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform-origin: 0 0;
+  transform: rotateY(-180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(-180deg);
+}
 	</style>
 	<link as="fetch" rel="preload" href="https://cdn.discordapp.com/attachments/860285417181806592/861075891325108294/image0.jpg"/>
 </head>
@@ -250,6 +304,17 @@
 			<div id="KEKWa" class="actor"><img src="./assets/KEKWa.webp"></div>
 		</div>
 		<div id="bg"></div>
+		<div class="flip-card">
+		  <div class="flip-card-inner">
+			<div class="flip-card-front" id="book">
+			</div>
+			<div class="flip-card-back">
+			  <h1>John Doe</h1>
+			  <p>Architect & Engineer</p>
+			  <p>We love that guy</p>
+			</div>
+		  </div>
+		</div>
 		<div id="Envi"><img src="https://res.cloudinary.com/tfboson/image/upload/v1624280022/envi/muffin/assets/Envi.png"></div>
 		<div id="dialog_box" onclick="con_dia()"><div id="name">Enviosity</div><div id="dtext"><p></p></div></div>
 	</div>
@@ -328,9 +393,11 @@
 			switch(dia_stage){
 				case 0:
 					$("#prestory").css("display", "none");
-					bg = "https://cdn.discordapp.com/attachments/860285417181806592/861075891325108294/image0.jpg";
+					$(".flip-card").css("display", "block");
+					bg = "";
 				break;
 				case 1:
+					//bg = "https://cdn.discordapp.com/attachments/860285417181806592/861075891325108294/image0.jpg";
 					$("#name").html("Enviosity");
 					text = "Alright boys! Take it easy!";
 				break;
