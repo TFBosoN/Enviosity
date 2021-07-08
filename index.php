@@ -444,17 +444,18 @@ $without = "WE LOVE YOU ENVI  <img src='//res.cloudinary.com/tfboson/image/uploa
 	</script>
 
 <script>
-var countDownDate = new Date(Date.UTC(2021, 7, 5, 12, 0, 0)).getTime();
+var countDownDate = new Date(Date.UTC(2021, 6, 9, 12, 0, 0)).getTime();
 var now = new Date;
 var x = setInterval(function() {
 	now = new Date();
 	now = Date.UTC(now.getUTCFullYear(),now.getUTCMonth(), now.getUTCDate() , 
       now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds(), now.getUTCMilliseconds());
   var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  $("#timer").html("1.7 update stream in " + hours + "h "
+  $("#timer").html("1.7 update stream in " + days +"d " + hours + "h "
   + minutes + "m " + seconds + "s ");
   distance-=1;
   if (distance < 0) {
