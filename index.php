@@ -452,10 +452,10 @@ var x = setInterval(function() {
       now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds(), now.getUTCMilliseconds());
   var distance = countDownDate - now;
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))+days*24;
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  $("#timer").html("1.7 update stream in " + days +"d " + hours + "h "
+  $("#timer").html("1.7 update stream in " + hours + "h "
   + minutes + "m " + seconds + "s ");
   distance-=1;
   if (distance < 0) {
