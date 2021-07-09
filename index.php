@@ -10,7 +10,7 @@ $bg_images = json_decode(file_get_contents("./envi.json"));
 $imgh = 160;
 $zoom = 2;
 
-$live = false;
+$live = true;
 
 $without = "0 days without streaming!";
 $phrase_fs = false;
