@@ -2,7 +2,7 @@
 $USER_ID = "enviosity";
 $client_id = getenv('tw_cl_id');
 $secret = getenv('tw_cl_sc');
-echo $client_id."lol".$_ENV['tw_cl_id'];
+echo $client_id."lol".$_EN;
 
 $postdata = http_build_query(
     array(
