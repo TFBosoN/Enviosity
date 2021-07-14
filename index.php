@@ -47,11 +47,11 @@ $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(2,count($names)-1);
 
 
-if(isset($_COOKIE['no_promo']) || true){
+if(isset($_COOKIE['no_promo'])){
 	$promote_name[] = $names[$count];
 }else{
-	$promote_name[] = "Fartiosity";
-	setcookie( "no_promo", true, time()+10 );
+	$promote_name[] = "Fakeiosity";
+	setcookie("no_promo", true, time()+60*60*24);
 }
 
 
@@ -176,13 +176,14 @@ switch($names){
 	break;
 	case "Hackiosity":
 	case "Hackerosity":
-		$avatar = $alarm_img = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif";
 		$alarm = true;
+		$without = "0 days without HACKERMANS";
+	case "Fakeiosity":
+		$avatar = $alarm_img = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif";
 		$phrase = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif" width="160" alt="HACKERMANS" title="HACKERMANS">';
 		//$alarm_icon = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif" width="64" alt="HACKERMANS" title="HACKERMANS">';
 		$alarm_icon_s = '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif" width="18" alt="HACKERMANS" title="HACKERMANS">';
 		$alarm_img = '//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/HACKERMANS.gif';
-		$without = "0 days without HACKERMANS";
 		$alarm_msg = 'WARNING! SYSTEM OVERRIDE!<br><br><a id="hack_text">Hacking in progress..</a><div class="progress"><div class="bar"></div></div>';
 	break;
 	case "YEPiosity":
@@ -198,7 +199,6 @@ switch($names){
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1623790335/envi/assets/Gigachad.jpg";
 	break;
 }
-$without = "WE LOVE YOU ENVI  <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png' width='32' alt='enviLove' title='enviLove'>";
 ?>
 
 <html>
@@ -283,6 +283,79 @@ $without = "WE LOVE YOU ENVI  <img src='//res.cloudinary.com/tfboson/image/uploa
 		#sec_logo{
 			position:absolute;
 			z-index:-9;
+			background-image: url(https://res.cloudinary.com/tfboson/image/upload/v1625076133/envi/assets/9herpoa3c6671.webp);
+		}
+		#mscr{
+			background-image: url(https://res.cloudinary.com/tfboson/image/upload/v1626292512/envi/assets/monkaWsite.jpg);
+			background-position: center;
+			background-size: 100% auto;
+			width:100%;
+			position: fixed;
+			height: 100%;
+			top:0;
+			left:0;
+			z-index:2;
+		}
+		#hack_text{
+			z-index: 1;
+		}
+		#presentation{
+			z-index:99;
+		}
+		#first_logo{
+			transition: all 10s;
+		}
+		#dialog_box{
+			display:none;
+			height:200px;
+			position: fixed;
+			bottom:0;
+			width:100%;
+			Background: rgba(70, 50, 50, 0.3);
+			border: 2px solid rgba(20, 10, 10, 0.3);
+			z-index: 101;
+			text-align: center;
+			font-family: genshin;
+			left:0;
+			cursor: pointer;
+		}
+		#dialog{
+			position:fixed;
+			width: 100%;
+			height: 100%;
+			z-index: 101;
+			cursor: pointer;
+			display:none;
+		}
+		#name{
+			font-size: 40px;
+			font-weight: bold;
+			font-family: genshin;
+			color: #fdbc06;
+			border-bottom: 2px solid rgba(253, 188, 6, 0.7);
+			width: 420px;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%);
+		}
+		#dtext{
+			margin: 50px auto;
+			white-space: nowrap;
+			overflow: hidden;
+			font-family: genshin;
+			color: #fff;
+			font-size: 36px;
+			text-align: center;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%,0);
+		}
+		p{
+			margin-top: inherit;
+		}
+		@font-face {
+			font-family: 'genshin';
+			src: url('./assets/genshin.ttf'); 
 		}
 	</style>
 </head>
@@ -319,12 +392,30 @@ $without = "WE LOVE YOU ENVI  <img src='//res.cloudinary.com/tfboson/image/uploa
 	<div class="container">
 		<!-- window.open('//enviosity.com/chat/', 'popup', 'location=0,width=400,height=800,left=500,top=55'); return false; -->
 		<div id="presentation"><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>"><?=$phrase;?></h1></div>
+		<?php
+		if(!isset($_COOKIE['no_promo'])){
+			?>
+		<div id="dialog_box" onclick="con_dia()"><div id="name">TFBosoN</div><div id="dtext"><p></p></div></div>
+		<div id="mscr" onclick="act()"></div>
+		<?php
+		}
+		?>
 		<div class="main" id="main" style="display:none;">
 			<a class="logo"><div id="first_logo"></div><div id="sec_logo"></div></a>
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
 				<a><?=$without;?></a><br><br>
-				<a>GFUEL use code "ENVIOSITY" for 10% off!</a><br>
+				<?php
+				if(!isset($_COOKIE['no_promo'])){
+					?>
+				<a>use code "FAKEIOSITY" for nothing!</a><br>
+				<?php
+				}else{
+					?>
+				<a>use code "ENVIOSITY" for 10% off!</a><br>
+				<?php
+				}
+				?>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br>
 				<a href="https://player.twitch.tv/?channel=enviosity&parent=twitch.tv" style="color:white; font-size: 26px;" id="timer">WATCH ENVIOSITY <?=($live)?"🔴 NOW LIVE!":"";?></a><br>
@@ -380,6 +471,51 @@ $without = "WE LOVE YOU ENVI  <img src='//res.cloudinary.com/tfboson/image/uploa
 	/*/
 		TODO rewrite this shit to ajax
 	/*/
+	function act(){
+		$('#mscr').css('display', 'none');
+		play_sound("Oh come on, can I have som time?! I'm workin hear!");
+		type("Oh come on, can I have some time?! I'm working here!", 0);
+		$("#dialog_box").css("display", "block");
+		setTimeout(() => {
+			type("If the sky is fake, why can't website be fake too...", 0);
+			play_sound("If the sky is fake, why can't website be fake too...");
+			setTimeout(() => {
+				$("#first_logo").css("transform", "translate(-20000px, 0)");
+				type("Anyways I'ma get out", 0);
+				play_sound("Anyways I'ma get out");
+				setTimeout(() => {
+					$("#dialog_box").css("display", "none");
+					setTimeout(() => {
+						$("#first_logo").css("transition", "all 8s");
+						$("#first_logo").css("transform", "translate(+20000px, 0)");
+						setTimeout(() => {
+							$("#dialog_box").css("display", "block");
+							type("Wrong way", 0);
+							play_sound("Wrong way");
+							setTimeout(() => {
+								$("#dialog_box").css("display", "none");
+							}, 1000);
+						}, 1300);
+					}, 1000);
+				}, 2000);
+			}, 4200);
+		}, 5100);
+	}
+	function type(caption, captionLength = 0) {
+		captionLength = parseInt(captionLength);
+		$('#dtext p').html(caption.substr(0, captionLength++));
+		if(captionLength < caption.length+1) {
+			setTimeout('type("'+caption+'", "'+captionLength+'")', 50);
+		} else {
+			captionLength = 0;
+			caption = '';
+			finished_typing = true;
+		}
+	}
+	function play_sound(text, whom = "Brian"){
+		var audio = new Audio("https://api.streamelements.com/kappa/v2/speech?voice="+whom+"&text="+encodeURIComponent(text.trim()));
+		audio.play();
+	}
 	data = [
 	<?php
 		foreach($bg_images->data as $dat){
@@ -412,7 +548,7 @@ $without = "WE LOVE YOU ENVI  <img src='//res.cloudinary.com/tfboson/image/uploa
 		}else{
 			num++;
 		}
-	},2707);
+	},5000);
 	<?php
 	}
 	?>
