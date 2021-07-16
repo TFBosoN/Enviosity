@@ -111,7 +111,7 @@ if(isset($_COOKIE['rolled'])){
 	$avatar = "https://res.cloudinary.com/tfboson/image/upload/v1625076133/envi/assets/9herpoa3c6671.webp";
 }
 $avatar = rand(0,1)?"https://res.cloudinary.com/tfboson/image/upload/v1626472529/envi/assets/flamingo.webp":"https://res.cloudinary.com/tfboson/image/upload/v1626472719/envi/assets/flamingoman1.jpg";
-$avatar = rand(0,3)>2? "https://res.cloudinary.com/tfboson/image/upload/v1626473113/envi/assets/pinkman.jpg":$avatar;
+$avatar = rand(0,2)>1? "https://res.cloudinary.com/tfboson/image/upload/v1626473113/envi/assets/pinkman.jpg":$avatar;
 switch($names){
 	case "Dogiosity":
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1625171913/envi/assets/Doggiosity.png.jpg";
