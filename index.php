@@ -8,7 +8,7 @@ $zoom = 2;
 
 $live = false;
 
-$without = "0 days without streaming!";
+$without = "0 days without pink!";
 $phrase_fs = false;
 
 //COPIUM 
