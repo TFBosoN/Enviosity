@@ -1,9 +1,5 @@
 <?php
 //background images from twitch thumbnails (populated daily)
-if(isset($_GET['rolled']) || isset($_GET['no_wish'])){
-	setcookie("rolled", 1, time()+60*60*24*30, "/");
-}
-
 header("Access-Control-Allow-Origin: api.enviosity.com");
 $bg_images = json_decode(file_get_contents("./envi.json"));
 //Bg settings
@@ -46,12 +42,17 @@ $rcat = rand(1, count($categories)-1); //Choosing rand category
 $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(2,count($names)-1);
 
-
-if(isset($_COOKIE['no_promo'])){
+setcookie("no_promos", true, time()+60*60*24);
+if(isset($_COOKIE['no_promos'])){
 	$promote_name[] = $names[$count];
 }else{
-	$promote_name[] = "Fakeiosity";
-	setcookie("no_promo", true, time()+60*60*24);
+	//$promote_name[] = "Fakeiosity";
+	$promote_name[] = "Pinkiosity";
+	$promote_name[] = "Mr. Flamingo";
+	$promote_name[] = "Flamingoman";
+	$promote_name[] = "Mr. Pinksuit";
+	$promote_name[] = "Mr. Flamingo";
+	setcookie("no_promos", true, time()+60*60*24);
 }
 
 
@@ -109,7 +110,7 @@ $avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/F2P
 if(isset($_COOKIE['rolled'])){
 	$avatar = "https://res.cloudinary.com/tfboson/image/upload/v1625076133/envi/assets/9herpoa3c6671.webp";
 }
-
+$avatar = "https://res.cloudinary.com/tfboson/image/upload/v1626472529/envi/assets/flamingo.webp";
 switch($names){
 	case "Dogiosity":
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1625171913/envi/assets/Doggiosity.png.jpg";
