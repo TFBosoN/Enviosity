@@ -43,7 +43,7 @@ $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(2,count($names)-1);
 
 setcookie("no_promos", true, time()+60*60*24);
-if(isset($_COOKIE['no_promos'])){
+if(isset($_COOKIE['no_promos'])&& false){
 	$promote_name[] = $names[$count];
 }else{
 	//$promote_name[] = "Fakeiosity";
