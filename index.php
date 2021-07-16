@@ -110,7 +110,8 @@ $avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/F2P
 if(isset($_COOKIE['rolled'])){
 	$avatar = "https://res.cloudinary.com/tfboson/image/upload/v1625076133/envi/assets/9herpoa3c6671.webp";
 }
-$avatar = "https://res.cloudinary.com/tfboson/image/upload/v1626472529/envi/assets/flamingo.webp";
+$avatar = rand(0,1)?"https://res.cloudinary.com/tfboson/image/upload/v1626472529/envi/assets/flamingo.webp":"https://res.cloudinary.com/tfboson/image/upload/v1626472719/envi/assets/flamingoman1.jpg";
+
 switch($names){
 	case "Dogiosity":
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1625171913/envi/assets/Doggiosity.png.jpg";
