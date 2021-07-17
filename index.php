@@ -55,7 +55,16 @@ $names = $promote_name[rand(0,count($promote_name)-1)];
 
 
 //RNG phrases on load screen
-$phrase = array("NO MORE<br>F2P DAMAGE!", "\"BEST STREAMER IN THE WORLD!\"<br>--Barack Obama",'<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png" width="160" alt="enviLove" title="enviLove">', '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/slime.png" width="185" alt="slime" title="slime">', '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviAyaya.png" width="185" alt="enviAyaya" title="enviAyaya">', "I'm old enough to be<br>your dad!", "Welcome to the weeb nation!", "Welcome to sandbaggers sanctuary!");
+$phrase = array(
+	"NO MORE<br>F2P DAMAGE!", 
+	"\"BEST STREAMER IN THE WORLD!\"<br>--Barack Obama",
+	'<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png" width="160" alt="enviLove" title="enviLove">',
+	'<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/slime.png" width="185" alt="slime" title="slime">',
+	'<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviAyaya.png" width="185" alt="enviAyaya" title="enviAyaya">',
+	"I'm old enough to be<br>your dad!",
+	"Welcome to the weeb nation!",
+	"Welcome to sandbaggers sanctuary!"
+);
 //$phrase = array("0 days without<br><img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/WeirdChamp.png' width='185' height='170' alt='WeirdChamp' title='WeirdChamp'> and <img src='//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/monkaTOS.png' width='185' height='170' alt='WeirdChamp' title='WeirdChamp'> in the chat");
 $phrase = $phrase[rand(0, count($phrase)-1)];
 
@@ -92,20 +101,7 @@ function get_movement(){
 	return array($top, $left, $spin, $speed);
 }
 
-//Some special site looks depending on name
-/*
-if($names=="Coderviosity" && !isset($_GET["real_site_pls"])){
-	die("<body><h1 style='color:red'>Hello!</h1><blockquote><br>&#171;I do know how to code&#187;</blockquote><figcaption>--Coderviosity, <cite>05/28/2021</cite><br><br><a href='?real_site_pls'>Real site please!</body>");
-}
-*/
-
 $avatar = "//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/F2P.png";
-
-if(isset($_COOKIE['rolled'])){
-	$avatar = "https://res.cloudinary.com/tfboson/image/upload/v1625076133/envi/assets/9herpoa3c6671.webp";
-}
-$avatar = rand(0,1)?"https://res.cloudinary.com/tfboson/image/upload/v1626472529/envi/assets/flamingo.webp":"https://res.cloudinary.com/tfboson/image/upload/v1626472719/envi/assets/flamingoman1.jpg";
-$avatar = rand(0,2)>1? "https://res.cloudinary.com/tfboson/image/upload/v1626473113/envi/assets/pinkman.jpg":$avatar;
 switch($names){
 	case "Dogiosity":
 		$avatar = "//res.cloudinary.com/tfboson/image/upload/v1625171913/envi/assets/Doggiosity.png.jpg";
