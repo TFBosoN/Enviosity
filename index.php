@@ -8,7 +8,7 @@ $zoom = 2;
 
 $live = false;
 
-$without = "0 days without pink!";
+$without = "0 days without streaming!";
 $phrase_fs = false;
 
 //COPIUM 
@@ -43,15 +43,9 @@ $names = array_filter(explode("\n", $categories[$rcat]));
 $count = rand(2,count($names)-1);
 
 setcookie("no_promos", true, time()+60*60*24);
-if(isset($_COOKIE['no_promos'])&& false){
+if(isset($_COOKIE['no_promos']) || true){
 	$promote_name[] = $names[$count];
 }else{
-	//$promote_name[] = "Fakeiosity";
-	$promote_name[] = "Pinkiosity";
-	$promote_name[] = "Mr. Flamingo";
-	$promote_name[] = "Flamingoman";
-	$promote_name[] = "Mr. Pinksuit";
-	$promote_name[] = "Mr. Flamingo";
 	setcookie("no_promos", true, time()+60*60*24);
 }
 
