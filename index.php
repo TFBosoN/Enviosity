@@ -384,14 +384,6 @@ switch($names){
 	<div class="container">
 		<!-- window.open('//enviosity.com/chat/', 'popup', 'location=0,width=400,height=800,left=500,top=55'); return false; -->
 		<div id="presentation"><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>"><?=$phrase;?></h1></div>
-		<?php
-		if(!isset($_COOKIE['no_promo'])){
-			?>
-		<div id="dialog_box" onclick="con_dia()"><div id="name">TFBosoN</div><div id="dtext"><p></p></div></div>
-		<div id="mscr" onclick="act()"></div>
-		<?php
-		}
-		?>
 		<div class="main" id="main" style="display:none;">
 			<a class="logo"><div id="first_logo"></div><div id="sec_logo"></div></a>
 			<div class="AYAYA_social">
