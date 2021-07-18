@@ -453,51 +453,8 @@ switch($names){
 	/*/
 		TODO rewrite this shit to ajax
 	/*/
-	function act(){
-		$('#mscr').css('display', 'none');
-		play_sound("Oh come on, can I have som time?! I'm workin hear!");
-		type("Oh come on, can I have some time?! I'm working here!", 0);
-		$("#dialog_box").css("display", "block");
-		setTimeout(() => {
-			type("If the sky is fake, why can't website be fake too...", 0);
-			play_sound("If the sky is fake, why can't website be fake too...");
-			setTimeout(() => {
-				$("#first_logo").css("transform", "translate(-20000px, 0)");
-				type("Anyways I'ma get out", 0);
-				play_sound("Anyways I'ma get out");
-				setTimeout(() => {
-					$("#dialog_box").css("display", "none");
-					setTimeout(() => {
-						$("#first_logo").css("transition", "all 8s");
-						$("#first_logo").css("transform", "translate(+20000px, 0)");
-						setTimeout(() => {
-							$("#dialog_box").css("display", "block");
-							type("Wrong way", 0);
-							play_sound("Wrong way");
-							setTimeout(() => {
-								$("#dialog_box").css("display", "none");
-							}, 1000);
-						}, 1300);
-					}, 1000);
-				}, 2000);
-			}, 4200);
-		}, 5100);
-	}
-	function type(caption, captionLength = 0) {
-		captionLength = parseInt(captionLength);
-		$('#dtext p').html(caption.substr(0, captionLength++));
-		if(captionLength < caption.length+1) {
-			setTimeout('type("'+caption+'", "'+captionLength+'")', 50);
-		} else {
-			captionLength = 0;
-			caption = '';
-			finished_typing = true;
-		}
-	}
-	function play_sound(text, whom = "Brian"){
-		var audio = new Audio("https://api.streamelements.com/kappa/v2/speech?voice="+whom+"&text="+encodeURIComponent(text.trim()));
-		audio.play();
-	}
+	
+
 	data = [
 	<?php
 		foreach($bg_images->data as $dat){
