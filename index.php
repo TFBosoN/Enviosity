@@ -389,8 +389,7 @@ switch($names){
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
 				<a><?=$without;?></a><br><br>
-				<a href="https://gfuel.com/collections/starter-kit/products/winter-white-starter-kit-v39">use code "ENVIOSITY" for 30% off!</a><br><br>
-				<a href="https://www.hoyolab.com/genshin/article/591256">Genshin Twitch Extension Event</a><br>
+				<a href="https://gfuel.com/collections/starter-kit/products/winter-white-starter-kit-v39">use code "ENVIOSITY" for 30% off!</a><br>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br>
 				<a href="https://player.twitch.tv/?channel=enviosity&parent=twitch.tv" style="color:white; font-size: 26px;" id="timer">WATCH ENVIOSITY <?=($live)?"🔴 NOW LIVE!":"";?></a><br>
