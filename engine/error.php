@@ -13,7 +13,8 @@ $list = array(
 	array("Oh no","Oh no no no","IT'S COMING!! RUN!",$err),
 	array("Another day..","Another.. ",$err),
 	array("If you stare into the abyss.. ","The abyss stares back at you.. ","Oh look what's that..",$err),
-	array("Bad wolf",$err)
+	array("Bad wolf",$err),
+	array("Mr. Envi?", "Mr. Slipper?", "Mr. ".$err)
 );
 $key = array_rand($list);
 $num = count($list[$key]);
