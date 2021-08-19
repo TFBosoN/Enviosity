@@ -1,10 +1,6 @@
 <?php
 //background images from twitch thumbnails (populated daily)
 header("Access-Control-Allow-Origin: api.enviosity.com");
-$bg_images = json_decode(file_get_contents("./envi.json"));
-//Bg settings
-$imgh = 160;
-$zoom = 2;
 
 $live = false;
 
@@ -209,6 +205,33 @@ switch($names){
 	<link rel="stylesheet" href="./assets/fa/css/all.min.css">
 	<link rel="stylesheet" href="./assets/main.css">
 	<style>
+		<?php
+		if(array_shift((explode('.', $_SERVER['HTTP_HOST'])))=="m"){
+		?>
+		.logo{
+			width:150px;
+		}
+		.AYAYA_social h1{
+			font-size:38px;
+		}
+		body{
+			font-size:15px;
+		}
+		.lines{
+			font-size:45px;
+		}
+		.lines span{
+			margin: 10px;
+		}
+		#presentation h1 {
+			font-size: 56px;
+		}
+		credits table {
+			font-size: 14px;
+		}
+		<?php
+		}
+		?>
 		.logo div{
 			background-image:url('<?=$avatar;?>');
 		}
@@ -271,11 +294,6 @@ switch($names){
 		#first_logo{
 			transition: opacity 2s ease-in-out;
 			opacity:1;
-		}
-		#sec_logo{
-			position:absolute;
-			z-index:-9;
-			background-image: url(https://res.cloudinary.com/tfboson/image/upload/v1625076133/envi/assets/9herpoa3c6671.webp);
 		}
 		#mscr{
 			background-image: url(https://res.cloudinary.com/tfboson/image/upload/v1626292512/envi/assets/monkaWsite.jpg);
@@ -351,8 +369,14 @@ switch($names){
 		}
 	</style>
 </head>
-<body onload="draw();">
-	<div id="cover"></div>
+<body>
+	<?php
+	if(array_shift((explode('.', $_SERVER['HTTP_HOST'])))!="m"){
+	?>
+	<iframe src="./bg.php" border=0  frameborder=0 style="position:fixed; top:0; left:0; width:100%;height:100%;"></iframe>
+	<?php
+	}
+	?>
 	<table class="slimes" id="slimes" style="">
 		<tr>
 			<td class="first">
@@ -380,19 +404,20 @@ switch($names){
 			</td>
 		</tr>
 	</table>
-	<canvas id="canvas" width="100%" height="100%"></canvas>
 	<div class="container">
 		<!-- window.open('//enviosity.com/chat/', 'popup', 'location=0,width=400,height=800,left=500,top=55'); return false; -->
 		<div id="presentation"><h1 class="banner" style="<?=($phrase_fs)?"height:100%":"";?>"><?=$phrase;?></h1></div>
 		<div class="main" id="main" style="display:none;">
-			<a class="logo"><div id="first_logo"></div><div id="sec_logo"></div></a>
+			<a class="logo"><div id="first_logo"></div></div></a>
 			<div class="AYAYA_social">
 				<h1><?=$names;?></h1>
 				<a><?=$without;?></a><br><br>
-				<a href="https://gfuel.com/collections/starter-kit/products/winter-white-starter-kit-v39">use code "ENVIOSITY" for 30% off!</a><br>
+				<a href="https://gfuel.com/collections/starter-kit/products/winter-white-starter-kit-v39" style="color:white">use code "ENVIOSITY" for 10% off!</a><br>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br>
-				<a href="https://player.twitch.tv/?channel=enviosity&parent=twitch.tv" style="color:white; font-size: 26px;" id="timer">WATCH ENVIOSITY <?=($live)?"🔴 NOW LIVE!":"";?></a><br>
+				<l style="color:white">Mobile version <img src="./assets/YAAY.gif" style="height:25px;"> <a href="https://m.enviosity.com" style='color:white'>m.enviosity.com</a></l>
+				<br>
+				<br>
 				<div class="lines">
 					<span><a class="youtube" href="https://youtube.com/Enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-youtube"></i>';?><br><l>Youtube</l></a></span>
 					<span><a class="twitch" href="https://www.twitch.tv/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-twitch"></i>';?><br><l>Twitch</l></a></span>
@@ -408,16 +433,15 @@ switch($names){
 					<span><a class="instogram" href="https://merch.streamelements.com/enviosity" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fas fa-tshirt"></i>';?><br><l>Merch</l></a></span>
 					<span><a class="reddit" href="https://www.reddit.com/r/Enviosity/" target="_blank"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fab fa-reddit"></i>';?><br><l>Reddit</l></a></span>
 				</div><br>
-				<a style="font-size:26px">= GENSHIN IMPACT =</a><br>
+				<a style="font-size:22px">= GENSHIN IMPACT =</a><br>
 				<div class="lines">
 					<span style="width: auto;"><a class="discord" href="https://paimon.moe" target="_blank"><img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/paimonmoe.ico" style="vertical-align: middle;"><b style="font-family: sans-serif; position:relative; font-size:20px">Paimon<div style="position: absolute; top: -9px; font-size: 14px; right: 0; color: rgb(78, 124, 255);">.moe</div></b></a></span>
 					<span style="width: auto;"><a class="discord" href="https://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id=e202102251931481" target="_blank"><img src="//res.cloudinary.com/tfboson/image/upload/v1623974211/envi/assets/Paimon.png" style="vertical-align: middle; height:72px"><l style="position:relative; font-size:20px">Login<div style="position: absolute; top: -22px; left: 0;">Daily</div></l></a></span>
 					<span style="width: auto;"><a class="discord" href="https://webstatic-sea.mihoyo.com/app/ys-map-sea/" target="_blank"><img src="data:image/png;base64,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" style="vertical-align: middle; height:72px"><l style="position:relative; font-size:20px">HoYoLAB<div style="position: absolute; top: -22px; left: 0;white-space: nowrap;">World Map</div></l></a></span>
 				</div>
-				<a style="font-size:26px">= MISC =</a><br>
+				<a style="font-size:22px">= MISC =</a><br>
 				<div class="lines">
 					<span style="position:relative"><a class="alist" href="https://myanimelist.net/animelist/Enviosity"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fas fa-list-alt"></i>';?><br><l style="position: absolute; left: 50%; transform: translate(-50%);">MyAnimeList</l></a></span>
-					<span style="position:relative"><a class="book" href="./stories/"><?=($alarm && !empty($alarm_icon))? $alarm_icon: '<i class="fad fa-books"></i>';?><br><l style="position: absolute; left: 50%; transform: translate(-50%);">Stories</l></a><!--<span class="badge badge-pill badge-danger">1</span>--></span>
 				</div>
 				<br>
 				<br>
@@ -428,10 +452,10 @@ switch($names){
 						<tr>
 							<td style="text-align:center"><div style="display:none" id="slime_warning"><a style="font-size:14px">slimes are resource intence!</a> <a style="font-size:14px; cursor:pointer" onclick='enable_slimes()'>Enable them</a></div></td>
 						</tr>
-							<td class="bot_links" style="text-align:center; padding:10px"><a href='https://github.com/TFBosoN/enviosity'>GitHub</a> | <a href="./changelog.txt">Changelog</a> | <a href="./envi_names.txt">This is how viewers call me</a></td>
+							<td class="bot_links" style="text-align:center; padding:10px"><a href='https://github.com/TFBosoN/enviosity'>GitHub</a> | <a href="./changelog.txt">Changelog</a> | <a href="./envi_names.txt">Envi names</a></td>
 						</tr>
 						<tr>
-							<td style="text-align:center">Emotes by <a href="https://twitter.com/fishywishies">@fishywishes!</a> <img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/fishy.jpg" height="18" width="18" alt="fishy" title="fishy"> | Site by <a href="https://tfb.su">@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?></td>
+							<td style="text-align:center; font-size: 14px;">F2P site by <a href="https://tfb.su">@TFBosoN</a> w/ <?=($alarm)? $alarm_icon_s : '<img src="//res.cloudinary.com/tfboson/image/upload/v1623506141/envi/assets/enviLove.png" height="18" width="18" alt="enviLove" title="enviLove">';?></td>
 						</tr>
 					</table>
 				</div>
@@ -440,75 +464,6 @@ switch($names){
 		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script>
-	//Background
-	/*/
-		TODO rewrite this shit to ajax
-	/*/
-	
-
-	data = [
-	<?php
-		foreach($bg_images->data as $dat){
-			if(!empty($dat->thumbnail_url)){
-				$dat->thumbnail_url = str_replace("%{width}", 284, $dat->thumbnail_url);
-				$dat->thumbnail_url = str_replace("%{height}", 160, $dat->thumbnail_url);
-				echo '"'.explode("cf_vods/", $dat->thumbnail_url)[1].'",';
-			}
-		}
-	?>
-	];
-	//HACKERMANS TEXT
-	text = [ "UPLOADING VIRUSES..", "INSTALLING BACKDOOR..", "LOGGING PASSWORDS..", "OVERRIDING SECURITY PROTOCOL..", "PENETRATING THE SYSTEM..", "HACKING THE IP-ADDRESS..", "DOWNLOADING SECRET PORN STASH..", "MINING DOGE-COINS..", "GETTING SATELLITE DATA..", "INSERTING KEYLOGGER.."];
-	var imgwidth = <?=$imgh/9*16;?>;
-	var imgheight = <?=$imgh;?>;
-	var num = 0;
-	
-	<?php
-	if($names == "Hackiosity"){
-	?>
-	function randomString(num){
-		console.log(num);
-		//not random KEKW
-		return text[num/*Math.floor(Math.random() * text.length)*/];
-	}
-	setInterval(function(){
-		document.getElementById("hack_text").innerHTML = randomString(num);
-		if(num>=text.length-1){
-			num = 0;
-		}else{
-			num++;
-		}
-	},5000);
-	<?php
-	}
-	?>
-	/*
-	$.ajax({
-		url: "https://api.enviosity.com/v1/reddit/getFanArt/",
-		type: "GET",
-		dataType: "json"
-	}).done(function(rdata){
-		console.log(rdata);
-		show_image(rdata, 0);
-	});
-	function show_image(rdata, n){
-		if(n>rdata.length-1){
-			n = 0;
-		}
-		console.log(n);
-		$('#sec_logo').css("background-image", "url('"+rdata[n]+"')");
-		setTimeout(() => {
-			$('#first_logo').css("opacity", "0");
-			setTimeout(() => {
-				$('#first_logo').css("background-image", "url('"+rdata[n]+"')");
-				$('#first_logo').css("opacity", "1");
-				setTimeout(() => { show_image(rdata, n+1); }, 3200);
-			}, 2000);
-		}, 1000);
-	}*/
-	
-	</script>
 	<script src='./assets/main.js'></script>
 </body>
 </html>
