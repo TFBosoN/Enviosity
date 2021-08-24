@@ -557,7 +557,7 @@ client.addListener('crash', function () {
 		chatNotice('Crashed', 10000, 4, 'chat-crash');
 });
 //testMessage();
-testMessage('enviosity', null, "Hey~! Welcome to <s>Secret</s> Chat (beta) v0.4 (still scuffed)! We have this additional emotes: BOOBA PagMan peepoTub Madge YEAHBUT7TV peepoHappy WineTime FeelsDankMan catJAM Smadge Bedge PogU PogO Wiggle aquaJAM peepoFat ratJAM downBadge SuiseiFukireta FeelsWeirdMan ppOverheat ppHop gachiW KEKL HandsUp gachiHYPER PEPSICLE agreeGe pepePls Kissahomie Sadeg YAAY Tssk Okayeg Susge FeelsOkayMan pepeW forsenPls BillyApprove gachiGASM RareParrot eShrug pepePoint pepeJAMJAM ModTime WTFF DAINO");
+testMessage('enviosity', null, "");
 
 
 if (!$.cookie('twitch_auth')) {
