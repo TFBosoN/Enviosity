@@ -205,7 +205,7 @@ function capitalize(n) {
 	return n[0].toUpperCase() +  n.substr(1);
 }
 function play_sound(text, whom = "Brian"){
-	var audio = new Audio("https://api.streamelements.com/kappa/v2/speech?voice="+whom+"&text="+encodeURIComponent(text.trim()));
+	var audio = new Audio("//api.enviosity.com/tts/?whom="+whom+"&text="+text);
 	audio.play();
 }
 function handleChat(channel, user, message, self) {
