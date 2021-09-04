@@ -415,7 +415,7 @@ switch($names){
 				<a href="https://gfuel.com/collections/starter-kit/products/winter-white-starter-kit-v39" style="color:white">use code "ENVIOSITY" for 10% off!</a><br>
 				<?=($alarm)?"<br><br><a class='red'>".$alarm_msg."</a>":"";?>
 				<br>
-				<l style="color:white">HAPPY BDA <img src="./assets/YAAY.gif" style="height:25px;"></l>
+				<l style="color:white">HAPPY BDAY <img src="./assets/YAAY.gif" style="height:25px;"></l>
 				<br>
 				<br>
 				<div class="lines">
